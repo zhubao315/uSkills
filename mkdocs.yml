@@ -23,7 +23,7 @@ nav:
   - 快速开始: quickstart.md
   - 架构: architecture.md
   - Schema: schema.md
-  - 技能库: skills.md
+  - 技能分类: skills.md
   - skill-creator 驾驭示例: skill-creator-case.md
-  - 技能仓库: generated/skills-index.md
+  - 技能库: generated/skills-index.md
   - Roadmap: roadmap.md
