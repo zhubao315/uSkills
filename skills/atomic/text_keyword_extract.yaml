@@ -1,0 +1,50 @@
+skill_id: uskill-atomic-text-keyword-extract-v1-0-0
+meta:
+  name: 文本关键词提取
+  version: 1.0.0
+  category: atomic
+  domain: nlp
+  description: 从输入文本中提取关键词，并返回结构化结果。
+  tags:
+    - nlp
+    - extract
+    - atomic
+  owner: uSkills
+input:
+  params:
+    - name: text
+      type: string
+      required: true
+      description: 待提取关键词的原始文本
+execute:
+  prompt_template: |
+    从{{text}}中提取 5 到 10 个最核心关键词。
+    结果返回 JSON，包含 keywords 与 summary。
+  steps:
+    - 识别文本主题
+    - 抽取高价值关键词
+    - 去重并输出结构化结果
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+    - manual-review
+output:
+  format: json
+  params:
+    - keywords
+    - summary
+  validation_rules:
+    - keywords must be a non-empty array
+    - summary must be a concise sentence
+control:
+  timeout: 10
+  retry: 2
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: 历史提示词资产
+  sop_path: examples/customer_service_sop.md
+  step_index: 1
+  raw_step: 从文本中提取关键词

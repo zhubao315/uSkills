@@ -1,0 +1,50 @@
+skill_id: uskill-governance-execution-guard-v1-0-0
+meta:
+  name: 执行合规守卫
+  version: 1.0.0
+  category: governance
+  domain: governance
+  description: 在技能执行前后检查输入完整性、输出结构和异常处理状态。
+  tags:
+    - governance
+    - guardrail
+    - control
+  owner: uSkills
+input:
+  params:
+    - name: payload
+      type: object
+      required: true
+      description: 待检查的执行载荷
+execute:
+  prompt_template: |
+    检查{{payload}}是否满足技能执行约束与输出规范。
+    如果不满足，返回 failed 并说明原因。
+  steps:
+    - 检查关键入参
+    - 检查输出格式
+    - 标记异常和建议处置动作
+  temperature: 0.0
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+    - manual-review
+output:
+  format: json
+  params:
+    - status
+    - issues
+    - recommendation
+  validation_rules:
+    - status must be success or failed
+control:
+  timeout: 15
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: 驾驭工程执行规范
+  sop_path: standards/governance.md
+  step_index: 1
+  raw_step: 检查技能执行完整性与输出合规性

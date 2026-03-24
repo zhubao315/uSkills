@@ -1,0 +1,28 @@
+site_name: uSkills
+site_url: https://zhubao315.github.io/uSkills/
+site_description: The open skill foundation for controllable Agent execution.
+repo_url: https://github.com/zhubao315/uSkills
+repo_name: zhubao315/uSkills
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+  palette:
+    primary: teal
+    accent: amber
+markdown_extensions:
+  - admonition
+  - tables
+  - pymdownx.highlight
+  - pymdownx.superfences
+nav:
+  - 首页: index.md
+  - 快速开始: quickstart.md
+  - 架构: architecture.md
+  - Schema: schema.md
+  - 技能库: skills.md
+  - Generated Skills Index: generated/skills-index.md
+  - Roadmap: roadmap.md

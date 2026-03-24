@@ -1,0 +1,19 @@
+name: Feature Request
+description: Suggest a new skill type, engine feature, or integration.
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: background
+    attributes:
+      label: Background
+      description: What use case or SOP scenario is missing?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the desired capability.
+    validations:
+      required: true

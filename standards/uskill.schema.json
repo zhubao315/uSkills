@@ -1,0 +1,280 @@
+{
+  "$defs": {
+    "ControlConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "timeout": {
+          "default": 30,
+          "title": "Timeout",
+          "type": "integer"
+        },
+        "retry": {
+          "default": 1,
+          "title": "Retry",
+          "type": "integer"
+        },
+        "interrupt": {
+          "default": true,
+          "title": "Interrupt",
+          "type": "boolean"
+        },
+        "breakpoint_allowed": {
+          "default": true,
+          "title": "Breakpoint Allowed",
+          "type": "boolean"
+        },
+        "mockable": {
+          "default": true,
+          "title": "Mockable",
+          "type": "boolean"
+        }
+      },
+      "title": "ControlConfig",
+      "type": "object"
+    },
+    "ExecuteConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "prompt_template": {
+          "title": "Prompt Template",
+          "type": "string"
+        },
+        "steps": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Steps",
+          "type": "array"
+        },
+        "temperature": {
+          "default": 0.1,
+          "title": "Temperature",
+          "type": "number"
+        },
+        "model": {
+          "default": "gpt-5.4-mini",
+          "title": "Model",
+          "type": "string"
+        },
+        "tools": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Tools",
+          "type": "array"
+        },
+        "fallback": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Fallback",
+          "type": "array"
+        }
+      },
+      "required": [
+        "prompt_template"
+      ],
+      "title": "ExecuteConfig",
+      "type": "object"
+    },
+    "OutputConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "format": {
+          "default": "json",
+          "title": "Format",
+          "type": "string"
+        },
+        "params": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Params",
+          "type": "array"
+        },
+        "validation_rules": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Validation Rules",
+          "type": "array"
+        }
+      },
+      "title": "OutputConfig",
+      "type": "object"
+    },
+    "SkillCategory": {
+      "enum": [
+        "atomic",
+        "composite",
+        "domain",
+        "governance"
+      ],
+      "title": "SkillCategory",
+      "type": "string"
+    },
+    "SkillInput": {
+      "additionalProperties": false,
+      "properties": {
+        "params": {
+          "items": {
+            "$ref": "#/$defs/SkillParam"
+          },
+          "title": "Params",
+          "type": "array"
+        }
+      },
+      "title": "SkillInput",
+      "type": "object"
+    },
+    "SkillMeta": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "version": {
+          "default": "1.0.0",
+          "title": "Version",
+          "type": "string"
+        },
+        "category": {
+          "$ref": "#/$defs/SkillCategory"
+        },
+        "domain": {
+          "title": "Domain",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Tags",
+          "type": "array"
+        },
+        "owner": {
+          "default": "community",
+          "title": "Owner",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "category",
+        "domain",
+        "description"
+      ],
+      "title": "SkillMeta",
+      "type": "object"
+    },
+    "SkillParam": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "type": {
+          "title": "Type",
+          "type": "string"
+        },
+        "required": {
+          "default": true,
+          "title": "Required",
+          "type": "boolean"
+        },
+        "description": {
+          "default": "",
+          "title": "Description",
+          "type": "string"
+        },
+        "default": {
+          "anyOf": [
+            {},
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Default"
+        }
+      },
+      "required": [
+        "name",
+        "type"
+      ],
+      "title": "SkillParam",
+      "type": "object"
+    },
+    "SourceTrace": {
+      "additionalProperties": false,
+      "properties": {
+        "sop_name": {
+          "title": "Sop Name",
+          "type": "string"
+        },
+        "sop_path": {
+          "title": "Sop Path",
+          "type": "string"
+        },
+        "step_index": {
+          "title": "Step Index",
+          "type": "integer"
+        },
+        "raw_step": {
+          "title": "Raw Step",
+          "type": "string"
+        }
+      },
+      "required": [
+        "sop_name",
+        "sop_path",
+        "step_index",
+        "raw_step"
+      ],
+      "title": "SourceTrace",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "skill_id": {
+      "title": "Skill Id",
+      "type": "string"
+    },
+    "meta": {
+      "$ref": "#/$defs/SkillMeta"
+    },
+    "input": {
+      "$ref": "#/$defs/SkillInput"
+    },
+    "execute": {
+      "$ref": "#/$defs/ExecuteConfig"
+    },
+    "output": {
+      "$ref": "#/$defs/OutputConfig"
+    },
+    "control": {
+      "$ref": "#/$defs/ControlConfig"
+    },
+    "source": {
+      "$ref": "#/$defs/SourceTrace"
+    }
+  },
+  "required": [
+    "skill_id",
+    "meta",
+    "input",
+    "execute",
+    "output",
+    "control",
+    "source"
+  ],
+  "title": "USkill",
+  "type": "object"
+}
