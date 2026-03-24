@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-09-终身学习者-个性化学习计划-19-ai辅助资源策展-使用-ai提示词-02-让ai-v1-0-0
+meta:
+  name: SOP-09-终身学习者-个性化学习计划 Step 19
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**AI辅助资源策展**: 使用**AI提示词-02**，让AI扮演“图书情报专家”，根据学习大纲，推荐高质量、权威的学习资源（书籍、核心论文、在线课程、开源项目、领域专家）。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-09-终身学习者-个性化学习计划
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-09-终身学习者-个性化学习计划
+
+    Step objective: **AI辅助资源策展**: 使用**AI提示词-02**，让AI扮演“图书情报专家”，根据学习大纲，推荐高质量、权威的学习资源（书籍、核心论文、在线课程、开源项目、领域专家）。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**AI辅助资源策展**: 使用**AI提示词-02**，让AI扮演“图书情报专家”，根据学习大纲，推荐高质量、权威的学习资源（书籍、核心论文、在线课程、开源项目、领域专家）。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-09-终身学习者-个性化学习计划
+  sop_path: /tmp/SOPs/SOP-09-终身学习者-个性化学习计划.md
+  step_index: 19
+  raw_step: '**AI辅助资源策展**: 使用**AI提示词-02**，让AI扮演“图书情报专家”，根据学习大纲，推荐高质量、权威的学习资源（书籍、核心论文、在线课程、开源项目、领域专家）。'

@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-19-户外大神-户外路线规划-64-提示词-02-gpx轨迹分析-你是一位gis地理-v1-0-0
+meta:
+  name: SOP-19-户外大神-户外路线规划 Step 64
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-02 (GPX轨迹分析)**: `你是一位GIS地理信息系统分析师。我将提供2-3条他人走过的GPX轨迹文件（以WKT或GeoJSON格式描述）。请你分析这些轨迹，并告诉我：1.
+    它们重合度最高的“主路线”是哪一段？2. 轨迹出现分叉的关键节点在哪里？3. 综合所有轨迹，标注出可能的稳定水源地和适合扎营的平坦区域。轨迹数据如下：[...]`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-19-户外大神-户外路线规划
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-19-户外大神-户外路线规划
+
+    Step objective: **提示词-02 (GPX轨迹分析)**: `你是一位GIS地理信息系统分析师。我将提供2-3条他人走过的GPX轨迹文件（以WKT或GeoJSON格式描述）。请你分析这些轨迹，并告诉我：1.
+    它们重合度最高的“主路线”是哪一段？2. 轨迹出现分叉的关键节点在哪里？3. 综合所有轨迹，标注出可能的稳定水源地和适合扎营的平坦区域。轨迹数据如下：[...]`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-02 (GPX轨迹分析)**: `你是一位GIS地理信息系统分析师。我将提供2-3条他人走过的GPX轨迹文件（以WKT或GeoJSON格式描述）。请你分析这些轨迹，并告诉我：1.
+    它们重合度最高的“主路线”是哪一段？2. 轨迹出现分叉的关键节点在哪里？3. 综合所有轨迹，标注出可能的稳定水源地和适合扎营的平坦区域。轨迹数据如下：[...]`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-19-户外大神-户外路线规划
+  sop_path: /tmp/SOPs/SOP-19-户外大神-户外路线规划.md
+  step_index: 64
+  raw_step: '**提示词-02 (GPX轨迹分析)**: `你是一位GIS地理信息系统分析师。我将提供2-3条他人走过的GPX轨迹文件（以WKT或GeoJSON格式描述）。请你分析这些轨迹，并告诉我：1.
+    它们重合度最高的“主路线”是哪一段？2. 轨迹出现分叉的关键节点在哪里？3. 综合所有轨迹，标注出可能的稳定水源地和适合扎营的平坦区域。轨迹数据如下：[...]`'

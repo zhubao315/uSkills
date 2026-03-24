@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-01-架构师-系统设计分析-163-主要ai需求-若有-v1-0-0
+meta:
+  name: SOP-01-架构师-系统设计分析 Step 163
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: 主要AI需求（若有）
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-01-架构师-系统设计分析
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-01-架构师-系统设计分析
+
+    Step objective: 主要AI需求（若有）
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - 主要AI需求（若有）
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-01-架构师-系统设计分析
+  sop_path: /tmp/SOPs/SOP-01-架构师-系统设计分析.md
+  step_index: 163
+  raw_step: 主要AI需求（若有）

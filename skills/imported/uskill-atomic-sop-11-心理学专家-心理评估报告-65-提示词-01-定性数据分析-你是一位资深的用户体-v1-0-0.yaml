@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-11-心理学专家-心理评估报告-65-提示词-01-定性数据分析-你是一位资深的用户体-v1-0-0
+meta:
+  name: SOP-11-心理学专家-心理评估报告 Step 65
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-01 (定性数据分析)**: `你是一位资深的用户体验研究员。我将提供[数量]份用户访谈的匿名文稿。请你：1. 使用主题建模，识别出被提及次数最多的Top
+    5痛点和Top 5期望。2. 对整体文稿进行情感分析，判断用户的主流情绪是积极、中立还是消极。3. 引用原文，总结出2-3个最有趣或最反直觉的用户观点。文稿如下：[...]`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-11-心理学专家-心理评估报告
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-11-心理学专家-心理评估报告
+
+    Step objective: **提示词-01 (定性数据分析)**: `你是一位资深的用户体验研究员。我将提供[数量]份用户访谈的匿名文稿。请你：1.
+    使用主题建模，识别出被提及次数最多的Top 5痛点和Top 5期望。2. 对整体文稿进行情感分析，判断用户的主流情绪是积极、中立还是消极。3. 引用原文，总结出2-3个最有趣或最反直觉的用户观点。文稿如下：[...]`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-01 (定性数据分析)**: `你是一位资深的用户体验研究员。我将提供[数量]份用户访谈的匿名文稿。请你：1. 使用主题建模，识别出被提及次数最多的Top
+    5痛点和Top 5期望。2. 对整体文稿进行情感分析，判断用户的主流情绪是积极、中立还是消极。3. 引用原文，总结出2-3个最有趣或最反直觉的用户观点。文稿如下：[...]`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-11-心理学专家-心理评估报告
+  sop_path: /tmp/SOPs/SOP-11-心理学专家-心理评估报告.md
+  step_index: 65
+  raw_step: '**提示词-01 (定性数据分析)**: `你是一位资深的用户体验研究员。我将提供[数量]份用户访谈的匿名文稿。请你：1. 使用主题建模，识别出被提及次数最多的Top
+    5痛点和Top 5期望。2. 对整体文稿进行情感分析，判断用户的主流情绪是积极、中立还是消极。3. 引用原文，总结出2-3个最有趣或最反直觉的用户观点。文稿如下：[...]`'

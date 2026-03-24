@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-10-国学大师-古籍文献解读-13-确定工作文本-根据校勘结果-确定用于后续研究的--v1-0-0
+meta:
+  name: SOP-10-国学大师-古籍文献解读 Step 13
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**确定工作文本**: 根据校勘结果，确定用于后续研究的、最可靠的工作文本。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-10-国学大师-古籍文献解读
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-10-国学大师-古籍文献解读
+
+    Step objective: **确定工作文本**: 根据校勘结果，确定用于后续研究的、最可靠的工作文本。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**确定工作文本**: 根据校勘结果，确定用于后续研究的、最可靠的工作文本。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-10-国学大师-古籍文献解读
+  sop_path: /tmp/SOPs/SOP-10-国学大师-古籍文献解读.md
+  step_index: 13
+  raw_step: '**确定工作文本**: 根据校勘结果，确定用于后续研究的、最可靠的工作文本。'

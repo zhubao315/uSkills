@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-09-终身学习者-个性化学习计划-50-提示词-03-苏格拉底式提问-你是一位遵循苏格拉-v1-0-0
+meta:
+  name: SOP-09-终身学习者-个性化学习计划 Step 50
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-03 (苏格拉底式提问)**: `你是一位遵循苏格拉底教学法的导师。我正在学习概念“[某个概念，如‘Kubernetes中的Sidecar模式’]”，我的初步理解是[...]。请不要直接告诉我答案，而是通过连续提出5个深刻的、启发性的问题，来引导我更深入地思考这个概念的本质、应用场景、优缺点和底层原理。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-09-终身学习者-个性化学习计划
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-09-终身学习者-个性化学习计划
+
+    Step objective: **提示词-03 (苏格拉底式提问)**: `你是一位遵循苏格拉底教学法的导师。我正在学习概念“[某个概念，如‘Kubernetes中的Sidecar模式’]”，我的初步理解是[...]。请不要直接告诉我答案，而是通过连续提出5个深刻的、启发性的问题，来引导我更深入地思考这个概念的本质、应用场景、优缺点和底层原理。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-03 (苏格拉底式提问)**: `你是一位遵循苏格拉底教学法的导师。我正在学习概念“[某个概念，如‘Kubernetes中的Sidecar模式’]”，我的初步理解是[...]。请不要直接告诉我答案，而是通过连续提出5个深刻的、启发性的问题，来引导我更深入地思考这个概念的本质、应用场景、优缺点和底层原理。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-09-终身学习者-个性化学习计划
+  sop_path: /tmp/SOPs/SOP-09-终身学习者-个性化学习计划.md
+  step_index: 50
+  raw_step: '**提示词-03 (苏格拉底式提问)**: `你是一位遵循苏格拉底教学法的导师。我正在学习概念“[某个概念，如‘Kubernetes中的Sidecar模式’]”，我的初步理解是[...]。请不要直接告诉我答案，而是通过连续提出5个深刻的、启发性的问题，来引导我更深入地思考这个概念的本质、应用场景、优缺点和底层原理。`'

@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-10-国学大师-古籍文献解读-44-将知识原子化-结构化-网络化-是-国学智典-实现-v1-0-0
+meta:
+  name: SOP-10-国学大师-古籍文献解读 Step 44
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**将知识原子化、结构化、网络化**，是`国学智典`实现智能问答、关联推荐等高级功能的基础，也是实现知识复利的关键步骤。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-10-国学大师-古籍文献解读
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-10-国学大师-古籍文献解读
+
+    Step objective: **将知识原子化、结构化、网络化**，是`国学智典`实现智能问答、关联推荐等高级功能的基础，也是实现知识复利的关键步骤。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**将知识原子化、结构化、网络化**，是`国学智典`实现智能问答、关联推荐等高级功能的基础，也是实现知识复利的关键步骤。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-10-国学大师-古籍文献解读
+  sop_path: /tmp/SOPs/SOP-10-国学大师-古籍文献解读.md
+  step_index: 44
+  raw_step: '**将知识原子化、结构化、网络化**，是`国学智典`实现智能问答、关联推荐等高级功能的基础，也是实现知识复利的关键步骤。'

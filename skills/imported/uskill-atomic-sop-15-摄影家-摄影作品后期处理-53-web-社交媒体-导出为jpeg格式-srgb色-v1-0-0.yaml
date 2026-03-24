@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-15-摄影家-摄影作品后期处理-53-web-社交媒体-导出为jpeg格式-srgb色-v1-0-0
+meta:
+  name: SOP-15-摄影家-摄影作品后期处理 Step 53
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**Web/社交媒体**: 导出为JPEG格式，sRGB色彩空间，长边设置为2048像素。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-15-摄影家-摄影作品后期处理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-15-摄影家-摄影作品后期处理
+
+    Step objective: **Web/社交媒体**: 导出为JPEG格式，sRGB色彩空间，长边设置为2048像素。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**Web/社交媒体**: 导出为JPEG格式，sRGB色彩空间，长边设置为2048像素。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-15-摄影家-摄影作品后期处理
+  sop_path: /tmp/SOPs/SOP-15-摄影家-摄影作品后期处理.md
+  step_index: 53
+  raw_step: '**Web/社交媒体**: 导出为JPEG格式，sRGB色彩空间，长边设置为2048像素。'

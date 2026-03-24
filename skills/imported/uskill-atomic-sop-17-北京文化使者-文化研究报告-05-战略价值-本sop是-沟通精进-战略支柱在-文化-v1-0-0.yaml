@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-17-北京文化使者-文化研究报告-05-战略价值-本sop是-沟通精进-战略支柱在-文化-v1-0-0
+meta:
+  name: SOP-17-北京文化使者-文化研究报告 Step 5
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**战略价值**: 本SOP是“沟通精进”战略支柱在**文化传播领域的核心实践**。它旨在将我对北京的深厚理解与热爱，通过创新的叙事和技术手段，转化为连接东西方、沟通古与今的文化桥梁，塑造一个立体、鲜活、富有魅力的北京形象，并提升个人作为文化交流者的全球影响力。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-17-北京文化使者-文化研究报告
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-17-北京文化使者-文化研究报告
+
+    Step objective: **战略价值**: 本SOP是“沟通精进”战略支柱在**文化传播领域的核心实践**。它旨在将我对北京的深厚理解与热爱，通过创新的叙事和技术手段，转化为连接东西方、沟通古与今的文化桥梁，塑造一个立体、鲜活、富有魅力的北京形象，并提升个人作为文化交流者的全球影响力。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**战略价值**: 本SOP是“沟通精进”战略支柱在**文化传播领域的核心实践**。它旨在将我对北京的深厚理解与热爱，通过创新的叙事和技术手段，转化为连接东西方、沟通古与今的文化桥梁，塑造一个立体、鲜活、富有魅力的北京形象，并提升个人作为文化交流者的全球影响力。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-17-北京文化使者-文化研究报告
+  sop_path: /tmp/SOPs/SOP-17-北京文化使者-文化研究报告.md
+  step_index: 5
+  raw_step: '**战略价值**: 本SOP是“沟通精进”战略支柱在**文化传播领域的核心实践**。它旨在将我对北京的深厚理解与热爱，通过创新的叙事和技术手段，转化为连接东西方、沟通古与今的文化桥梁，塑造一个立体、鲜活、富有魅力的北京形象，并提升个人作为文化交流者的全球影响力。'

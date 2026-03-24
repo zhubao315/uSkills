@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-03-ai专家-提示词优化与测试-05-战略价值-本sop是-uprompt-产品的灵魂-v1-0-0
+meta:
+  name: SOP-03-AI专家-提示词优化与测试 Step 5
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**战略价值**: 本SOP是**`uPrompt`产品的灵魂和方法论基础**。它将提示词从“灵感笔记”提升为可管理的、可迭代的、可复用的**高价值数字资产**，直接赋能“效率倍增”和“智慧学习”两大战略支柱。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-03-ai专家-提示词优化与测试
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-03-AI专家-提示词优化与测试
+
+    Step objective: **战略价值**: 本SOP是**`uPrompt`产品的灵魂和方法论基础**。它将提示词从“灵感笔记”提升为可管理的、可迭代的、可复用的**高价值数字资产**，直接赋能“效率倍增”和“智慧学习”两大战略支柱。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**战略价值**: 本SOP是**`uPrompt`产品的灵魂和方法论基础**。它将提示词从“灵感笔记”提升为可管理的、可迭代的、可复用的**高价值数字资产**，直接赋能“效率倍增”和“智慧学习”两大战略支柱。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-03-AI专家-提示词优化与测试
+  sop_path: /tmp/SOPs/SOP-03-AI专家-提示词优化与测试.md
+  step_index: 5
+  raw_step: '**战略价值**: 本SOP是**`uPrompt`产品的灵魂和方法论基础**。它将提示词从“灵感笔记”提升为可管理的、可迭代的、可复用的**高价值数字资产**，直接赋能“效率倍增”和“智慧学习”两大战略支柱。'

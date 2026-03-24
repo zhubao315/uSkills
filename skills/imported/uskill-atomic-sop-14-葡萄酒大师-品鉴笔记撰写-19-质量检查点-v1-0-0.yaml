@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-14-葡萄酒大师-品鉴笔记撰写-19-质量检查点-v1-0-0
+meta:
+  name: SOP-14-葡萄酒大师-品鉴笔记撰写 Step 19
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**质量检查点**:'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-14-葡萄酒大师-品鉴笔记撰写
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-14-葡萄酒大师-品鉴笔记撰写
+
+    Step objective: **质量检查点**:
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**质量检查点**:'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-14-葡萄酒大师-品鉴笔记撰写
+  sop_path: /tmp/SOPs/SOP-14-葡萄酒大师-品鉴笔记撰写.md
+  step_index: 19
+  raw_step: '**质量检查点**:'

@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-07-知识产权顾问-专利申请文书-42-充分公开-围绕最终版本的权利要求书-撰写说明书--v1-0-0
+meta:
+  name: SOP-07-知识产权顾问-专利申请文书 Step 42
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**充分公开**: 围绕最终版本的权利要求书，撰写说明书。确保说明书详细描述了至少一个**具体实施方式 (Embodiment)**，使得本领域的普通技术人员（如另一位AI工程师）能够再现本发明。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-07-知识产权顾问-专利申请文书
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-07-知识产权顾问-专利申请文书
+
+    Step objective: **充分公开**: 围绕最终版本的权利要求书，撰写说明书。确保说明书详细描述了至少一个**具体实施方式 (Embodiment)**，使得本领域的普通技术人员（如另一位AI工程师）能够再现本发明。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**充分公开**: 围绕最终版本的权利要求书，撰写说明书。确保说明书详细描述了至少一个**具体实施方式 (Embodiment)**，使得本领域的普通技术人员（如另一位AI工程师）能够再现本发明。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-07-知识产权顾问-专利申请文书
+  sop_path: /tmp/SOPs/SOP-07-知识产权顾问-专利申请文书.md
+  step_index: 42
+  raw_step: '**充分公开**: 围绕最终版本的权利要求书，撰写说明书。确保说明书详细描述了至少一个**具体实施方式 (Embodiment)**，使得本领域的普通技术人员（如另一位AI工程师）能够再现本发明。'

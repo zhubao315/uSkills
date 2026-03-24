@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-20-深度阅读与知识管理-60-提示词-03-知识拆解师-你是一位精通-卡片盒笔-v1-0-0
+meta:
+  name: SOP-20-深度阅读与知识管理 Step 60
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-03 (知识拆解师)**: `你是一位精通“卡片盒笔记法”的知识架构师。以下是我阅读《[书名]》时的原始高亮和碎片批注。请把它们重构为一组“原子化知识卡片”。每张卡片要求：1.
+    标题：核心概念；2. 内容：用通俗语言重述核心逻辑；3. 洞察：附带一条我的个人思考（基于批注）；4. 标签：提取2-3个关键标签。原始材料：[粘贴材料]`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-20-深度阅读与知识管理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-20-深度阅读与知识管理
+
+    Step objective: **提示词-03 (知识拆解师)**: `你是一位精通“卡片盒笔记法”的知识架构师。以下是我阅读《[书名]》时的原始高亮和碎片批注。请把它们重构为一组“原子化知识卡片”。每张卡片要求：1.
+    标题：核心概念；2. 内容：用通俗语言重述核心逻辑；3. 洞察：附带一条我的个人思考（基于批注）；4. 标签：提取2-3个关键标签。原始材料：[粘贴材料]`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-03 (知识拆解师)**: `你是一位精通“卡片盒笔记法”的知识架构师。以下是我阅读《[书名]》时的原始高亮和碎片批注。请把它们重构为一组“原子化知识卡片”。每张卡片要求：1.
+    标题：核心概念；2. 内容：用通俗语言重述核心逻辑；3. 洞察：附带一条我的个人思考（基于批注）；4. 标签：提取2-3个关键标签。原始材料：[粘贴材料]`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-20-深度阅读与知识管理
+  sop_path: /tmp/SOPs/SOP-20-深度阅读与知识管理.md
+  step_index: 60
+  raw_step: '**提示词-03 (知识拆解师)**: `你是一位精通“卡片盒笔记法”的知识架构师。以下是我阅读《[书名]》时的原始高亮和碎片批注。请把它们重构为一组“原子化知识卡片”。每张卡片要求：1.
+    标题：核心概念；2. 内容：用通俗语言重述核心逻辑；3. 洞察：附带一条我的个人思考（基于批注）；4. 标签：提取2-3个关键标签。原始材料：[粘贴材料]`'

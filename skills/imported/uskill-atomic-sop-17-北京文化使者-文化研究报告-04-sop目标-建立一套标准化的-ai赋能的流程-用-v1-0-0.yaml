@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-17-北京文化使者-文化研究报告-04-sop目标-建立一套标准化的-ai赋能的流程-用-v1-0-0
+meta:
+  name: SOP-17-北京文化使者-文化研究报告 Step 4
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**SOP目标**: 建立一套标准化的、AI赋能的流程，用于系统化地研究北京文化主题，并将其创作、包装为适合全球传播的高质量、多媒体数字内容。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-17-北京文化使者-文化研究报告
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-17-北京文化使者-文化研究报告
+
+    Step objective: **SOP目标**: 建立一套标准化的、AI赋能的流程，用于系统化地研究北京文化主题，并将其创作、包装为适合全球传播的高质量、多媒体数字内容。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**SOP目标**: 建立一套标准化的、AI赋能的流程，用于系统化地研究北京文化主题，并将其创作、包装为适合全球传播的高质量、多媒体数字内容。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-17-北京文化使者-文化研究报告
+  sop_path: /tmp/SOPs/SOP-17-北京文化使者-文化研究报告.md
+  step_index: 4
+  raw_step: '**SOP目标**: 建立一套标准化的、AI赋能的流程，用于系统化地研究北京文化主题，并将其创作、包装为适合全球传播的高质量、多媒体数字内容。'

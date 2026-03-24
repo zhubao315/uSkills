@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-09-终身学习者-个性化学习计划-49-提示词-02-资源策展-你是一位博学的图书情报专-v1-0-0
+meta:
+  name: SOP-09-终身学习者-个性化学习计划 Step 49
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-02 (资源策展)**: `你是一位博学的图书情报专家和特定领域（如[领域名称]）的资深研究员。请围绕学习主题“[学习主题]”，为我推荐一个“最小知识集合”，包含：1.
+    必读的2本“圣经”级书籍；2. 3篇开创性的学术论文或行业报告；3. 1-2个最值得学习的在线课程（Coursera/edX）；4. 2-3个必看的开源项目或实战教程。请对每个推荐资源附上一句推荐理由。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-09-终身学习者-个性化学习计划
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-09-终身学习者-个性化学习计划
+
+    Step objective: **提示词-02 (资源策展)**: `你是一位博学的图书情报专家和特定领域（如[领域名称]）的资深研究员。请围绕学习主题“[学习主题]”，为我推荐一个“最小知识集合”，包含：1.
+    必读的2本“圣经”级书籍；2. 3篇开创性的学术论文或行业报告；3. 1-2个最值得学习的在线课程（Coursera/edX）；4. 2-3个必看的开源项目或实战教程。请对每个推荐资源附上一句推荐理由。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-02 (资源策展)**: `你是一位博学的图书情报专家和特定领域（如[领域名称]）的资深研究员。请围绕学习主题“[学习主题]”，为我推荐一个“最小知识集合”，包含：1.
+    必读的2本“圣经”级书籍；2. 3篇开创性的学术论文或行业报告；3. 1-2个最值得学习的在线课程（Coursera/edX）；4. 2-3个必看的开源项目或实战教程。请对每个推荐资源附上一句推荐理由。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-09-终身学习者-个性化学习计划
+  sop_path: /tmp/SOPs/SOP-09-终身学习者-个性化学习计划.md
+  step_index: 49
+  raw_step: '**提示词-02 (资源策展)**: `你是一位博学的图书情报专家和特定领域（如[领域名称]）的资深研究员。请围绕学习主题“[学习主题]”，为我推荐一个“最小知识集合”，包含：1.
+    必读的2本“圣经”级书籍；2. 3篇开创性的学术论文或行业报告；3. 1-2个最值得学习的在线课程（Coursera/edX）；4. 2-3个必看的开源项目或实战教程。请对每个推荐资源附上一句推荐理由。`'

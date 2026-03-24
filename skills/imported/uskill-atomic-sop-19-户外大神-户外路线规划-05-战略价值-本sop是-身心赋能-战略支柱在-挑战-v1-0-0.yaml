@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-19-户外大神-户外路线规划-05-战略价值-本sop是-身心赋能-战略支柱在-挑战-v1-0-0
+meta:
+  name: SOP-19-户外大神-户外路线规划 Step 5
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**战略价值**: 本SOP是“身心赋能”战略支柱在**挑战与成长**维度的最高实践。它将[[🏗️ 架构师：AI时代价值系统的核心引擎|系统思维]]、[[🤖
+    人工智能专家技能|数据分析能力]]和[[🧠 心理学专家技能|心理韧性]]全面应用于户外探索，不仅锻炼身心，更是一场关于决策、风险管理和团队协作的实战演练，其经验可直接反哺我的职业与生活。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-19-户外大神-户外路线规划
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-19-户外大神-户外路线规划
+
+    Step objective: **战略价值**: 本SOP是“身心赋能”战略支柱在**挑战与成长**维度的最高实践。它将[[🏗️ 架构师：AI时代价值系统的核心引擎|系统思维]]、[[🤖
+    人工智能专家技能|数据分析能力]]和[[🧠 心理学专家技能|心理韧性]]全面应用于户外探索，不仅锻炼身心，更是一场关于决策、风险管理和团队协作的实战演练，其经验可直接反哺我的职业与生活。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**战略价值**: 本SOP是“身心赋能”战略支柱在**挑战与成长**维度的最高实践。它将[[🏗️ 架构师：AI时代价值系统的核心引擎|系统思维]]、[[🤖
+    人工智能专家技能|数据分析能力]]和[[🧠 心理学专家技能|心理韧性]]全面应用于户外探索，不仅锻炼身心，更是一场关于决策、风险管理和团队协作的实战演练，其经验可直接反哺我的职业与生活。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-19-户外大神-户外路线规划
+  sop_path: /tmp/SOPs/SOP-19-户外大神-户外路线规划.md
+  step_index: 5
+  raw_step: '**战略价值**: 本SOP是“身心赋能”战略支柱在**挑战与成长**维度的最高实践。它将[[🏗️ 架构师：AI时代价值系统的核心引擎|系统思维]]、[[🤖
+    人工智能专家技能|数据分析能力]]和[[🧠 心理学专家技能|心理韧性]]全面应用于户外探索，不仅锻炼身心，更是一场关于决策、风险管理和团队协作的实战演练，其经验可直接反哺我的职业与生活。'

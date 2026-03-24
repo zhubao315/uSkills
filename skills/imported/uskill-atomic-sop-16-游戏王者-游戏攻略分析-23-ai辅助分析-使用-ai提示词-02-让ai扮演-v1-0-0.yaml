@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-16-游戏王者-游戏攻略分析-23-ai辅助分析-使用-ai提示词-02-让ai扮演-v1-0-0
+meta:
+  name: SOP-16-游戏王者-游戏攻略分析 Step 23
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**AI辅助分析**: 使用**AI提示词-02**，让AI扮演“电竞复盘教练”，从经济曲线、决策逻辑、操作细节、资源置换等角度，对本局进行深度复盘。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-16-游戏王者-游戏攻略分析
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-16-游戏王者-游戏攻略分析
+
+    Step objective: **AI辅助分析**: 使用**AI提示词-02**，让AI扮演“电竞复盘教练”，从经济曲线、决策逻辑、操作细节、资源置换等角度，对本局进行深度复盘。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**AI辅助分析**: 使用**AI提示词-02**，让AI扮演“电竞复盘教练”，从经济曲线、决策逻辑、操作细节、资源置换等角度，对本局进行深度复盘。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-16-游戏王者-游戏攻略分析
+  sop_path: /tmp/SOPs/SOP-16-游戏王者-游戏攻略分析.md
+  step_index: 23
+  raw_step: '**AI辅助分析**: 使用**AI提示词-02**，让AI扮演“电竞复盘教练”，从经济曲线、决策逻辑、操作细节、资源置换等角度，对本局进行深度复盘。'

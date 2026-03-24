@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-22-目标管理-57-提示词-04-季度复盘引导-你是一位经验丰富的复-v1-0-0
+meta:
+  name: SOP-22-目标管理 Step 57
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-04 (季度复盘引导)**: `你是一位经验丰富的复盘引导师。我的一个季度OKR刚刚结束，目标（O）是“[O描述]”，关键结果（KR）的最终得分如下：[列出KR及最终得分]。请你通过一系列深刻的问题，引导我进行一次全面的季度复盘。问题请覆盖“成就与亮点”、“失败与不足”、“根本原因分析”和“核心经验沉淀”四个方面。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-22-目标管理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-22-目标管理
+
+    Step objective: **提示词-04 (季度复盘引导)**: `你是一位经验丰富的复盘引导师。我的一个季度OKR刚刚结束，目标（O）是“[O描述]”，关键结果（KR）的最终得分如下：[列出KR及最终得分]。请你通过一系列深刻的问题，引导我进行一次全面的季度复盘。问题请覆盖“成就与亮点”、“失败与不足”、“根本原因分析”和“核心经验沉淀”四个方面。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-04 (季度复盘引导)**: `你是一位经验丰富的复盘引导师。我的一个季度OKR刚刚结束，目标（O）是“[O描述]”，关键结果（KR）的最终得分如下：[列出KR及最终得分]。请你通过一系列深刻的问题，引导我进行一次全面的季度复盘。问题请覆盖“成就与亮点”、“失败与不足”、“根本原因分析”和“核心经验沉淀”四个方面。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-22-目标管理
+  sop_path: /tmp/SOPs/SOP-22-目标管理.md
+  step_index: 57
+  raw_step: '**提示词-04 (季度复盘引导)**: `你是一位经验丰富的复盘引导师。我的一个季度OKR刚刚结束，目标（O）是“[O描述]”，关键结果（KR）的最终得分如下：[列出KR及最终得分]。请你通过一系列深刻的问题，引导我进行一次全面的季度复盘。问题请覆盖“成就与亮点”、“失败与不足”、“根本原因分析”和“核心经验沉淀”四个方面。`'

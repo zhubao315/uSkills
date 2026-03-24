@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-13-健身跑者-训练计划制定-31-伤病风险预警-关注数据中的异常信号-如静息心率持-v1-0-0
+meta:
+  name: SOP-13-健身跑者-训练计划制定 Step 31
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**伤病风险预警**: 关注数据中的异常信号（如静息心率持续升高、HRV持续下降），作为潜在过度训练或伤病风险的预警。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-13-健身跑者-训练计划制定
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-13-健身跑者-训练计划制定
+
+    Step objective: **伤病风险预警**: 关注数据中的异常信号（如静息心率持续升高、HRV持续下降），作为潜在过度训练或伤病风险的预警。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**伤病风险预警**: 关注数据中的异常信号（如静息心率持续升高、HRV持续下降），作为潜在过度训练或伤病风险的预警。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-13-健身跑者-训练计划制定
+  sop_path: /tmp/SOPs/SOP-13-健身跑者-训练计划制定.md
+  step_index: 31
+  raw_step: '**伤病风险预警**: 关注数据中的异常信号（如静息心率持续升高、HRV持续下降），作为潜在过度训练或伤病风险的预警。'

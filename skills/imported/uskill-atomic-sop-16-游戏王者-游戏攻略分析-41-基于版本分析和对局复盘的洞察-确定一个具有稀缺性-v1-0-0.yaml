@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-16-游戏王者-游戏攻略分析-41-基于版本分析和对局复盘的洞察-确定一个具有稀缺性-v1-0-0
+meta:
+  name: SOP-16-游戏王者-游戏攻略分析 Step 41
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: 基于版本分析和对局复盘的洞察，确定一个具有稀缺性和深度的内容主题（如“Sxx赛季T0打野的全新博弈思路”、“一篇文章讲透XX英雄的克制与反克制”）。
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-16-游戏王者-游戏攻略分析
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-16-游戏王者-游戏攻略分析
+
+    Step objective: 基于版本分析和对局复盘的洞察，确定一个具有稀缺性和深度的内容主题（如“Sxx赛季T0打野的全新博弈思路”、“一篇文章讲透XX英雄的克制与反克制”）。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - 基于版本分析和对局复盘的洞察，确定一个具有稀缺性和深度的内容主题（如“Sxx赛季T0打野的全新博弈思路”、“一篇文章讲透XX英雄的克制与反克制”）。
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-16-游戏王者-游戏攻略分析
+  sop_path: /tmp/SOPs/SOP-16-游戏王者-游戏攻略分析.md
+  step_index: 41
+  raw_step: 基于版本分析和对局复盘的洞察，确定一个具有稀缺性和深度的内容主题（如“Sxx赛季T0打野的全新博弈思路”、“一篇文章讲透XX英雄的克制与反克制”）。

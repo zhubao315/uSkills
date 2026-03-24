@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-09-终身学习者-个性化学习计划-05-战略价值-本sop是-智慧学习-战略支柱的-顶层-v1-0-0
+meta:
+  name: SOP-09-终身学习者-个性化学习计划 Step 5
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**战略价值**: 本SOP是“智慧学习”战略支柱的**顶层设计与核心执行框架**。它确保每一次学习都是一次战略投资，旨在构建和强化个人能力矩阵，最终实现**知识复利**，为所有其他技能的提升提供源动力。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-09-终身学习者-个性化学习计划
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-09-终身学习者-个性化学习计划
+
+    Step objective: **战略价值**: 本SOP是“智慧学习”战略支柱的**顶层设计与核心执行框架**。它确保每一次学习都是一次战略投资，旨在构建和强化个人能力矩阵，最终实现**知识复利**，为所有其他技能的提升提供源动力。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**战略价值**: 本SOP是“智慧学习”战略支柱的**顶层设计与核心执行框架**。它确保每一次学习都是一次战略投资，旨在构建和强化个人能力矩阵，最终实现**知识复利**，为所有其他技能的提升提供源动力。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-09-终身学习者-个性化学习计划
+  sop_path: /tmp/SOPs/SOP-09-终身学习者-个性化学习计划.md
+  step_index: 5
+  raw_step: '**战略价值**: 本SOP是“智慧学习”战略支柱的**顶层设计与核心执行框架**。它确保每一次学习都是一次战略投资，旨在构建和强化个人能力矩阵，最终实现**知识复利**，为所有其他技能的提升提供源动力。'

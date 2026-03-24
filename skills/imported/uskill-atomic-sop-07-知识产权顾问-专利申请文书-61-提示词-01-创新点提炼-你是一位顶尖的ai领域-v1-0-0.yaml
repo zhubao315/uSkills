@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-07-知识产权顾问-专利申请文书-61-提示词-01-创新点提炼-你是一位顶尖的ai领域-v1-0-0
+meta:
+  name: SOP-07-知识产权顾问-专利申请文书 Step 61
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-01 (创新点提炼)**: `你是一位顶尖的AI领域专利代理师。请阅读我提供的技术交底书，并以专业的眼光，提炼出其中可能构成核心创新点的3-5个技术特征。请说明每个创新点解决了什么技术问题，并带来了什么有益效果。技术交底书：[粘贴技术描述]`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-07-知识产权顾问-专利申请文书
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-07-知识产权顾问-专利申请文书
+
+    Step objective: **提示词-01 (创新点提炼)**: `你是一位顶尖的AI领域专利代理师。请阅读我提供的技术交底书，并以专业的眼光，提炼出其中可能构成核心创新点的3-5个技术特征。请说明每个创新点解决了什么技术问题，并带来了什么有益效果。技术交底书：[粘贴技术描述]`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-01 (创新点提炼)**: `你是一位顶尖的AI领域专利代理师。请阅读我提供的技术交底书，并以专业的眼光，提炼出其中可能构成核心创新点的3-5个技术特征。请说明每个创新点解决了什么技术问题，并带来了什么有益效果。技术交底书：[粘贴技术描述]`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-07-知识产权顾问-专利申请文书
+  sop_path: /tmp/SOPs/SOP-07-知识产权顾问-专利申请文书.md
+  step_index: 61
+  raw_step: '**提示词-01 (创新点提炼)**: `你是一位顶尖的AI领域专利代理师。请阅读我提供的技术交底书，并以专业的眼光，提炼出其中可能构成核心创新点的3-5个技术特征。请说明每个创新点解决了什么技术问题，并带来了什么有益效果。技术交底书：[粘贴技术描述]`'

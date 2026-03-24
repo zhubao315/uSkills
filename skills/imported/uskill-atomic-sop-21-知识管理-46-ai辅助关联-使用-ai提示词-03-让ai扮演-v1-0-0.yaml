@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-21-知识管理-46-ai辅助关联-使用-ai提示词-03-让ai扮演-v1-0-0
+meta:
+  name: SOP-21-知识管理 Step 46
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**AI辅助关联**: 使用**AI提示词-03**，让AI扮演“创意催化剂”，分析当前笔记，并建议3-5个可能与之相关的、存在于我知识库中的其他概念或笔记。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-21-知识管理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-21-知识管理
+
+    Step objective: **AI辅助关联**: 使用**AI提示词-03**，让AI扮演“创意催化剂”，分析当前笔记，并建议3-5个可能与之相关的、存在于我知识库中的其他概念或笔记。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**AI辅助关联**: 使用**AI提示词-03**，让AI扮演“创意催化剂”，分析当前笔记，并建议3-5个可能与之相关的、存在于我知识库中的其他概念或笔记。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-21-知识管理
+  sop_path: /tmp/SOPs/SOP-21-知识管理.md
+  step_index: 46
+  raw_step: '**AI辅助关联**: 使用**AI提示词-03**，让AI扮演“创意催化剂”，分析当前笔记，并建议3-5个可能与之相关的、存在于我知识库中的其他概念或笔记。'

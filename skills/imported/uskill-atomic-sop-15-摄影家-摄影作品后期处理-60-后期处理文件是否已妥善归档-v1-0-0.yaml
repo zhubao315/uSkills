@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-15-摄影家-摄影作品后期处理-60-后期处理文件是否已妥善归档-v1-0-0
+meta:
+  name: SOP-15-摄影家-摄影作品后期处理 Step 60
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '[ ] 后期处理文件是否已妥善归档？'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-15-摄影家-摄影作品后期处理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-15-摄影家-摄影作品后期处理
+
+    Step objective: [ ] 后期处理文件是否已妥善归档？
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '[ ] 后期处理文件是否已妥善归档？'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-15-摄影家-摄影作品后期处理
+  sop_path: /tmp/SOPs/SOP-15-摄影家-摄影作品后期处理.md
+  step_index: 60
+  raw_step: '[ ] 后期处理文件是否已妥善归档？'

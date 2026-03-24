@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-22-目标管理-05-战略价值-本sop是-个人战略的-总指挥室-和--v1-0-0
+meta:
+  name: SOP-22-目标管理 Step 5
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**战略价值**: 本SOP是**个人战略的“总指挥室”和“导航仪”**。它将宏大的年度愿景（如“AI-Led Evolution”）转化为具体的、可衡量的季度行动，通过设定挑战性目标（O）和量化关键结果（KR），驱动个人能力的指数级成长和战略目标的最终达成。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-22-目标管理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-22-目标管理
+
+    Step objective: **战略价值**: 本SOP是**个人战略的“总指挥室”和“导航仪”**。它将宏大的年度愿景（如“AI-Led Evolution”）转化为具体的、可衡量的季度行动，通过设定挑战性目标（O）和量化关键结果（KR），驱动个人能力的指数级成长和战略目标的最终达成。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**战略价值**: 本SOP是**个人战略的“总指挥室”和“导航仪”**。它将宏大的年度愿景（如“AI-Led Evolution”）转化为具体的、可衡量的季度行动，通过设定挑战性目标（O）和量化关键结果（KR），驱动个人能力的指数级成长和战略目标的最终达成。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-22-目标管理
+  sop_path: /tmp/SOPs/SOP-22-目标管理.md
+  step_index: 5
+  raw_step: '**战略价值**: 本SOP是**个人战略的“总指挥室”和“导航仪”**。它将宏大的年度愿景（如“AI-Led Evolution”）转化为具体的、可衡量的季度行动，通过设定挑战性目标（O）和量化关键结果（KR），驱动个人能力的指数级成长和战略目标的最终达成。'

@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-14-葡萄酒大师-品鉴笔记撰写-05-战略价值-本sop是-身心赋能-和-沟通精进-两-v1-0-0
+meta:
+  name: SOP-14-葡萄酒大师-品鉴笔记撰写 Step 5
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**战略价值**: 本SOP是“身心赋能”和“沟通精进”两大战略支柱的交汇点。它不仅通过感官训练提升生活品质，更是将个人体验和知识，转化为公开影响力和社交资本的核心规程，为[[🎨
+    生活艺术家技能]]提供丰富素材。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-14-葡萄酒大师-品鉴笔记撰写
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-14-葡萄酒大师-品鉴笔记撰写
+
+    Step objective: **战略价值**: 本SOP是“身心赋能”和“沟通精进”两大战略支柱的交汇点。它不仅通过感官训练提升生活品质，更是将个人体验和知识，转化为公开影响力和社交资本的核心规程，为[[🎨
+    生活艺术家技能]]提供丰富素材。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**战略价值**: 本SOP是“身心赋能”和“沟通精进”两大战略支柱的交汇点。它不仅通过感官训练提升生活品质，更是将个人体验和知识，转化为公开影响力和社交资本的核心规程，为[[🎨
+    生活艺术家技能]]提供丰富素材。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-14-葡萄酒大师-品鉴笔记撰写
+  sop_path: /tmp/SOPs/SOP-14-葡萄酒大师-品鉴笔记撰写.md
+  step_index: 5
+  raw_step: '**战略价值**: 本SOP是“身心赋能”和“沟通精进”两大战略支柱的交汇点。它不仅通过感官训练提升生活品质，更是将个人体验和知识，转化为公开影响力和社交资本的核心规程，为[[🎨
+    生活艺术家技能]]提供丰富素材。'

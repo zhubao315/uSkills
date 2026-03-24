@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-18-数字人生-个人数据分析报告-60-提示词-03-行动计划生成-你是一位顶级的个人效-v1-0-0
+meta:
+  name: SOP-18-数字人生-个人数据分析报告 Step 60
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-03 (行动计划生成)**: `你是一位顶级的个人效能教练（Performance Coach）。基于我的核心洞察：“[粘贴核心洞察，如‘下午2-4点是我的效率低谷，可能是因为午餐后血糖波动和缺乏短期激励’]”，请为我设计一个为期一周的“下午效率提升”改进实验。计划需包含：1.
+    明确的实验假设；2. 每日需执行的具体行动（如调整午餐结构、设置番茄钟）；3. 用于衡量实验是否成功的量化指标（如‘下午时段完成的任务数’）；4. 实验结束后的评估标准。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-18-数字人生-个人数据分析报告
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-18-数字人生-个人数据分析报告
+
+    Step objective: **提示词-03 (行动计划生成)**: `你是一位顶级的个人效能教练（Performance Coach）。基于我的核心洞察：“[粘贴核心洞察，如‘下午2-4点是我的效率低谷，可能是因为午餐后血糖波动和缺乏短期激励’]”，请为我设计一个为期一周的“下午效率提升”改进实验。计划需包含：1.
+    明确的实验假设；2. 每日需执行的具体行动（如调整午餐结构、设置番茄钟）；3. 用于衡量实验是否成功的量化指标（如‘下午时段完成的任务数’）；4. 实验结束后的评估标准。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-03 (行动计划生成)**: `你是一位顶级的个人效能教练（Performance Coach）。基于我的核心洞察：“[粘贴核心洞察，如‘下午2-4点是我的效率低谷，可能是因为午餐后血糖波动和缺乏短期激励’]”，请为我设计一个为期一周的“下午效率提升”改进实验。计划需包含：1.
+    明确的实验假设；2. 每日需执行的具体行动（如调整午餐结构、设置番茄钟）；3. 用于衡量实验是否成功的量化指标（如‘下午时段完成的任务数’）；4. 实验结束后的评估标准。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-18-数字人生-个人数据分析报告
+  sop_path: /tmp/SOPs/SOP-18-数字人生-个人数据分析报告.md
+  step_index: 60
+  raw_step: '**提示词-03 (行动计划生成)**: `你是一位顶级的个人效能教练（Performance Coach）。基于我的核心洞察：“[粘贴核心洞察，如‘下午2-4点是我的效率低谷，可能是因为午餐后血糖波动和缺乏短期激励’]”，请为我设计一个为期一周的“下午效率提升”改进实验。计划需包含：1.
+    明确的实验假设；2. 每日需执行的具体行动（如调整午餐结构、设置番茄钟）；3. 用于衡量实验是否成功的量化指标（如‘下午时段完成的任务数’）；4. 实验结束后的评估标准。`'

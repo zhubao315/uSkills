@@ -1,0 +1,63 @@
+skill_id: uskill-atomic-sop-19-户外大神-户外路线规划-66-提示词-04-应急预案生成-你是一位荒野急救与生-v1-0-0
+meta:
+  name: SOP-19-户外大神-户外路线规划 Step 66
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-04 (应急预案生成)**: `你是一位荒野急救与生存专家。针对我即将进行的“[活动类型]”活动，地点在“[地区类型，如高海拔山区]”，请为我生成一份简洁的应急预案卡。内容需包括：1.
+    常见的3种医疗紧急情况（如高反、失温）的现场处置流程；2. 3种极端天气（如雷暴、大雪）的应对措施；3. 迷路时的“STOP”原则（Stop, Think,
+    Observe, Plan）。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-19-户外大神-户外路线规划
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-19-户外大神-户外路线规划
+
+    Step objective: **提示词-04 (应急预案生成)**: `你是一位荒野急救与生存专家。针对我即将进行的“[活动类型]”活动，地点在“[地区类型，如高海拔山区]”，请为我生成一份简洁的应急预案卡。内容需包括：1.
+    常见的3种医疗紧急情况（如高反、失温）的现场处置流程；2. 3种极端天气（如雷暴、大雪）的应对措施；3. 迷路时的“STOP”原则（Stop, Think,
+    Observe, Plan）。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-04 (应急预案生成)**: `你是一位荒野急救与生存专家。针对我即将进行的“[活动类型]”活动，地点在“[地区类型，如高海拔山区]”，请为我生成一份简洁的应急预案卡。内容需包括：1.
+    常见的3种医疗紧急情况（如高反、失温）的现场处置流程；2. 3种极端天气（如雷暴、大雪）的应对措施；3. 迷路时的“STOP”原则（Stop, Think,
+    Observe, Plan）。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-19-户外大神-户外路线规划
+  sop_path: /tmp/SOPs/SOP-19-户外大神-户外路线规划.md
+  step_index: 66
+  raw_step: '**提示词-04 (应急预案生成)**: `你是一位荒野急救与生存专家。针对我即将进行的“[活动类型]”活动，地点在“[地区类型，如高海拔山区]”，请为我生成一份简洁的应急预案卡。内容需包括：1.
+    常见的3种医疗紧急情况（如高反、失温）的现场处置流程；2. 3种极端天气（如雷暴、大雪）的应对措施；3. 迷路时的“STOP”原则（Stop, Think,
+    Observe, Plan）。`'

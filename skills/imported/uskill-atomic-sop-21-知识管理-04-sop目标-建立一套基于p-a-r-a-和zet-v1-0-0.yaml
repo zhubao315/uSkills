@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-21-知识管理-04-sop目标-建立一套基于p-a-r-a-和zet-v1-0-0
+meta:
+  name: SOP-21-知识管理 Step 4
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**SOP目标**: 建立一套基于P.A.R.A.和Zettelkasten方法论，由AI全面赋能的个人知识管理（PKM）操作系统，用于高效地捕捉、组织、提炼和创造知识。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-21-知识管理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-21-知识管理
+
+    Step objective: **SOP目标**: 建立一套基于P.A.R.A.和Zettelkasten方法论，由AI全面赋能的个人知识管理（PKM）操作系统，用于高效地捕捉、组织、提炼和创造知识。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**SOP目标**: 建立一套基于P.A.R.A.和Zettelkasten方法论，由AI全面赋能的个人知识管理（PKM）操作系统，用于高效地捕捉、组织、提炼和创造知识。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-21-知识管理
+  sop_path: /tmp/SOPs/SOP-21-知识管理.md
+  step_index: 4
+  raw_step: '**SOP目标**: 建立一套基于P.A.R.A.和Zettelkasten方法论，由AI全面赋能的个人知识管理（PKM）操作系统，用于高效地捕捉、组织、提炼和创造知识。'

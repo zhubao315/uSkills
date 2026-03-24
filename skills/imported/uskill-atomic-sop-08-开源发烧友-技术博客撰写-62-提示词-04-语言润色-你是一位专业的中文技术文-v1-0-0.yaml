@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-08-开源发烧友-技术博客撰写-62-提示词-04-语言润色-你是一位专业的中文技术文-v1-0-0
+meta:
+  name: SOP-08-开源发烧友-技术博客撰写 Step 62
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-04 (语言润色)**: `你是一位专业的中文技术文章润色编辑，擅长用通俗易懂且生动的语言解释复杂概念。请对以下段落进行润色，使其更具可读性和吸引力，同时保持技术准确性。我的写作风格是[专业、风趣、深入浅出等]。段落：[粘贴需要润色的段落]`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-08-开源发烧友-技术博客撰写
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-08-开源发烧友-技术博客撰写
+
+    Step objective: **提示词-04 (语言润色)**: `你是一位专业的中文技术文章润色编辑，擅长用通俗易懂且生动的语言解释复杂概念。请对以下段落进行润色，使其更具可读性和吸引力，同时保持技术准确性。我的写作风格是[专业、风趣、深入浅出等]。段落：[粘贴需要润色的段落]`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-04 (语言润色)**: `你是一位专业的中文技术文章润色编辑，擅长用通俗易懂且生动的语言解释复杂概念。请对以下段落进行润色，使其更具可读性和吸引力，同时保持技术准确性。我的写作风格是[专业、风趣、深入浅出等]。段落：[粘贴需要润色的段落]`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-08-开源发烧友-技术博客撰写
+  sop_path: /tmp/SOPs/SOP-08-开源发烧友-技术博客撰写.md
+  step_index: 62
+  raw_step: '**提示词-04 (语言润色)**: `你是一位专业的中文技术文章润色编辑，擅长用通俗易懂且生动的语言解释复杂概念。请对以下段落进行润色，使其更具可读性和吸引力，同时保持技术准确性。我的写作风格是[专业、风趣、深入浅出等]。段落：[粘贴需要润色的段落]`'

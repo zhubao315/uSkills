@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-24-产品经理-竞品分析-39-提示词-03-战略军师-你是一位战略咨询顾问-基-v1-0-0
+meta:
+  name: SOP-24-产品经理-竞品分析 Step 39
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-03 (战略军师)**: `你是一位战略咨询顾问。基于我们收集的关于[竞品名称]的信息（如下附录），请进行SWOT分析。并重点回答：1.
+    它的阿喀琉斯之踵（最大弱点）在哪里？2. 我们作为新进入者，能够进行“降维打击”或“侧翼包抄”的机会点是什么？附录内容：[粘贴收集到的信息]`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-24-产品经理-竞品分析
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-24-产品经理-竞品分析
+
+    Step objective: **提示词-03 (战略军师)**: `你是一位战略咨询顾问。基于我们收集的关于[竞品名称]的信息（如下附录），请进行SWOT分析。并重点回答：1.
+    它的阿喀琉斯之踵（最大弱点）在哪里？2. 我们作为新进入者，能够进行“降维打击”或“侧翼包抄”的机会点是什么？附录内容：[粘贴收集到的信息]`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-03 (战略军师)**: `你是一位战略咨询顾问。基于我们收集的关于[竞品名称]的信息（如下附录），请进行SWOT分析。并重点回答：1. 它的阿喀琉斯之踵（最大弱点）在哪里？2.
+    我们作为新进入者，能够进行“降维打击”或“侧翼包抄”的机会点是什么？附录内容：[粘贴收集到的信息]`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-24-产品经理-竞品分析
+  sop_path: /tmp/SOPs/SOP-24-产品经理-竞品分析.md
+  step_index: 39
+  raw_step: '**提示词-03 (战略军师)**: `你是一位战略咨询顾问。基于我们收集的关于[竞品名称]的信息（如下附录），请进行SWOT分析。并重点回答：1.
+    它的阿喀琉斯之踵（最大弱点）在哪里？2. 我们作为新进入者，能够进行“降维打击”或“侧翼包抄”的机会点是什么？附录内容：[粘贴收集到的信息]`'

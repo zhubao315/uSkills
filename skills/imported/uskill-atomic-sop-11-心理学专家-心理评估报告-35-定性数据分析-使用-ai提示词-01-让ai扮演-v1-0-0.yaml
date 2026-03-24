@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-11-心理学专家-心理评估报告-35-定性数据分析-使用-ai提示词-01-让ai扮演-v1-0-0
+meta:
+  name: SOP-11-心理学专家-心理评估报告 Step 35
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**定性数据分析**: 使用**AI提示词-01**，让AI扮演“用户体验研究员”，对访谈文稿进行主题建模（Topic Modeling）和情感分析，快速识别高频出现的关键词、情绪和观点。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-11-心理学专家-心理评估报告
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-11-心理学专家-心理评估报告
+
+    Step objective: **定性数据分析**: 使用**AI提示词-01**，让AI扮演“用户体验研究员”，对访谈文稿进行主题建模（Topic Modeling）和情感分析，快速识别高频出现的关键词、情绪和观点。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**定性数据分析**: 使用**AI提示词-01**，让AI扮演“用户体验研究员”，对访谈文稿进行主题建模（Topic Modeling）和情感分析，快速识别高频出现的关键词、情绪和观点。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-11-心理学专家-心理评估报告
+  sop_path: /tmp/SOPs/SOP-11-心理学专家-心理评估报告.md
+  step_index: 35
+  raw_step: '**定性数据分析**: 使用**AI提示词-01**，让AI扮演“用户体验研究员”，对访谈文稿进行主题建模（Topic Modeling）和情感分析，快速识别高频出现的关键词、情绪和观点。'

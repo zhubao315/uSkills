@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-20-深度阅读与知识管理-51-更新书单-在-notes-我的书单-md-中添加-v1-0-0
+meta:
+  name: SOP-20-深度阅读与知识管理 Step 51
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**更新书单**: 在`notes/我的书单.md`中添加条目，格式：`[[《书名》- 作者]] 一句话总结。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-20-深度阅读与知识管理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-20-深度阅读与知识管理
+
+    Step objective: **更新书单**: 在`notes/我的书单.md`中添加条目，格式：`[[《书名》- 作者]] 一句话总结。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**更新书单**: 在`notes/我的书单.md`中添加条目，格式：`[[《书名》- 作者]] 一句话总结。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-20-深度阅读与知识管理
+  sop_path: /tmp/SOPs/SOP-20-深度阅读与知识管理.md
+  step_index: 51
+  raw_step: '**更新书单**: 在`notes/我的书单.md`中添加条目，格式：`[[《书名》- 作者]] 一句话总结。`'

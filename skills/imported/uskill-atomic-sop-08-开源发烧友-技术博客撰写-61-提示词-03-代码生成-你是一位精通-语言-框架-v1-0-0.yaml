@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-08-开源发烧友-技术博客撰写-61-提示词-03-代码生成-你是一位精通-语言-框架-v1-0-0
+meta:
+  name: SOP-08-开源发烧友-技术博客撰写 Step 61
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-03 (代码生成)**: `你是一位精通[语言/框架]的编程导师。请为我生成一段代码，用于演示“[具体功能，如：如何使用Python的Pandas库对数据进行分组聚合]”。要求代码：1.
+    包含清晰的、逐行的中文注释；2. 使用简单、易于理解的示例数据；3. 最终能打印出可验证的结果。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-08-开源发烧友-技术博客撰写
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-08-开源发烧友-技术博客撰写
+
+    Step objective: **提示词-03 (代码生成)**: `你是一位精通[语言/框架]的编程导师。请为我生成一段代码，用于演示“[具体功能，如：如何使用Python的Pandas库对数据进行分组聚合]”。要求代码：1.
+    包含清晰的、逐行的中文注释；2. 使用简单、易于理解的示例数据；3. 最终能打印出可验证的结果。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-03 (代码生成)**: `你是一位精通[语言/框架]的编程导师。请为我生成一段代码，用于演示“[具体功能，如：如何使用Python的Pandas库对数据进行分组聚合]”。要求代码：1.
+    包含清晰的、逐行的中文注释；2. 使用简单、易于理解的示例数据；3. 最终能打印出可验证的结果。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-08-开源发烧友-技术博客撰写
+  sop_path: /tmp/SOPs/SOP-08-开源发烧友-技术博客撰写.md
+  step_index: 61
+  raw_step: '**提示词-03 (代码生成)**: `你是一位精通[语言/框架]的编程导师。请为我生成一段代码，用于演示“[具体功能，如：如何使用Python的Pandas库对数据进行分组聚合]”。要求代码：1.
+    包含清晰的、逐行的中文注释；2. 使用简单、易于理解的示例数据；3. 最终能打印出可验证的结果。`'

@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-12-生活艺术家-生活美学设计-23-运用-人工智能专家技能-让ai成为灵感的放大器--v1-0-0
+meta:
+  name: SOP-12-生活艺术家-生活美学设计 Step 23
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: 运用[[🤖 人工智能专家技能]]，让AI成为灵感的放大器，在短时间内探索传统方法难以触及的风格组合与视觉创意，打破思维定式。
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-12-生活艺术家-生活美学设计
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-12-生活艺术家-生活美学设计
+
+    Step objective: 运用[[🤖 人工智能专家技能]]，让AI成为灵感的放大器，在短时间内探索传统方法难以触及的风格组合与视觉创意，打破思维定式。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - 运用[[🤖 人工智能专家技能]]，让AI成为灵感的放大器，在短时间内探索传统方法难以触及的风格组合与视觉创意，打破思维定式。
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-12-生活艺术家-生活美学设计
+  sop_path: /tmp/SOPs/SOP-12-生活艺术家-生活美学设计.md
+  step_index: 23
+  raw_step: 运用[[🤖 人工智能专家技能]]，让AI成为灵感的放大器，在短时间内探索传统方法难以触及的风格组合与视觉创意，打破思维定式。

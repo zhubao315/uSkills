@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-13-健身跑者-训练计划制定-39-形成调整策略-基于复盘报告的洞察-决定下一周期的-v1-0-0
+meta:
+  name: SOP-13-健身跑者-训练计划制定 Step 39
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**形成调整策略**: 基于复盘报告的洞察，决定下一周期的调整方向（如增加强度、增加恢复、调整营养）。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-13-健身跑者-训练计划制定
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-13-健身跑者-训练计划制定
+
+    Step objective: **形成调整策略**: 基于复盘报告的洞察，决定下一周期的调整方向（如增加强度、增加恢复、调整营养）。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**形成调整策略**: 基于复盘报告的洞察，决定下一周期的调整方向（如增加强度、增加恢复、调整营养）。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-13-健身跑者-训练计划制定
+  sop_path: /tmp/SOPs/SOP-13-健身跑者-训练计划制定.md
+  step_index: 39
+  raw_step: '**形成调整策略**: 基于复盘报告的洞察，决定下一周期的调整方向（如增加强度、增加恢复、调整营养）。'

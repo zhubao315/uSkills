@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-06-云计算专家-容器化部署-59-配置prometheus-grafana等监控工-v1-0-0
+meta:
+  name: SOP-06-云计算专家-容器化部署 Step 59
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: 配置Prometheus/Grafana等监控工具，添加对新部署应用的关键指标（如CPU/内存使用率、请求延迟、错误率）的监控和告警。
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-06-云计算专家-容器化部署
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-06-云计算专家-容器化部署
+
+    Step objective: 配置Prometheus/Grafana等监控工具，添加对新部署应用的关键指标（如CPU/内存使用率、请求延迟、错误率）的监控和告警。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - 配置Prometheus/Grafana等监控工具，添加对新部署应用的关键指标（如CPU/内存使用率、请求延迟、错误率）的监控和告警。
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-06-云计算专家-容器化部署
+  sop_path: /tmp/SOPs/SOP-06-云计算专家-容器化部署.md
+  step_index: 59
+  raw_step: 配置Prometheus/Grafana等监控工具，添加对新部署应用的关键指标（如CPU/内存使用率、请求延迟、错误率）的监控和告警。

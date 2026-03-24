@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-16-游戏王者-游戏攻略分析-52-提示词-02-对局复盘-你是一位kpl冠军赛复盘-v1-0-0
+meta:
+  name: SOP-16-游戏王者-游戏攻略分析 Step 52
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-02 (对局复盘)**: `你是一位KPL冠军赛复盘教练。我将提供一场王者荣耀对局的简要信息（阵容、关键事件时间戳、赛后数据截图描述）。请你进行一次深度复盘，分析：1.
+    BP阶段的优劣势；2. 关键转折点（如4分钟、10分钟）的决策是否正确，有无更优解？3. 我方（特别是我的角色）在这局中的核心贡献和主要失误是什么？4. 给出3条如果重来一次的具体改进建议。对局信息：[...]`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-16-游戏王者-游戏攻略分析
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-16-游戏王者-游戏攻略分析
+
+    Step objective: **提示词-02 (对局复盘)**: `你是一位KPL冠军赛复盘教练。我将提供一场王者荣耀对局的简要信息（阵容、关键事件时间戳、赛后数据截图描述）。请你进行一次深度复盘，分析：1.
+    BP阶段的优劣势；2. 关键转折点（如4分钟、10分钟）的决策是否正确，有无更优解？3. 我方（特别是我的角色）在这局中的核心贡献和主要失误是什么？4. 给出3条如果重来一次的具体改进建议。对局信息：[...]`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-02 (对局复盘)**: `你是一位KPL冠军赛复盘教练。我将提供一场王者荣耀对局的简要信息（阵容、关键事件时间戳、赛后数据截图描述）。请你进行一次深度复盘，分析：1.
+    BP阶段的优劣势；2. 关键转折点（如4分钟、10分钟）的决策是否正确，有无更优解？3. 我方（特别是我的角色）在这局中的核心贡献和主要失误是什么？4. 给出3条如果重来一次的具体改进建议。对局信息：[...]`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-16-游戏王者-游戏攻略分析
+  sop_path: /tmp/SOPs/SOP-16-游戏王者-游戏攻略分析.md
+  step_index: 52
+  raw_step: '**提示词-02 (对局复盘)**: `你是一位KPL冠军赛复盘教练。我将提供一场王者荣耀对局的简要信息（阵容、关键事件时间戳、赛后数据截图描述）。请你进行一次深度复盘，分析：1.
+    BP阶段的优劣势；2. 关键转折点（如4分钟、10分钟）的决策是否正确，有无更优解？3. 我方（特别是我的角色）在这局中的核心贡献和主要失误是什么？4. 给出3条如果重来一次的具体改进建议。对局信息：[...]`'

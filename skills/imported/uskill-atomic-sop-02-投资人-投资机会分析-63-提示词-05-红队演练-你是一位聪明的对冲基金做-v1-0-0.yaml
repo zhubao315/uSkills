@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-02-投资人-投资机会分析-63-提示词-05-红队演练-你是一位聪明的对冲基金做-v1-0-0
+meta:
+  name: SOP-02-投资人-投资机会分析 Step 63
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-05 (红队演练)**: `你是一位聪明的对冲基金做空者，正在寻找做空[公司名称]的理由。请基于我提供的投资逻辑和公司资料，从最悲观的角度，提出3-5个最致命的攻击点。每个攻击点都需要有数据或逻辑支撑，并预测可能引发股价下跌的催化剂事件。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-02-投资人-投资机会分析
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-02-投资人-投资机会分析
+
+    Step objective: **提示词-05 (红队演练)**: `你是一位聪明的对冲基金做空者，正在寻找做空[公司名称]的理由。请基于我提供的投资逻辑和公司资料，从最悲观的角度，提出3-5个最致命的攻击点。每个攻击点都需要有数据或逻辑支撑，并预测可能引发股价下跌的催化剂事件。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-05 (红队演练)**: `你是一位聪明的对冲基金做空者，正在寻找做空[公司名称]的理由。请基于我提供的投资逻辑和公司资料，从最悲观的角度，提出3-5个最致命的攻击点。每个攻击点都需要有数据或逻辑支撑，并预测可能引发股价下跌的催化剂事件。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-02-投资人-投资机会分析
+  sop_path: /tmp/SOPs/SOP-02-投资人-投资机会分析.md
+  step_index: 63
+  raw_step: '**提示词-05 (红队演练)**: `你是一位聪明的对冲基金做空者，正在寻找做空[公司名称]的理由。请基于我提供的投资逻辑和公司资料，从最悲观的角度，提出3-5个最致命的攻击点。每个攻击点都需要有数据或逻辑支撑，并预测可能引发股价下跌的催化剂事件。`'

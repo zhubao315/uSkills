@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-08-开源发烧友-技术博客撰写-03-复杂概念科普-需要将深奥的技术原理-如trans-v1-0-0
+meta:
+  name: SOP-08-开源发烧友-技术博客撰写 Step 3
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**复杂概念科普**: 需要将深奥的技术原理（如Transformer架构）用通俗易懂的语言向非技术人员或初学者解释时。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-08-开源发烧友-技术博客撰写
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-08-开源发烧友-技术博客撰写
+
+    Step objective: **复杂概念科普**: 需要将深奥的技术原理（如Transformer架构）用通俗易懂的语言向非技术人员或初学者解释时。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**复杂概念科普**: 需要将深奥的技术原理（如Transformer架构）用通俗易懂的语言向非技术人员或初学者解释时。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-08-开源发烧友-技术博客撰写
+  sop_path: /tmp/SOPs/SOP-08-开源发烧友-技术博客撰写.md
+  step_index: 3
+  raw_step: '**复杂概念科普**: 需要将深奥的技术原理（如Transformer架构）用通俗易懂的语言向非技术人员或初学者解释时。'

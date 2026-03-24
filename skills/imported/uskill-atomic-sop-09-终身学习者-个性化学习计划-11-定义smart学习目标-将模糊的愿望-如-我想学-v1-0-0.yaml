@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-09-终身学习者-个性化学习计划-11-定义smart学习目标-将模糊的愿望-如-我想学-v1-0-0
+meta:
+  name: SOP-09-终身学习者-个性化学习计划 Step 11
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**定义SMART学习目标**: 将模糊的愿望（如“我想学量化投资”）转化为具体、可衡量、可实现、相关、有时限的目标（如“在3个月内，掌握`backtrader`框架，并复现一个海龟交易策略”）。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-09-终身学习者-个性化学习计划
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-09-终身学习者-个性化学习计划
+
+    Step objective: **定义SMART学习目标**: 将模糊的愿望（如“我想学量化投资”）转化为具体、可衡量、可实现、相关、有时限的目标（如“在3个月内，掌握`backtrader`框架，并复现一个海龟交易策略”）。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**定义SMART学习目标**: 将模糊的愿望（如“我想学量化投资”）转化为具体、可衡量、可实现、相关、有时限的目标（如“在3个月内，掌握`backtrader`框架，并复现一个海龟交易策略”）。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-09-终身学习者-个性化学习计划
+  sop_path: /tmp/SOPs/SOP-09-终身学习者-个性化学习计划.md
+  step_index: 11
+  raw_step: '**定义SMART学习目标**: 将模糊的愿望（如“我想学量化投资”）转化为具体、可衡量、可实现、相关、有时限的目标（如“在3个月内，掌握`backtrader`框架，并复现一个海龟交易策略”）。'

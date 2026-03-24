@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-05-产品经理-产品需求文档prd-05-战略价值-本sop是我作为-ai时代产品孵化器--v1-0-0
+meta:
+  name: SOP-05-产品经理-产品需求文档PRD Step 5
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**战略价值**: 本SOP是我作为**AI时代产品孵化器**的核心方法论，是`uPrompt`等三大产品从0到1的行动指南。它确保每一个产品决策都基于坚实的数据和洞察，并将我的[[🤖
+    人工智能专家技能]]、[[🏗️ 架构师技能]]、[[💰 投资人技能]]等复合能力系统性地注入产品创造过程，直接驱动“沟通精进”（通过产品交付价值）。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-05-产品经理-产品需求文档prd
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-05-产品经理-产品需求文档PRD
+
+    Step objective: **战略价值**: 本SOP是我作为**AI时代产品孵化器**的核心方法论，是`uPrompt`等三大产品从0到1的行动指南。它确保每一个产品决策都基于坚实的数据和洞察，并将我的[[🤖
+    人工智能专家技能]]、[[🏗️ 架构师技能]]、[[💰 投资人技能]]等复合能力系统性地注入产品创造过程，直接驱动“沟通精进”（通过产品交付价值）。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**战略价值**: 本SOP是我作为**AI时代产品孵化器**的核心方法论，是`uPrompt`等三大产品从0到1的行动指南。它确保每一个产品决策都基于坚实的数据和洞察，并将我的[[🤖
+    人工智能专家技能]]、[[🏗️ 架构师技能]]、[[💰 投资人技能]]等复合能力系统性地注入产品创造过程，直接驱动“沟通精进”（通过产品交付价值）。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-05-产品经理-产品需求文档PRD
+  sop_path: /tmp/SOPs/SOP-05-产品经理-产品需求文档PRD.md
+  step_index: 5
+  raw_step: '**战略价值**: 本SOP是我作为**AI时代产品孵化器**的核心方法论，是`uPrompt`等三大产品从0到1的行动指南。它确保每一个产品决策都基于坚实的数据和洞察，并将我的[[🤖
+    人工智能专家技能]]、[[🏗️ 架构师技能]]、[[💰 投资人技能]]等复合能力系统性地注入产品创造过程，直接驱动“沟通精进”（通过产品交付价值）。'

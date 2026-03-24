@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-19-户外大神-户外路线规划-65-提示词-03-路线审查-你是一位持有ifmga认-v1-0-0
+meta:
+  name: SOP-19-户外大神-户外路线规划 Step 65
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-03 (路线审查)**: `你是一位持有IFMGA认证的国际高山向导。我制定了一份登山/徒步计划，请你以最苛刻的标准对其进行审查，并指出至少5个潜在的风险点或计划疏漏。审查需覆盖：路线设计的合理性、时间安排的裕度、风险评估的全面性、以及应急预案的可行性。计划如下：[...]`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-19-户外大神-户外路线规划
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-19-户外大神-户外路线规划
+
+    Step objective: **提示词-03 (路线审查)**: `你是一位持有IFMGA认证的国际高山向导。我制定了一份登山/徒步计划，请你以最苛刻的标准对其进行审查，并指出至少5个潜在的风险点或计划疏漏。审查需覆盖：路线设计的合理性、时间安排的裕度、风险评估的全面性、以及应急预案的可行性。计划如下：[...]`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-03 (路线审查)**: `你是一位持有IFMGA认证的国际高山向导。我制定了一份登山/徒步计划，请你以最苛刻的标准对其进行审查，并指出至少5个潜在的风险点或计划疏漏。审查需覆盖：路线设计的合理性、时间安排的裕度、风险评估的全面性、以及应急预案的可行性。计划如下：[...]`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-19-户外大神-户外路线规划
+  sop_path: /tmp/SOPs/SOP-19-户外大神-户外路线规划.md
+  step_index: 65
+  raw_step: '**提示词-03 (路线审查)**: `你是一位持有IFMGA认证的国际高山向导。我制定了一份登山/徒步计划，请你以最苛刻的标准对其进行审查，并指出至少5个潜在的风险点或计划疏漏。审查需覆盖：路线设计的合理性、时间安排的裕度、风险评估的全面性、以及应急预案的可行性。计划如下：[...]`'

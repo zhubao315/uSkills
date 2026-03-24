@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-19-户外大神-户外路线规划-63-提示词-01-可行性分析-你是一位经验丰富的户外-v1-0-0
+meta:
+  name: SOP-19-户外大神-户外路线规划 Step 63
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-01 (可行性分析)**: `你是一位经验丰富的户外领队。我计划在[月份]和[人数]名队员（平均体能[水平]）去[地点]进行一次为期[天数]的[活动类型，如重装徒步]。请为我进行一次初步的可行性分析，指出：1.
+    该季节在该地区的主要风险（如天气、地质、野生动物）。2. 对团队成员的最低体能和技能要求。3. 给出“推荐”、“谨慎推荐”或“不推荐”的初步评级及理由。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-19-户外大神-户外路线规划
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-19-户外大神-户外路线规划
+
+    Step objective: **提示词-01 (可行性分析)**: `你是一位经验丰富的户外领队。我计划在[月份]和[人数]名队员（平均体能[水平]）去[地点]进行一次为期[天数]的[活动类型，如重装徒步]。请为我进行一次初步的可行性分析，指出：1.
+    该季节在该地区的主要风险（如天气、地质、野生动物）。2. 对团队成员的最低体能和技能要求。3. 给出“推荐”、“谨慎推荐”或“不推荐”的初步评级及理由。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-01 (可行性分析)**: `你是一位经验丰富的户外领队。我计划在[月份]和[人数]名队员（平均体能[水平]）去[地点]进行一次为期[天数]的[活动类型，如重装徒步]。请为我进行一次初步的可行性分析，指出：1.
+    该季节在该地区的主要风险（如天气、地质、野生动物）。2. 对团队成员的最低体能和技能要求。3. 给出“推荐”、“谨慎推荐”或“不推荐”的初步评级及理由。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-19-户外大神-户外路线规划
+  sop_path: /tmp/SOPs/SOP-19-户外大神-户外路线规划.md
+  step_index: 63
+  raw_step: '**提示词-01 (可行性分析)**: `你是一位经验丰富的户外领队。我计划在[月份]和[人数]名队员（平均体能[水平]）去[地点]进行一次为期[天数]的[活动类型，如重装徒步]。请为我进行一次初步的可行性分析，指出：1.
+    该季节在该地区的主要风险（如天气、地质、野生动物）。2. 对团队成员的最低体能和技能要求。3. 给出“推荐”、“谨慎推荐”或“不推荐”的初步评级及理由。`'

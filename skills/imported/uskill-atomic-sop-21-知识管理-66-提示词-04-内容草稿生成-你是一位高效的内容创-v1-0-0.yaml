@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-21-知识管理-66-提示词-04-内容草稿生成-你是一位高效的内容创-v1-0-0
+meta:
+  name: SOP-21-知识管理 Step 66
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-04 (内容草稿生成)**: `你是一位高效的内容创作者。我将提供几张来自我知识库的、互相关联的原子笔记。请你将这些碎片化的知识点，串联、组织成一篇逻辑通顺、结构完整的[内容类型，如“博客文章”]的初稿。初稿需要有一个引人入胜的开头和总结性的结尾。原子笔记如下：[粘贴2-5张原子笔记的内容]`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-21-知识管理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-21-知识管理
+
+    Step objective: **提示词-04 (内容草稿生成)**: `你是一位高效的内容创作者。我将提供几张来自我知识库的、互相关联的原子笔记。请你将这些碎片化的知识点，串联、组织成一篇逻辑通顺、结构完整的[内容类型，如“博客文章”]的初稿。初稿需要有一个引人入胜的开头和总结性的结尾。原子笔记如下：[粘贴2-5张原子笔记的内容]`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-04 (内容草稿生成)**: `你是一位高效的内容创作者。我将提供几张来自我知识库的、互相关联的原子笔记。请你将这些碎片化的知识点，串联、组织成一篇逻辑通顺、结构完整的[内容类型，如“博客文章”]的初稿。初稿需要有一个引人入胜的开头和总结性的结尾。原子笔记如下：[粘贴2-5张原子笔记的内容]`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-21-知识管理
+  sop_path: /tmp/SOPs/SOP-21-知识管理.md
+  step_index: 66
+  raw_step: '**提示词-04 (内容草稿生成)**: `你是一位高效的内容创作者。我将提供几张来自我知识库的、互相关联的原子笔记。请你将这些碎片化的知识点，串联、组织成一篇逻辑通顺、结构完整的[内容类型，如“博客文章”]的初稿。初稿需要有一个引人入胜的开头和总结性的结尾。原子笔记如下：[粘贴2-5张原子笔记的内容]`'

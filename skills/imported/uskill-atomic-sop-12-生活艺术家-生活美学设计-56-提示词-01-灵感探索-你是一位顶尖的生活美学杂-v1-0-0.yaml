@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-12-生活艺术家-生活美学设计-56-提示词-01-灵感探索-你是一位顶尖的生活美学杂-v1-0-0
+meta:
+  name: SOP-12-生活艺术家-生活美学设计 Step 56
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-01 (灵感探索)**: `你是一位顶尖的生活美学杂志《Kinfolk》的创意总监。我希望为一个[空间，如“家庭办公室”]进行设计，我期望的情感基调是“[3-5个关键词，如‘宁静、专注、自然、温暖’]”。请为我：1.
+    推荐3种符合该基调的设计风格（如侘寂风、现代有机风、日式极简），并简要描述其核心元素。2. 为每种风格提供一个包含8种颜色的色彩板。3. 生成一段富有感染力的文字，描述置身于这种空间中的感受，用于构建我的灵感板。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-12-生活艺术家-生活美学设计
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-12-生活艺术家-生活美学设计
+
+    Step objective: **提示词-01 (灵感探索)**: `你是一位顶尖的生活美学杂志《Kinfolk》的创意总监。我希望为一个[空间，如“家庭办公室”]进行设计，我期望的情感基调是“[3-5个关键词，如‘宁静、专注、自然、温暖’]”。请为我：1.
+    推荐3种符合该基调的设计风格（如侘寂风、现代有机风、日式极简），并简要描述其核心元素。2. 为每种风格提供一个包含8种颜色的色彩板。3. 生成一段富有感染力的文字，描述置身于这种空间中的感受，用于构建我的灵感板。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-01 (灵感探索)**: `你是一位顶尖的生活美学杂志《Kinfolk》的创意总监。我希望为一个[空间，如“家庭办公室”]进行设计，我期望的情感基调是“[3-5个关键词，如‘宁静、专注、自然、温暖’]”。请为我：1.
+    推荐3种符合该基调的设计风格（如侘寂风、现代有机风、日式极简），并简要描述其核心元素。2. 为每种风格提供一个包含8种颜色的色彩板。3. 生成一段富有感染力的文字，描述置身于这种空间中的感受，用于构建我的灵感板。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-12-生活艺术家-生活美学设计
+  sop_path: /tmp/SOPs/SOP-12-生活艺术家-生活美学设计.md
+  step_index: 56
+  raw_step: '**提示词-01 (灵感探索)**: `你是一位顶尖的生活美学杂志《Kinfolk》的创意总监。我希望为一个[空间，如“家庭办公室”]进行设计，我期望的情感基调是“[3-5个关键词，如‘宁静、专注、自然、温暖’]”。请为我：1.
+    推荐3种符合该基调的设计风格（如侘寂风、现代有机风、日式极简），并简要描述其核心元素。2. 为每种风格提供一个包含8种颜色的色彩板。3. 生成一段富有感染力的文字，描述置身于这种空间中的感受，用于构建我的灵感板。`'

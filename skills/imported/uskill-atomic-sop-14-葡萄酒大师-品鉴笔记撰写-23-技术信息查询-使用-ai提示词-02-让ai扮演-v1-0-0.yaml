@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-14-葡萄酒大师-品鉴笔记撰写-23-技术信息查询-使用-ai提示词-02-让ai扮演-v1-0-0
+meta:
+  name: SOP-14-葡萄酒大师-品鉴笔记撰写 Step 23
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**技术信息查询**: 使用**AI提示词-02**，让AI扮演“葡萄酒研究员”，快速查询并补充该酒款的技术信息，如酿造工艺（是否过桶、浸皮时间）、风土特点、酒庄历史等。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-14-葡萄酒大师-品鉴笔记撰写
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-14-葡萄酒大师-品鉴笔记撰写
+
+    Step objective: **技术信息查询**: 使用**AI提示词-02**，让AI扮演“葡萄酒研究员”，快速查询并补充该酒款的技术信息，如酿造工艺（是否过桶、浸皮时间）、风土特点、酒庄历史等。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**技术信息查询**: 使用**AI提示词-02**，让AI扮演“葡萄酒研究员”，快速查询并补充该酒款的技术信息，如酿造工艺（是否过桶、浸皮时间）、风土特点、酒庄历史等。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-14-葡萄酒大师-品鉴笔记撰写
+  sop_path: /tmp/SOPs/SOP-14-葡萄酒大师-品鉴笔记撰写.md
+  step_index: 23
+  raw_step: '**技术信息查询**: 使用**AI提示词-02**，让AI扮演“葡萄酒研究员”，快速查询并补充该酒款的技术信息，如酿造工艺（是否过桶、浸皮时间）、风土特点、酒庄历史等。'

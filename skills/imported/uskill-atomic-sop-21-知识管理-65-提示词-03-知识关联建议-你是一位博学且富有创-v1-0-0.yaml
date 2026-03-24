@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-21-知识管理-65-提示词-03-知识关联建议-你是一位博学且富有创-v1-0-0
+meta:
+  name: SOP-21-知识管理 Step 65
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-03 (知识关联建议)**: `你是一位博学且富有创意的思维伙伴，擅长发现不同概念之间的隐藏联系。我正在写一张关于“[笔记A的核心概念]”的笔记。请从我的知识领域（如AI、投资、心理学、国学）中，建议3个可以与这个概念产生有趣连接或碰撞的其他概念，并简要说明为什么这种连接可能产生新的洞察。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-21-知识管理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-21-知识管理
+
+    Step objective: **提示词-03 (知识关联建议)**: `你是一位博学且富有创意的思维伙伴，擅长发现不同概念之间的隐藏联系。我正在写一张关于“[笔记A的核心概念]”的笔记。请从我的知识领域（如AI、投资、心理学、国学）中，建议3个可以与这个概念产生有趣连接或碰撞的其他概念，并简要说明为什么这种连接可能产生新的洞察。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-03 (知识关联建议)**: `你是一位博学且富有创意的思维伙伴，擅长发现不同概念之间的隐藏联系。我正在写一张关于“[笔记A的核心概念]”的笔记。请从我的知识领域（如AI、投资、心理学、国学）中，建议3个可以与这个概念产生有趣连接或碰撞的其他概念，并简要说明为什么这种连接可能产生新的洞察。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-21-知识管理
+  sop_path: /tmp/SOPs/SOP-21-知识管理.md
+  step_index: 65
+  raw_step: '**提示词-03 (知识关联建议)**: `你是一位博学且富有创意的思维伙伴，擅长发现不同概念之间的隐藏联系。我正在写一张关于“[笔记A的核心概念]”的笔记。请从我的知识领域（如AI、投资、心理学、国学）中，建议3个可以与这个概念产生有趣连接或碰撞的其他概念，并简要说明为什么这种连接可能产生新的洞察。`'

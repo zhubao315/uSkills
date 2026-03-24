@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-04-全栈工程师-功能开发-69-关键性能指标-如响应时间-错误率-是否在正常范围-v1-0-0
+meta:
+  name: SOP-04-全栈工程师-功能开发 Step 69
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '[ ] 关键性能指标（如响应时间、错误率）是否在正常范围内？'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-04-全栈工程师-功能开发
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-04-全栈工程师-功能开发
+
+    Step objective: [ ] 关键性能指标（如响应时间、错误率）是否在正常范围内？
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '[ ] 关键性能指标（如响应时间、错误率）是否在正常范围内？'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-04-全栈工程师-功能开发
+  sop_path: /tmp/SOPs/SOP-04-全栈工程师-功能开发.md
+  step_index: 69
+  raw_step: '[ ] 关键性能指标（如响应时间、错误率）是否在正常范围内？'

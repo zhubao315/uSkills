@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-12-生活艺术家-生活美学设计-28-系统性空间规划-运用-架构师-ai时代价值系统的-v1-0-0
+meta:
+  name: SOP-12-生活艺术家-生活美学设计 Step 28
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**系统性空间规划**: 运用[[🏗️ 架构师：AI时代价值系统的核心引擎|架构师技能]]的系统思维，进行空间布局规划（如动线设计、功能分区），绘制平面布局草图。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-12-生活艺术家-生活美学设计
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-12-生活艺术家-生活美学设计
+
+    Step objective: **系统性空间规划**: 运用[[🏗️ 架构师：AI时代价值系统的核心引擎|架构师技能]]的系统思维，进行空间布局规划（如动线设计、功能分区），绘制平面布局草图。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**系统性空间规划**: 运用[[🏗️ 架构师：AI时代价值系统的核心引擎|架构师技能]]的系统思维，进行空间布局规划（如动线设计、功能分区），绘制平面布局草图。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-12-生活艺术家-生活美学设计
+  sop_path: /tmp/SOPs/SOP-12-生活艺术家-生活美学设计.md
+  step_index: 28
+  raw_step: '**系统性空间规划**: 运用[[🏗️ 架构师：AI时代价值系统的核心引擎|架构师技能]]的系统思维，进行空间布局规划（如动线设计、功能分区），绘制平面布局草图。'

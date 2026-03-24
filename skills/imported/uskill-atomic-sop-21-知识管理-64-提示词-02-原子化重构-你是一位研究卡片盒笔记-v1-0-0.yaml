@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-21-知识管理-64-提示词-02-原子化重构-你是一位研究卡片盒笔记-v1-0-0
+meta:
+  name: SOP-21-知识管理 Step 64
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-02 (原子化重构)**: `你是一位研究卡片盒笔记法（Zettelkasten）的专家。我将提供一篇长文或一堆读书高亮。请你遵循“原子化”原则，将其核心思想提炼、重构为3-5条独立的、永久性的笔记。每条笔记需包含：1.
+    一个概括性的标题；2. 用我自己的话（第一人称）写成的核心内容（<200字）；3. 3-5个相关的标签。原始材料：[...]`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-21-知识管理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-21-知识管理
+
+    Step objective: **提示词-02 (原子化重构)**: `你是一位研究卡片盒笔记法（Zettelkasten）的专家。我将提供一篇长文或一堆读书高亮。请你遵循“原子化”原则，将其核心思想提炼、重构为3-5条独立的、永久性的笔记。每条笔记需包含：1.
+    一个概括性的标题；2. 用我自己的话（第一人称）写成的核心内容（<200字）；3. 3-5个相关的标签。原始材料：[...]`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-02 (原子化重构)**: `你是一位研究卡片盒笔记法（Zettelkasten）的专家。我将提供一篇长文或一堆读书高亮。请你遵循“原子化”原则，将其核心思想提炼、重构为3-5条独立的、永久性的笔记。每条笔记需包含：1.
+    一个概括性的标题；2. 用我自己的话（第一人称）写成的核心内容（<200字）；3. 3-5个相关的标签。原始材料：[...]`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-21-知识管理
+  sop_path: /tmp/SOPs/SOP-21-知识管理.md
+  step_index: 64
+  raw_step: '**提示词-02 (原子化重构)**: `你是一位研究卡片盒笔记法（Zettelkasten）的专家。我将提供一篇长文或一堆读书高亮。请你遵循“原子化”原则，将其核心思想提炼、重构为3-5条独立的、永久性的笔记。每条笔记需包含：1.
+    一个概括性的标题；2. 用我自己的话（第一人称）写成的核心内容（<200字）；3. 3-5个相关的标签。原始材料：[...]`'

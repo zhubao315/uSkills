@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-14-葡萄酒大师-品鉴笔记撰写-26-qpr评估-结合第一阶段的个人品鉴感受和第二阶段-v1-0-0
+meta:
+  name: SOP-14-葡萄酒大师-品鉴笔记撰写 Step 26
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**QPR评估**: 结合第一阶段的个人品鉴感受和第二阶段的市场价格与评分，运用[[💰 投资人：AI驱动的理性价值发现引擎|投资人技能]]的思维，给出明确的QPR（性价比）评级（如：极高
+    / 合理 / 偏低）。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-14-葡萄酒大师-品鉴笔记撰写
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-14-葡萄酒大师-品鉴笔记撰写
+
+    Step objective: **QPR评估**: 结合第一阶段的个人品鉴感受和第二阶段的市场价格与评分，运用[[💰 投资人：AI驱动的理性价值发现引擎|投资人技能]]的思维，给出明确的QPR（性价比）评级（如：极高
+    / 合理 / 偏低）。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**QPR评估**: 结合第一阶段的个人品鉴感受和第二阶段的市场价格与评分，运用[[💰 投资人：AI驱动的理性价值发现引擎|投资人技能]]的思维，给出明确的QPR（性价比）评级（如：极高
+    / 合理 / 偏低）。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-14-葡萄酒大师-品鉴笔记撰写
+  sop_path: /tmp/SOPs/SOP-14-葡萄酒大师-品鉴笔记撰写.md
+  step_index: 26
+  raw_step: '**QPR评估**: 结合第一阶段的个人品鉴感受和第二阶段的市场价格与评分，运用[[💰 投资人：AI驱动的理性价值发现引擎|投资人技能]]的思维，给出明确的QPR（性价比）评级（如：极高
+    / 合理 / 偏低）。'

@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-03-ai专家-提示词优化与测试-35-ai辅助评估-使用-元提示词-03-让一个独立的-v1-0-0
+meta:
+  name: SOP-03-AI专家-提示词优化与测试 Step 35
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**AI辅助评估**: 使用**元提示词-03**，让一个独立的AI模型根据预设的评分标准（Rubric）对另一个模型的输出进行打分。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-03-ai专家-提示词优化与测试
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-03-AI专家-提示词优化与测试
+
+    Step objective: **AI辅助评估**: 使用**元提示词-03**，让一个独立的AI模型根据预设的评分标准（Rubric）对另一个模型的输出进行打分。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**AI辅助评估**: 使用**元提示词-03**，让一个独立的AI模型根据预设的评分标准（Rubric）对另一个模型的输出进行打分。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-03-AI专家-提示词优化与测试
+  sop_path: /tmp/SOPs/SOP-03-AI专家-提示词优化与测试.md
+  step_index: 35
+  raw_step: '**AI辅助评估**: 使用**元提示词-03**，让一个独立的AI模型根据预设的评分标准（Rubric）对另一个模型的输出进行打分。'

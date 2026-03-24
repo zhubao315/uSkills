@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-04-全栈工程师-功能开发-75-相关技能-架构师-ai时代价值系统的核心引擎-架-v1-0-0
+meta:
+  name: SOP-04-全栈工程师-功能开发 Step 75
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**相关技能**: [[🏗️ 架构师：AI时代价值系统的核心引擎|🏗️ 架构师技能]], [[📦 产品经理：AI时代价值创造与产品孵化的核心引擎|📦
+    产品经理技能]], [[☁️ 云计算与云原生：AI时代智能应用与高效基础设施的驱动者|☁️ 云计算与云原生技能]]'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-04-全栈工程师-功能开发
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-04-全栈工程师-功能开发
+
+    Step objective: **相关技能**: [[🏗️ 架构师：AI时代价值系统的核心引擎|🏗️ 架构师技能]], [[📦 产品经理：AI时代价值创造与产品孵化的核心引擎|📦
+    产品经理技能]], [[☁️ 云计算与云原生：AI时代智能应用与高效基础设施的驱动者|☁️ 云计算与云原生技能]]
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**相关技能**: [[🏗️ 架构师：AI时代价值系统的核心引擎|🏗️ 架构师技能]], [[📦 产品经理：AI时代价值创造与产品孵化的核心引擎|📦 产品经理技能]],
+    [[☁️ 云计算与云原生：AI时代智能应用与高效基础设施的驱动者|☁️ 云计算与云原生技能]]'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-04-全栈工程师-功能开发
+  sop_path: /tmp/SOPs/SOP-04-全栈工程师-功能开发.md
+  step_index: 75
+  raw_step: '**相关技能**: [[🏗️ 架构师：AI时代价值系统的核心引擎|🏗️ 架构师技能]], [[📦 产品经理：AI时代价值创造与产品孵化的核心引擎|📦
+    产品经理技能]], [[☁️ 云计算与云原生：AI时代智能应用与高效基础设施的驱动者|☁️ 云计算与云原生技能]]'

@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-11-心理学专家-心理评估报告-67-提示词-03-行动建议生成-你是一位经验丰富的产-v1-0-0
+meta:
+  name: SOP-11-心理学专家-心理评估报告 Step 67
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-03 (行动建议生成)**: `你是一位经验丰富的产品总监/组织发展顾问。基于以下核心洞察：“[粘贴核心洞察，如‘用户对复杂设置感到焦虑，倾向于使用默认选项’]”，请为我头脑风暴出3-5个具体的、可执行的行动建议。每个建议需说明“做什么”、“为什么做”以及“预期的效果”。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-11-心理学专家-心理评估报告
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-11-心理学专家-心理评估报告
+
+    Step objective: **提示词-03 (行动建议生成)**: `你是一位经验丰富的产品总监/组织发展顾问。基于以下核心洞察：“[粘贴核心洞察，如‘用户对复杂设置感到焦虑，倾向于使用默认选项’]”，请为我头脑风暴出3-5个具体的、可执行的行动建议。每个建议需说明“做什么”、“为什么做”以及“预期的效果”。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-03 (行动建议生成)**: `你是一位经验丰富的产品总监/组织发展顾问。基于以下核心洞察：“[粘贴核心洞察，如‘用户对复杂设置感到焦虑，倾向于使用默认选项’]”，请为我头脑风暴出3-5个具体的、可执行的行动建议。每个建议需说明“做什么”、“为什么做”以及“预期的效果”。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-11-心理学专家-心理评估报告
+  sop_path: /tmp/SOPs/SOP-11-心理学专家-心理评估报告.md
+  step_index: 67
+  raw_step: '**提示词-03 (行动建议生成)**: `你是一位经验丰富的产品总监/组织发展顾问。基于以下核心洞察：“[粘贴核心洞察，如‘用户对复杂设置感到焦虑，倾向于使用默认选项’]”，请为我头脑风暴出3-5个具体的、可执行的行动建议。每个建议需说明“做什么”、“为什么做”以及“预期的效果”。`'

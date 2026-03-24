@@ -1,0 +1,58 @@
+skill_id: uskill-atomic-sop-13-健身跑者-训练计划制定-05-战略价值-本sop是-身心赋能-战略支柱的-核心-v1-0-0
+meta:
+  name: SOP-13-健身跑者-训练计划制定 Step 5
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**战略价值**: 本SOP是“身心赋能”战略支柱的**核心操作系统**。它不仅是关于跑步，更是关于纪律、韧性和数据化自我管理的实践。通过
+    این SOP，我将跑步从单纯的体能训练，升华为一个可衡量、可优化、可持续的个人成长项目，其培养的意志力将直接反哺我的职业与学习。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-13-健身跑者-训练计划制定
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-13-健身跑者-训练计划制定
+
+    Step objective: **战略价值**: 本SOP是“身心赋能”战略支柱的**核心操作系统**。它不仅是关于跑步，更是关于纪律、韧性和数据化自我管理的实践。通过
+    این SOP，我将跑步从单纯的体能训练，升华为一个可衡量、可优化、可持续的个人成长项目，其培养的意志力将直接反哺我的职业与学习。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**战略价值**: 本SOP是“身心赋能”战略支柱的**核心操作系统**。它不仅是关于跑步，更是关于纪律、韧性和数据化自我管理的实践。通过 این SOP，我将跑步从单纯的体能训练，升华为一个可衡量、可优化、可持续的个人成长项目，其培养的意志力将直接反哺我的职业与学习。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-13-健身跑者-训练计划制定
+  sop_path: /tmp/SOPs/SOP-13-健身跑者-训练计划制定.md
+  step_index: 5
+  raw_step: '**战略价值**: 本SOP是“身心赋能”战略支柱的**核心操作系统**。它不仅是关于跑步，更是关于纪律、韧性和数据化自我管理的实践。通过
+    این SOP，我将跑步从单纯的体能训练，升华为一个可衡量、可优化、可持续的个人成长项目，其培养的意志力将直接反哺我的职业与学习。'

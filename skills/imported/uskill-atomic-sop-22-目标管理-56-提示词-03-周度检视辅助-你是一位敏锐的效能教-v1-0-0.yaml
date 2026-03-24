@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-22-目标管理-56-提示词-03-周度检视辅助-你是一位敏锐的效能教-v1-0-0
+meta:
+  name: SOP-22-目标管理 Step 56
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-03 (周度检视辅助)**: `你是一位敏锐的效能教练。我正在进行周度OKR检视。我的一个关键结果（KR）是“[KR描述]”，目标是[目标值]，目前进度是[当前值]。我的信心指数是[1-10分]，因为我遇到了障碍：“[障碍描述]”。请帮我分析这个障碍的可能原因，并提出2-3个具体的、可操作的建议来帮助我移除它。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-22-目标管理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-22-目标管理
+
+    Step objective: **提示词-03 (周度检视辅助)**: `你是一位敏锐的效能教练。我正在进行周度OKR检视。我的一个关键结果（KR）是“[KR描述]”，目标是[目标值]，目前进度是[当前值]。我的信心指数是[1-10分]，因为我遇到了障碍：“[障碍描述]”。请帮我分析这个障碍的可能原因，并提出2-3个具体的、可操作的建议来帮助我移除它。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-03 (周度检视辅助)**: `你是一位敏锐的效能教练。我正在进行周度OKR检视。我的一个关键结果（KR）是“[KR描述]”，目标是[目标值]，目前进度是[当前值]。我的信心指数是[1-10分]，因为我遇到了障碍：“[障碍描述]”。请帮我分析这个障碍的可能原因，并提出2-3个具体的、可操作的建议来帮助我移除它。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-22-目标管理
+  sop_path: /tmp/SOPs/SOP-22-目标管理.md
+  step_index: 56
+  raw_step: '**提示词-03 (周度检视辅助)**: `你是一位敏锐的效能教练。我正在进行周度OKR检视。我的一个关键结果（KR）是“[KR描述]”，目标是[目标值]，目前进度是[当前值]。我的信心指数是[1-10分]，因为我遇到了障碍：“[障碍描述]”。请帮我分析这个障碍的可能原因，并提出2-3个具体的、可操作的建议来帮助我移除它。`'

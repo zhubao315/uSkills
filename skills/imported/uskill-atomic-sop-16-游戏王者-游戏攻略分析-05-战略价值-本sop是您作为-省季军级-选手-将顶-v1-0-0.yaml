@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-16-游戏王者-游戏攻略分析-05-战略价值-本sop是您作为-省季军级-选手-将顶-v1-0-0
+meta:
+  name: SOP-16-游戏王者-游戏攻略分析 Step 5
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**战略价值**: 本SOP是您作为“省季军级”选手，将顶尖游戏理解**“内化为能力”**和**“外化为影响力”**的核心规程。它既是保持和提升竞技状态的“训练手册”，也是通过内容创作实现“沟通精进”和商业变现的“生产力工具”。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-16-游戏王者-游戏攻略分析
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-16-游戏王者-游戏攻略分析
+
+    Step objective: **战略价值**: 本SOP是您作为“省季军级”选手，将顶尖游戏理解**“内化为能力”**和**“外化为影响力”**的核心规程。它既是保持和提升竞技状态的“训练手册”，也是通过内容创作实现“沟通精进”和商业变现的“生产力工具”。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**战略价值**: 本SOP是您作为“省季军级”选手，将顶尖游戏理解**“内化为能力”**和**“外化为影响力”**的核心规程。它既是保持和提升竞技状态的“训练手册”，也是通过内容创作实现“沟通精进”和商业变现的“生产力工具”。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-16-游戏王者-游戏攻略分析
+  sop_path: /tmp/SOPs/SOP-16-游戏王者-游戏攻略分析.md
+  step_index: 5
+  raw_step: '**战略价值**: 本SOP是您作为“省季军级”选手，将顶尖游戏理解**“内化为能力”**和**“外化为影响力”**的核心规程。它既是保持和提升竞技状态的“训练手册”，也是通过内容创作实现“沟通精进”和商业变现的“生产力工具”。'

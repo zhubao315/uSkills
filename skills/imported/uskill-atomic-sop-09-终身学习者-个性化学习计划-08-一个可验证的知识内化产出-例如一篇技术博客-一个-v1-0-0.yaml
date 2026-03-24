@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-09-终身学习者-个性化学习计划-08-一个可验证的知识内化产出-例如一篇技术博客-一个-v1-0-0
+meta:
+  name: SOP-09-终身学习者-个性化学习计划 Step 8
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**一个可验证的知识内化产出**: 例如一篇技术博客、一个side project、一次内部分享或一个优化的SOP。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-09-终身学习者-个性化学习计划
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-09-终身学习者-个性化学习计划
+
+    Step objective: **一个可验证的知识内化产出**: 例如一篇技术博客、一个side project、一次内部分享或一个优化的SOP。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**一个可验证的知识内化产出**: 例如一篇技术博客、一个side project、一次内部分享或一个优化的SOP。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-09-终身学习者-个性化学习计划
+  sop_path: /tmp/SOPs/SOP-09-终身学习者-个性化学习计划.md
+  step_index: 8
+  raw_step: '**一个可验证的知识内化产出**: 例如一篇技术博客、一个side project、一次内部分享或一个优化的SOP。'

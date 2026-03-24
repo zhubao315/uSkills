@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-23-效率分析-28-设计-效率实验-针对根本原因-设计一个具体的-有-v1-0-0
+meta:
+  name: SOP-23-效率分析 Step 28
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**设计“效率实验”**: 针对根本原因，设计一个具体的、有时限的、可衡量的“改进实验”。例如：“本周，我将尝试‘时间块’工作法，每天上午9-11点设定为‘无干扰写作时间’，以减少上下文切换的成本”。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-23-效率分析
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-23-效率分析
+
+    Step objective: **设计“效率实验”**: 针对根本原因，设计一个具体的、有时限的、可衡量的“改进实验”。例如：“本周，我将尝试‘时间块’工作法，每天上午9-11点设定为‘无干扰写作时间’，以减少上下文切换的成本”。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**设计“效率实验”**: 针对根本原因，设计一个具体的、有时限的、可衡量的“改进实验”。例如：“本周，我将尝试‘时间块’工作法，每天上午9-11点设定为‘无干扰写作时间’，以减少上下文切换的成本”。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-23-效率分析
+  sop_path: /tmp/SOPs/SOP-23-效率分析.md
+  step_index: 28
+  raw_step: '**设计“效率实验”**: 针对根本原因，设计一个具体的、有时限的、可衡量的“改进实验”。例如：“本周，我将尝试‘时间块’工作法，每天上午9-11点设定为‘无干扰写作时间’，以减少上下文切换的成本”。'

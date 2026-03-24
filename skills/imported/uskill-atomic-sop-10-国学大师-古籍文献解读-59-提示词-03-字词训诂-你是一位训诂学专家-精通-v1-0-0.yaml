@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-10-国学大师-古籍文献解读-59-提示词-03-字词训诂-你是一位训诂学专家-精通-v1-0-0
+meta:
+  name: SOP-10-国学大师-古籍文献解读 Step 59
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-03 (字词训诂)**: `你是一位训诂学专家，精通《说文解字》和音韵学。我正在研读“[古籍名称]”，对其中的“[关键词]”一词的理解有疑问。请为我详细考证这个词的：1.
+    甲骨文/金文/小篆字形（如有）；2. 在《说文解字》中的本义；3. 在上古/中古音系中的拟音；4. 在先秦两汉文献中的主要用法和引申义。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-10-国学大师-古籍文献解读
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-10-国学大师-古籍文献解读
+
+    Step objective: **提示词-03 (字词训诂)**: `你是一位训诂学专家，精通《说文解字》和音韵学。我正在研读“[古籍名称]”，对其中的“[关键词]”一词的理解有疑问。请为我详细考证这个词的：1.
+    甲骨文/金文/小篆字形（如有）；2. 在《说文解字》中的本义；3. 在上古/中古音系中的拟音；4. 在先秦两汉文献中的主要用法和引申义。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-03 (字词训诂)**: `你是一位训诂学专家，精通《说文解字》和音韵学。我正在研读“[古籍名称]”，对其中的“[关键词]”一词的理解有疑问。请为我详细考证这个词的：1.
+    甲骨文/金文/小篆字形（如有）；2. 在《说文解字》中的本义；3. 在上古/中古音系中的拟音；4. 在先秦两汉文献中的主要用法和引申义。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-10-国学大师-古籍文献解读
+  sop_path: /tmp/SOPs/SOP-10-国学大师-古籍文献解读.md
+  step_index: 59
+  raw_step: '**提示词-03 (字词训诂)**: `你是一位训诂学专家，精通《说文解字》和音韵学。我正在研读“[古籍名称]”，对其中的“[关键词]”一词的理解有疑问。请为我详细考证这个词的：1.
+    甲骨文/金文/小篆字形（如有）；2. 在《说文解字》中的本义；3. 在上古/中古音系中的拟音；4. 在先秦两汉文献中的主要用法和引申义。`'

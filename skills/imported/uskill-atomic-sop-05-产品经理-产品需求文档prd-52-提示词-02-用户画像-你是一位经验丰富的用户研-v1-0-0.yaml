@@ -1,0 +1,59 @@
+skill_id: uskill-atomic-sop-05-产品经理-产品需求文档prd-52-提示词-02-用户画像-你是一位经验丰富的用户研-v1-0-0
+meta:
+  name: SOP-05-产品经理-产品需求文档PRD Step 52
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-02 (用户画像)**: `你是一位经验丰富的用户研究专家（User Researcher）。请根据我提供的用户访谈记录或用户反馈文本，提炼并构建1-2个核心用户画像。每个画像需包含：1.
+    人口统计学特征；2. 核心痛点与未被满足的需求；3. 典型使用场景（User Scenario）；4. 行为与态度标签。请以生动、有代入感的方式描述。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-05-产品经理-产品需求文档prd
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-05-产品经理-产品需求文档PRD
+
+    Step objective: **提示词-02 (用户画像)**: `你是一位经验丰富的用户研究专家（User Researcher）。请根据我提供的用户访谈记录或用户反馈文本，提炼并构建1-2个核心用户画像。每个画像需包含：1.
+    人口统计学特征；2. 核心痛点与未被满足的需求；3. 典型使用场景（User Scenario）；4. 行为与态度标签。请以生动、有代入感的方式描述。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-02 (用户画像)**: `你是一位经验丰富的用户研究专家（User Researcher）。请根据我提供的用户访谈记录或用户反馈文本，提炼并构建1-2个核心用户画像。每个画像需包含：1.
+    人口统计学特征；2. 核心痛点与未被满足的需求；3. 典型使用场景（User Scenario）；4. 行为与态度标签。请以生动、有代入感的方式描述。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-05-产品经理-产品需求文档PRD
+  sop_path: /tmp/SOPs/SOP-05-产品经理-产品需求文档PRD.md
+  step_index: 52
+  raw_step: '**提示词-02 (用户画像)**: `你是一位经验丰富的用户研究专家（User Researcher）。请根据我提供的用户访谈记录或用户反馈文本，提炼并构建1-2个核心用户画像。每个画像需包含：1.
+    人口统计学特征；2. 核心痛点与未被满足的需求；3. 典型使用场景（User Scenario）；4. 行为与态度标签。请以生动、有代入感的方式描述。`'

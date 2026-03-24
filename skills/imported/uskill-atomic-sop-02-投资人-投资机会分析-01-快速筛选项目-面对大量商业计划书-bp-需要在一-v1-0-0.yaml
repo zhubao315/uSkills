@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-02-投资人-投资机会分析-01-快速筛选项目-面对大量商业计划书-bp-需要在一-v1-0-0
+meta:
+  name: SOP-02-投资人-投资机会分析 Step 1
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**快速筛选项目**: 面对大量商业计划书（BP），需要在一小时内筛选出值得跟进的Top 3项目时。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-02-投资人-投资机会分析
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-02-投资人-投资机会分析
+
+    Step objective: **快速筛选项目**: 面对大量商业计划书（BP），需要在一小时内筛选出值得跟进的Top 3项目时。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**快速筛选项目**: 面对大量商业计划书（BP），需要在一小时内筛选出值得跟进的Top 3项目时。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-02-投资人-投资机会分析
+  sop_path: /tmp/SOPs/SOP-02-投资人-投资机会分析.md
+  step_index: 1
+  raw_step: '**快速筛选项目**: 面对大量商业计划书（BP），需要在一小时内筛选出值得跟进的Top 3项目时。'

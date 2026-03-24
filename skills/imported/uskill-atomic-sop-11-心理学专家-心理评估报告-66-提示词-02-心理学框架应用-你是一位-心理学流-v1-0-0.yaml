@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-11-心理学专家-心理评估报告-66-提示词-02-心理学框架应用-你是一位-心理学流-v1-0-0
+meta:
+  name: SOP-11-心理学专家-心理评估报告 Step 66
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-02 (心理学框架应用)**: `你是一位[心理学流派，如认知行为学派]的专家。我发现了一个行为模式：“[描述AI发现的数据模式，如‘用户在晚间10点后更容易发生冲动消费’]”。请你运用[心理学理论，如‘双系统理论’或‘决策疲劳’]来解释这个模式背后可能的心理机制，并提出2-3个待验证的假设。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-11-心理学专家-心理评估报告
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-11-心理学专家-心理评估报告
+
+    Step objective: **提示词-02 (心理学框架应用)**: `你是一位[心理学流派，如认知行为学派]的专家。我发现了一个行为模式：“[描述AI发现的数据模式，如‘用户在晚间10点后更容易发生冲动消费’]”。请你运用[心理学理论，如‘双系统理论’或‘决策疲劳’]来解释这个模式背后可能的心理机制，并提出2-3个待验证的假设。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-02 (心理学框架应用)**: `你是一位[心理学流派，如认知行为学派]的专家。我发现了一个行为模式：“[描述AI发现的数据模式，如‘用户在晚间10点后更容易发生冲动消费’]”。请你运用[心理学理论，如‘双系统理论’或‘决策疲劳’]来解释这个模式背后可能的心理机制，并提出2-3个待验证的假设。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-11-心理学专家-心理评估报告
+  sop_path: /tmp/SOPs/SOP-11-心理学专家-心理评估报告.md
+  step_index: 66
+  raw_step: '**提示词-02 (心理学框架应用)**: `你是一位[心理学流派，如认知行为学派]的专家。我发现了一个行为模式：“[描述AI发现的数据模式，如‘用户在晚间10点后更容易发生冲动消费’]”。请你运用[心理学理论，如‘双系统理论’或‘决策疲劳’]来解释这个模式背后可能的心理机制，并提出2-3个待验证的假设。`'

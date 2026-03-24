@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-10-国学大师-古籍文献解读-02-文化内容创作-需要从古籍中汲取灵感-创作一篇关于-v1-0-0
+meta:
+  name: SOP-10-国学大师-古籍文献解读 Step 2
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**文化内容创作**: 需要从古籍中汲取灵感，创作一篇关于“中国古代管理智慧”的深度文章或讲座逐字稿时。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-10-国学大师-古籍文献解读
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-10-国学大师-古籍文献解读
+
+    Step objective: **文化内容创作**: 需要从古籍中汲取灵感，创作一篇关于“中国古代管理智慧”的深度文章或讲座逐字稿时。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**文化内容创作**: 需要从古籍中汲取灵感，创作一篇关于“中国古代管理智慧”的深度文章或讲座逐字稿时。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-10-国学大师-古籍文献解读
+  sop_path: /tmp/SOPs/SOP-10-国学大师-古籍文献解读.md
+  step_index: 2
+  raw_step: '**文化内容创作**: 需要从古籍中汲取灵感，创作一篇关于“中国古代管理智慧”的深度文章或讲座逐字稿时。'

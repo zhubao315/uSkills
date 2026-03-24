@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-02-投资人-投资机会分析-07-深度尽职调查备忘录-涵盖技术尽调-管理层访谈-护-v1-0-0
+meta:
+  name: SOP-02-投资人-投资机会分析 Step 7
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**深度尽职调查备忘录**: 涵盖技术尽调、管理层访谈、护城河分析等深度洞察。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-02-投资人-投资机会分析
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-02-投资人-投资机会分析
+
+    Step objective: **深度尽职调查备忘录**: 涵盖技术尽调、管理层访谈、护城河分析等深度洞察。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**深度尽职调查备忘录**: 涵盖技术尽调、管理层访谈、护城河分析等深度洞察。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-02-投资人-投资机会分析
+  sop_path: /tmp/SOPs/SOP-02-投资人-投资机会分析.md
+  step_index: 7
+  raw_step: '**深度尽职调查备忘录**: 涵盖技术尽调、管理层访谈、护城河分析等深度洞察。'

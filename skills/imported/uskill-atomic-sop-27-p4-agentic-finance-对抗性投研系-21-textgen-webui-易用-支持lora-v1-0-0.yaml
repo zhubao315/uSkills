@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-27-p4-agentic-finance-对抗性投研系-21-textgen-webui-易用-支持lora-v1-0-0
+meta:
+  name: SOP-27-P4-Agentic-Finance-对抗性投研系统 Step 21
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**TextGen WebUI**: 易用，支持LoRA'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-27-p4-agentic-finance-对抗性投研系
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-27-P4-Agentic-Finance-对抗性投研系统
+
+    Step objective: **TextGen WebUI**: 易用，支持LoRA
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**TextGen WebUI**: 易用，支持LoRA'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-27-P4-Agentic-Finance-对抗性投研系统
+  sop_path: /tmp/SOPs/SOP-27-P4-Agentic-Finance-对抗性投研系统.md
+  step_index: 21
+  raw_step: '**TextGen WebUI**: 易用，支持LoRA'

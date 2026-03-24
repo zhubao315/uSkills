@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-21-知识管理-32-00-inbox-是否已清空-v1-0-0
+meta:
+  name: SOP-21-知识管理 Step 32
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '[ ] `00_Inbox`是否已清空？'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-21-知识管理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-21-知识管理
+
+    Step objective: [ ] `00_Inbox`是否已清空？
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '[ ] `00_Inbox`是否已清空？'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-21-知识管理
+  sop_path: /tmp/SOPs/SOP-21-知识管理.md
+  step_index: 32
+  raw_step: '[ ] `00_Inbox`是否已清空？'

@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-01-架构师-系统设计分析-18-用-诊断提示词-让ai判断-是否需要ai决策能力-v1-0-0
+meta:
+  name: SOP-01-架构师-系统设计分析 Step 18
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '用**诊断提示词**让AI判断: 是否需要AI决策能力？数据规模如何？是否涉及实时性要求？'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-01-架构师-系统设计分析
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-01-架构师-系统设计分析
+
+    Step objective: 用**诊断提示词**让AI判断: 是否需要AI决策能力？数据规模如何？是否涉及实时性要求？
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '用**诊断提示词**让AI判断: 是否需要AI决策能力？数据规模如何？是否涉及实时性要求？'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-01-架构师-系统设计分析
+  sop_path: /tmp/SOPs/SOP-01-架构师-系统设计分析.md
+  step_index: 18
+  raw_step: '用**诊断提示词**让AI判断: 是否需要AI决策能力？数据规模如何？是否涉及实时性要求？'

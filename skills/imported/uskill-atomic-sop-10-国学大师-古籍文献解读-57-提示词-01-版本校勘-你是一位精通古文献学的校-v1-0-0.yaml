@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-10-国学大师-古籍文献解读-57-提示词-01-版本校勘-你是一位精通古文献学的校-v1-0-0
+meta:
+  name: SOP-10-国学大师-古籍文献解读 Step 57
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-01 (版本校勘)**: `你是一位精通古文献学的校勘专家。我将提供《[古籍名称]》的两个不同版本（A和B）。请你逐句进行比对，并以表格形式列出所有存在显著差异的文字。表格需包含：所在章节、版本A原文、版本B原文、你的初步校勘意见。版本A：[...]。版本B：[...]。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-10-国学大师-古籍文献解读
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-10-国学大师-古籍文献解读
+
+    Step objective: **提示词-01 (版本校勘)**: `你是一位精通古文献学的校勘专家。我将提供《[古籍名称]》的两个不同版本（A和B）。请你逐句进行比对，并以表格形式列出所有存在显著差异的文字。表格需包含：所在章节、版本A原文、版本B原文、你的初步校勘意见。版本A：[...]。版本B：[...]。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-01 (版本校勘)**: `你是一位精通古文献学的校勘专家。我将提供《[古籍名称]》的两个不同版本（A和B）。请你逐句进行比对，并以表格形式列出所有存在显著差异的文字。表格需包含：所在章节、版本A原文、版本B原文、你的初步校勘意见。版本A：[...]。版本B：[...]。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-10-国学大师-古籍文献解读
+  sop_path: /tmp/SOPs/SOP-10-国学大师-古籍文献解读.md
+  step_index: 57
+  raw_step: '**提示词-01 (版本校勘)**: `你是一位精通古文献学的校勘专家。我将提供《[古籍名称]》的两个不同版本（A和B）。请你逐句进行比对，并以表格形式列出所有存在显著差异的文字。表格需包含：所在章节、版本A原文、版本B原文、你的初步校勘意见。版本A：[...]。版本B：[...]。`'

@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-09-终身学习者-个性化学习计划-44-将敏捷开发的-回顾-调整-思想引入学习过程-确保-v1-0-0
+meta:
+  name: SOP-09-终身学习者-个性化学习计划 Step 44
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: 将敏捷开发的“回顾-调整”思想引入学习过程，确保我的个人学习系统本身也在不断迭代和进化。
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-09-终身学习者-个性化学习计划
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-09-终身学习者-个性化学习计划
+
+    Step objective: 将敏捷开发的“回顾-调整”思想引入学习过程，确保我的个人学习系统本身也在不断迭代和进化。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - 将敏捷开发的“回顾-调整”思想引入学习过程，确保我的个人学习系统本身也在不断迭代和进化。
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-09-终身学习者-个性化学习计划
+  sop_path: /tmp/SOPs/SOP-09-终身学习者-个性化学习计划.md
+  step_index: 44
+  raw_step: 将敏捷开发的“回顾-调整”思想引入学习过程，确保我的个人学习系统本身也在不断迭代和进化。

@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-20-深度阅读与知识管理-12-需求分析-运用-投资人技能-的思维-问自己-这本-v1-0-0
+meta:
+  name: SOP-20-深度阅读与知识管理 Step 12
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**需求分析**: 运用[[💰 投资人技能]]的思维，问自己："这本书能解决我当前的什么关键问题？投资回报率(ROI)如何？"'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-20-深度阅读与知识管理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-20-深度阅读与知识管理
+
+    Step objective: **需求分析**: 运用[[💰 投资人技能]]的思维，问自己："这本书能解决我当前的什么关键问题？投资回报率(ROI)如何？"
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**需求分析**: 运用[[💰 投资人技能]]的思维，问自己："这本书能解决我当前的什么关键问题？投资回报率(ROI)如何？"'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-20-深度阅读与知识管理
+  sop_path: /tmp/SOPs/SOP-20-深度阅读与知识管理.md
+  step_index: 12
+  raw_step: '**需求分析**: 运用[[💰 投资人技能]]的思维，问自己："这本书能解决我当前的什么关键问题？投资回报率(ROI)如何？"'

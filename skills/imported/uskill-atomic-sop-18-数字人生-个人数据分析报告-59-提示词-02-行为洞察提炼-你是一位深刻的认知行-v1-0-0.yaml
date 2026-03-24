@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-18-数字人生-个人数据分析报告-59-提示词-02-行为洞察提炼-你是一位深刻的认知行-v1-0-0
+meta:
+  name: SOP-18-数字人生-个人数据分析报告 Step 59
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**提示词-02 (行为洞察提炼)**: `你是一位深刻的认知行为分析师。我观察到以下数据模式：“[描述数据模式，如‘尽管我计划每周阅读5小时，但实际平均只有2小时，且大部分阅读发生在周末深夜’]”。我的初步分析是“[初步分析，如‘工作日太累，没有精力阅读’]”。请你运用行为心理学（如习惯回路、决策疲劳、启动效应等）理论，对我这个模式进行深度解读，并提出2-3个更深层次的根本原因假设。`'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-18-数字人生-个人数据分析报告
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-18-数字人生-个人数据分析报告
+
+    Step objective: **提示词-02 (行为洞察提炼)**: `你是一位深刻的认知行为分析师。我观察到以下数据模式：“[描述数据模式，如‘尽管我计划每周阅读5小时，但实际平均只有2小时，且大部分阅读发生在周末深夜’]”。我的初步分析是“[初步分析，如‘工作日太累，没有精力阅读’]”。请你运用行为心理学（如习惯回路、决策疲劳、启动效应等）理论，对我这个模式进行深度解读，并提出2-3个更深层次的根本原因假设。`
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**提示词-02 (行为洞察提炼)**: `你是一位深刻的认知行为分析师。我观察到以下数据模式：“[描述数据模式，如‘尽管我计划每周阅读5小时，但实际平均只有2小时，且大部分阅读发生在周末深夜’]”。我的初步分析是“[初步分析，如‘工作日太累，没有精力阅读’]”。请你运用行为心理学（如习惯回路、决策疲劳、启动效应等）理论，对我这个模式进行深度解读，并提出2-3个更深层次的根本原因假设。`'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-18-数字人生-个人数据分析报告
+  sop_path: /tmp/SOPs/SOP-18-数字人生-个人数据分析报告.md
+  step_index: 59
+  raw_step: '**提示词-02 (行为洞察提炼)**: `你是一位深刻的认知行为分析师。我观察到以下数据模式：“[描述数据模式，如‘尽管我计划每周阅读5小时，但实际平均只有2小时，且大部分阅读发生在周末深夜’]”。我的初步分析是“[初步分析，如‘工作日太累，没有精力阅读’]”。请你运用行为心理学（如习惯回路、决策疲劳、启动效应等）理论，对我这个模式进行深度解读，并提出2-3个更深层次的根本原因假设。`'

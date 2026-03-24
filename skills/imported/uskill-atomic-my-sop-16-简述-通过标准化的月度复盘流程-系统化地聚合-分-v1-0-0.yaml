@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-my-sop-16-简述-通过标准化的月度复盘流程-系统化地聚合-分-v1-0-0
+meta:
+  name: my_sop Step 16
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**简述**: 通过标准化的月度复盘流程，系统化地聚合、分析个人全维度数据，以生成驱动个人成长的行动计划。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - my-sop
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: my_sop
+
+    Step objective: **简述**: 通过标准化的月度复盘流程，系统化地聚合、分析个人全维度数据，以生成驱动个人成长的行动计划。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**简述**: 通过标准化的月度复盘流程，系统化地聚合、分析个人全维度数据，以生成驱动个人成长的行动计划。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: my_sop
+  sop_path: /tmp/SOPs/my_sop.md
+  step_index: 16
+  raw_step: '**简述**: 通过标准化的月度复盘流程，系统化地聚合、分析个人全维度数据，以生成驱动个人成长的行动计划。'

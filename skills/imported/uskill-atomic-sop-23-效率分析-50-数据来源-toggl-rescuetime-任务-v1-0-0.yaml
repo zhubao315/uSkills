@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-23-效率分析-50-数据来源-toggl-rescuetime-任务-v1-0-0
+meta:
+  name: SOP-23-效率分析 Step 50
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**数据来源**: Toggl, RescueTime, 任务管理工具（如Todoist, Asana）'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-23-效率分析
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-23-效率分析
+
+    Step objective: **数据来源**: Toggl, RescueTime, 任务管理工具（如Todoist, Asana）
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**数据来源**: Toggl, RescueTime, 任务管理工具（如Todoist, Asana）'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-23-效率分析
+  sop_path: /tmp/SOPs/SOP-23-效率分析.md
+  step_index: 50
+  raw_step: '**数据来源**: Toggl, RescueTime, 任务管理工具（如Todoist, Asana）'

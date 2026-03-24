@@ -43,9 +43,10 @@ def extract_steps(text: str) -> list[str]:
 def convert_sop_text(text: str, sop_name: str, sop_path: str = "") -> list[USkill]:
     steps = extract_steps(text)
     skills: list[USkill] = []
+    sop_slug = _slugify(sop_name)[:32]
     for index, step in enumerate(steps, start=1):
-        slug = _slugify(step)[:40]
-        skill_id = f"uskill-atomic-{slug}-v1-0-0"
+        step_slug = _slugify(step)[:24]
+        skill_id = f"uskill-atomic-{sop_slug}-{index:02d}-{step_slug}-v1-0-0"
         skill = USkill(
             skill_id=skill_id,
             meta=SkillMeta(
@@ -54,7 +55,7 @@ def convert_sop_text(text: str, sop_name: str, sop_path: str = "") -> list[USkil
                 category=SkillCategory.atomic,
                 domain="general",
                 description=step,
-                tags=["converted", "sop", "atomic"],
+                tags=["converted", "sop", "atomic", sop_slug],
                 owner="uSkills",
             ),
             input=SkillInput(
@@ -70,6 +71,7 @@ def convert_sop_text(text: str, sop_name: str, sop_path: str = "") -> list[USkil
             execute=ExecuteConfig(
                 prompt_template=(
                     "You are executing an atomic SOP skill.\n"
+                    f"SOP: {sop_name}\n"
                     f"Step objective: {step}\n"
                     "Use {{context}} when provided and produce a structured result."
                 ),

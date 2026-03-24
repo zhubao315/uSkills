@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-15-摄影家-摄影作品后期处理-14-定义情感基调-运用-生活艺术家技能-的美学判断和-v1-0-0
+meta:
+  name: SOP-15-摄影家-摄影作品后期处理 Step 14
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**定义情感基调**: 运用[[🎨 生活艺术家技能]]的美学判断和[[🧠 心理学专家技能]]的色彩心理学知识，为照片定义一个情感关键词（如“静谧”、“史诗感”、“温暖”、“孤独”）。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-15-摄影家-摄影作品后期处理
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-15-摄影家-摄影作品后期处理
+
+    Step objective: **定义情感基调**: 运用[[🎨 生活艺术家技能]]的美学判断和[[🧠 心理学专家技能]]的色彩心理学知识，为照片定义一个情感关键词（如“静谧”、“史诗感”、“温暖”、“孤独”）。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**定义情感基调**: 运用[[🎨 生活艺术家技能]]的美学判断和[[🧠 心理学专家技能]]的色彩心理学知识，为照片定义一个情感关键词（如“静谧”、“史诗感”、“温暖”、“孤独”）。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-15-摄影家-摄影作品后期处理
+  sop_path: /tmp/SOPs/SOP-15-摄影家-摄影作品后期处理.md
+  step_index: 14
+  raw_step: '**定义情感基调**: 运用[[🎨 生活艺术家技能]]的美学判断和[[🧠 心理学专家技能]]的色彩心理学知识，为照片定义一个情感关键词（如“静谧”、“史诗感”、“温暖”、“孤独”）。'

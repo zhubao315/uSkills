@@ -1,0 +1,55 @@
+skill_id: uskill-atomic-sop-09-终身学习者-个性化学习计划-21-主动学习-在学习过程中-不断向ai提问-使用-a-v1-0-0
+meta:
+  name: SOP-09-终身学习者-个性化学习计划 Step 21
+  version: 1.0.0
+  category: atomic
+  domain: general
+  description: '**主动学习**: 在学习过程中，不断向AI提问（使用**AI提示词-03**），扮演“苏格拉底式导师”，通过追问和诘难，深化对知识的理解，而非被动接收。'
+  tags:
+  - converted
+  - sop
+  - atomic
+  - sop-09-终身学习者-个性化学习计划
+  owner: uSkills
+input:
+  params:
+  - name: context
+    type: string
+    required: false
+    description: Execution context shared across the SOP chain.
+    default: null
+execute:
+  prompt_template: 'You are executing an atomic SOP skill.
+
+    SOP: SOP-09-终身学习者-个性化学习计划
+
+    Step objective: **主动学习**: 在学习过程中，不断向AI提问（使用**AI提示词-03**），扮演“苏格拉底式导师”，通过追问和诘难，深化对知识的理解，而非被动接收。
+
+    Use {{context}} when provided and produce a structured result.'
+  steps:
+  - '**主动学习**: 在学习过程中，不断向AI提问（使用**AI提示词-03**），扮演“苏格拉底式导师”，通过追问和诘难，深化对知识的理解，而非被动接收。'
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools: []
+  fallback:
+  - manual-review
+output:
+  format: json
+  params:
+  - status
+  - result
+  - notes
+  validation_rules:
+  - status must be one of success, partial, failed
+  - result must summarize the step execution
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: SOP-09-终身学习者-个性化学习计划
+  sop_path: /tmp/SOPs/SOP-09-终身学习者-个性化学习计划.md
+  step_index: 21
+  raw_step: '**主动学习**: 在学习过程中，不断向AI提问（使用**AI提示词-03**），扮演“苏格拉底式导师”，通过追问和诘难，深化对知识的理解，而非被动接收。'
