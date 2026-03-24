@@ -1,0 +1,73 @@
+skill_id: uskill-domain-skill-creator-governance-demo-v1-0-0
+meta:
+  name: skill-creator 驾驭示例
+  version: 1.0.0
+  category: domain
+  domain: codex-skills
+  description: 以最新版 skill-creator 为对象，展示如何对一个技能执行定义驾驭、过程驾驭、结果驾驭与迭代驾驭。
+  tags:
+    - skill-creator
+    - governance
+    - codex
+    - skill-demo
+  owner: uSkills
+input:
+  params:
+    - name: task_goal
+      type: string
+      required: true
+      description: 本次要创建或更新的技能目标
+    - name: constraints
+      type: array
+      required: false
+      description: 本次技能任务的关键约束
+    - name: validation_artifacts
+      type: array
+      required: false
+      description: 需要保留的验证证据，例如输出、日志、diff
+execute:
+  prompt_template: |
+    你正在驾驭一个名为 skill-creator 的技能，而不是直接黑盒调用它。
+    先确认任务目标 {{task_goal}}，再基于 {{constraints}} 选择最小必要上下文。
+    强制遵循以下治理要求：
+    1. 只加载 SKILL.md 中与当前任务直接相关的内容
+    2. 当技能接近 500 行或存在多变体时，将细节拆到 references/
+    3. 使用 scripts/ 承载低自由度、易错流程
+    4. 验证时只给最小任务上下文，不泄露预期答案或既有结论
+    5. 记录失败模式、修改点和下一轮迭代建议
+  steps:
+    - 明确技能目标和边界
+    - 识别最小必要上下文与资源加载路径
+    - 选择自由度策略并执行技能初始化或更新
+    - 独立验证技能效果并沉淀证据
+    - 形成迭代结论并回写治理记录
+  temperature: 0.1
+  model: gpt-5.4-mini
+  tools:
+    - local-filesystem
+    - python
+  fallback:
+    - manual-review
+    - rollback-to-last-stable-skill
+output:
+  format: json
+  params:
+    - governance_plan
+    - execution_trace
+    - validation_summary
+    - next_iteration
+  validation_rules:
+    - governance_plan must state scope, resources, and degree of freedom
+    - execution_trace must identify loaded files and validation steps
+    - validation_summary must include at least one artifact or failure signal
+control:
+  timeout: 60
+  retry: 2
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: skill-creator 技能驾驭 SOP
+  sop_path: examples/skill_creator_governance_sop.md
+  step_index: 1
+  raw_step: 以最新版 skill-creator 为对象执行技能治理与发布示例

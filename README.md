@@ -41,6 +41,10 @@ python cli/uskills_cli.py index skills --output docs/generated/skills-index.md
 pytest
 ```
 
+## 示例案例
+
+- 以最新版 `skill-creator` 为样例，展示如何将一个技能纳入定义驾驭、过程驾驭、结果驾驭与迭代驾驭闭环
+
 ## V1.0 能力
 
 - 历史 SOP 文本导入与原子步骤拆分

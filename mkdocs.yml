@@ -24,5 +24,6 @@ nav:
   - 架构: architecture.md
   - Schema: schema.md
   - 技能库: skills.md
+  - skill-creator 驾驭示例: skill-creator-case.md
   - Generated Skills Index: generated/skills-index.md
   - Roadmap: roadmap.md
