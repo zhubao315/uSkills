@@ -1,36 +1,49 @@
-# Skills Index
+# 技能仓库
+
+共收录 **2655** 个技能，来源于 **33** 个 SOP / 技能源。
+
+## 分类导览
+
+- [SOP-01-架构师-系统设计分析](#sop-01-架构师-系统设计分析) (381)
+- [SOP-02-投资人-投资机会分析](#sop-02-投资人-投资机会分析) (68)
+- [SOP-03-AI专家-提示词优化与测试](#sop-03-ai专家-提示词优化与测试) (68)
+- [SOP-04-全栈工程师-功能开发](#sop-04-全栈工程师-功能开发) (77)
+- [SOP-05-产品经理-产品需求文档PRD](#sop-05-产品经理-产品需求文档prd) (58)
+- [SOP-06-云计算专家-容器化部署](#sop-06-云计算专家-容器化部署) (72)
+- [SOP-07-知识产权顾问-专利申请文书](#sop-07-知识产权顾问-专利申请文书) (70)
+- [SOP-08-开源发烧友-技术博客撰写](#sop-08-开源发烧友-技术博客撰写) (67)
+- [SOP-09-终身学习者-个性化学习计划](#sop-09-终身学习者-个性化学习计划) (56)
+- [SOP-10-国学大师-古籍文献解读](#sop-10-国学大师-古籍文献解读) (66)
+- [SOP-11-心理学专家-心理评估报告](#sop-11-心理学专家-心理评估报告) (71)
+- [SOP-12-生活艺术家-生活美学设计](#sop-12-生活艺术家-生活美学设计) (63)
+- [SOP-13-健身跑者-训练计划制定](#sop-13-健身跑者-训练计划制定) (54)
+- [SOP-14-葡萄酒大师-品鉴笔记撰写](#sop-14-葡萄酒大师-品鉴笔记撰写) (53)
+- [SOP-15-摄影家-摄影作品后期处理](#sop-15-摄影家-摄影作品后期处理) (68)
+- [SOP-16-游戏王者-游戏攻略分析](#sop-16-游戏王者-游戏攻略分析) (59)
+- [SOP-17-北京文化使者-文化研究报告](#sop-17-北京文化使者-文化研究报告) (65)
+- [SOP-18-数字人生-个人数据分析报告](#sop-18-数字人生-个人数据分析报告) (64)
+- [SOP-19-户外大神-户外路线规划](#sop-19-户外大神-户外路线规划) (71)
+- [SOP-20-深度阅读与知识管理](#sop-20-深度阅读与知识管理) (65)
+- [SOP-21-知识管理](#sop-21-知识管理) (71)
+- [SOP-22-目标管理](#sop-22-目标管理) (62)
+- [SOP-23-效率分析](#sop-23-效率分析) (51)
+- [SOP-24-产品经理-竞品分析](#sop-24-产品经理-竞品分析) (43)
+- [SOP-25-投资经理-IM报告撰写](#sop-25-投资经理-im报告撰写) (75)
+- [SOP-26-RPVI-大规模代码AI开发工作流](#sop-26-rpvi-大规模代码ai开发工作流) (239)
+- [SOP-26-人生操作系统-自主进化流程](#sop-26-人生操作系统-自主进化流程) (19)
+- [SOP-27-P4-Agentic-Finance-对抗性投研系统](#sop-27-p4-agentic-finance-对抗性投研系统) (361)
+- [SOP-28-电视剧深度解读](#sop-28-电视剧深度解读) (89)
+- [my_sop](#my-sop) (26)
+- [skill-creator 技能驾驭 SOP](#skill-creator-技能驾驭-sop) (1)
+- [历史提示词资产](#历史提示词资产) (1)
+- [驾驭工程执行规范](#驾驭工程执行规范) (1)
+
+## SOP-01-架构师-系统设计分析
+
+技能数：**381**
 
 | Skill ID | Name | Category | Domain | Version |
 | --- | --- | --- | --- | --- |
-| `uskill-atomic-text-keyword-extract-v1-0-0` | 文本关键词提取 | atomic | nlp | 1.0.0 |
-| `uskill-domain-skill-creator-governance-demo-v1-0-0` | skill-creator 驾驭示例 | domain | codex-skills | 1.0.0 |
-| `uskill-governance-execution-guard-v1-0-0` | 执行合规守卫 | governance | governance | 1.0.0 |
-| `uskill-atomic-my-sop-01-简述-设计ai原生-云原生-且llmops就绪的-v1-0-0` | my_sop Step 1 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-02-简述-建立以测试驱动开发-tdd-为核心-由ai-v1-0-0` | my_sop Step 2 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-03-简述-以用户价值为核心-高效-精准地发现市场机会-v1-0-0` | my_sop Step 3 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-04-简述-将任何应用-尤其是ai应用-高效-可靠地通-v1-0-0` | my_sop Step 4 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-05-简述-针对ai算法-软件架构等复杂技术-高效-精-v1-0-0` | my_sop Step 5 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-06-简述-持续-高效地生产具有深度-独特性和广泛影响-v1-0-0` | my_sop Step 6 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-07-简述-通过ai驱动的情报采集与分析流程-从海量噪-v1-0-0` | my_sop Step 7 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-08-简述-建立一套工业级提示词-prompt-的全生-v1-0-0` | my_sop Step 8 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-09-简述-规范化-高效-深入地完成对潜在投资标的的全-v1-0-0` | my_sop Step 9 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-10-简述-将标准投资备忘录-im-报告的撰写周期从5-v1-0-0` | my_sop Step 10 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-11-简述-建立以战略目标为导向-ai全面赋能的闭环学-v1-0-0` | my_sop Step 11 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-12-简述-对古籍文献进行深度-准确-多维度的解读-并-v1-0-0` | my_sop Step 12 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-13-简述-在非临床场景下-对个人-团队或用户群体的行-v1-0-0` | my_sop Step 13 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-14-简述-建立从战略选书到知识内化的ai增强闭环流程-v1-0-0` | my_sop Step 14 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-15-简述-基于p-a-r-a-和zettelkast-v1-0-0` | my_sop Step 15 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-16-简述-通过标准化的月度复盘流程-系统化地聚合-分-v1-0-0` | my_sop Step 16 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-17-简述-基于okr框架-建立由ai赋能的个人目标设-v1-0-0` | my_sop Step 17 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-18-简述-系统性地识别-分析和消除个人工作与生活中的-v1-0-0` | my_sop Step 18 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-19-简述-定义lifeos-v2026的三循环进化机-v1-0-0` | my_sop Step 19 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-20-简述-将抽象的美学理念和生活构想-转化为具体-可-v1-0-0` | my_sop Step 20 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-21-简述-建立以长期主义为核心-数据驱动-ai赋能的-v1-0-0` | my_sop Step 21 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-22-简述-系统化地品鉴-分析葡萄酒-并高效地将感官体-v1-0-0` | my_sop Step 22 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-23-简述-以叙事增强和风格塑造为核心-建立由ai全面-v1-0-0` | my_sop Step 23 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-24-简述-通过职业级的-数据驱动的流程-深度分析游戏-v1-0-0` | my_sop Step 24 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-25-简述-系统化地研究北京文化主题-并将其创作-包装-v1-0-0` | my_sop Step 25 | atomic | general | 1.0.0 |
-| `uskill-atomic-my-sop-26-简述-规划和管理具有挑战性的户外探险活动-将风险-v1-0-0` | my_sop Step 26 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-01-架构师-系统设计分析-01-复杂业务系统重构-当现有单体应用无法支撑业务增长-v1-0-0` | SOP-01-架构师-系统设计分析 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-01-架构师-系统设计分析-02-ai能力集成-当业务方提出要在现有系统中增加-智-v1-0-0` | SOP-01-架构师-系统设计分析 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-01-架构师-系统设计分析-03-技术选型决策-在面临-自研-vs-采购-或-开源-v1-0-0` | SOP-01-架构师-系统设计分析 Step 3 | atomic | general | 1.0.0 |
@@ -412,6 +425,13 @@
 | `uskill-atomic-sop-01-架构师-系统设计分析-97-模型降级链-gpt-4-claude-llama-v1-0-0` | SOP-01-架构师-系统设计分析 Step 97 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-01-架构师-系统设计分析-98-熔断策略-当model-a失败率-20-或成本--v1-0-0` | SOP-01-架构师-系统设计分析 Step 98 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-01-架构师-系统设计分析-99-缓存策略-对相同query的响应缓存-redis-v1-0-0` | SOP-01-架构师-系统设计分析 Step 99 | atomic | general | 1.0.0 |
+
+## SOP-02-投资人-投资机会分析
+
+技能数：**68**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-02-投资人-投资机会分析-01-快速筛选项目-面对大量商业计划书-bp-需要在一-v1-0-0` | SOP-02-投资人-投资机会分析 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-02-投资人-投资机会分析-02-深度尽职调查-在签署投资意向书-ts-前-需要对-v1-0-0` | SOP-02-投资人-投资机会分析 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-02-投资人-投资机会分析-03-投决会汇报-准备向投资委员会-ic-汇报项目-需-v1-0-0` | SOP-02-投资人-投资机会分析 Step 3 | atomic | general | 1.0.0 |
@@ -480,6 +500,13 @@
 | `uskill-atomic-sop-02-投资人-投资机会分析-66-历史最佳范例-比亚迪投资分析备忘录链接-v1-0-0` | SOP-02-投资人-投资机会分析 Step 66 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-02-投资人-投资机会分析-67-uprompt模板-投资-机会分析模板链接-v1-0-0` | SOP-02-投资人-投资机会分析 Step 67 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-02-投资人-投资机会分析-68-平台支持-投研智库平台链接-v1-0-0` | SOP-02-投资人-投资机会分析 Step 68 | atomic | general | 1.0.0 |
+
+## SOP-03-AI专家-提示词优化与测试
+
+技能数：**68**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-03-ai专家-提示词优化与测试-01-关键业务prompt开发-当需要为一个核心业务场-v1-0-0` | SOP-03-AI专家-提示词优化与测试 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-03-ai专家-提示词优化与测试-02-prompt效果不稳定-当发现线上ai应用的输出-v1-0-0` | SOP-03-AI专家-提示词优化与测试 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-03-ai专家-提示词优化与测试-03-新模型迁移测试-当需要将业务从gpt-3-5迁移-v1-0-0` | SOP-03-AI专家-提示词优化与测试 Step 3 | atomic | general | 1.0.0 |
@@ -548,6 +575,13 @@
 | `uskill-atomic-sop-03-ai专家-提示词优化与测试-66-相关技能-产品经理技能-心理学专家技能-终身学习-v1-0-0` | SOP-03-AI专家-提示词优化与测试 Step 66 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-03-ai专家-提示词优化与测试-67-历史最佳范例-uprompt中-架构师sop提示-v1-0-0` | SOP-03-AI专家-提示词优化与测试 Step 67 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-03-ai专家-提示词优化与测试-68-相关sop-sop-21-知识管理-v1-0-0` | SOP-03-AI专家-提示词优化与测试 Step 68 | atomic | general | 1.0.0 |
+
+## SOP-04-全栈工程师-功能开发
+
+技能数：**77**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-04-全栈工程师-功能开发-01-新功能端到端开发-接到一个完整的用户故事-需要独-v1-0-0` | SOP-04-全栈工程师-功能开发 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-04-全栈工程师-功能开发-02-遗留代码重构-在修改一个充满-技术债-的老模块时-v1-0-0` | SOP-04-全栈工程师-功能开发 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-04-全栈工程师-功能开发-03-紧急bug修复-生产环境出现严重bug-需要快速-v1-0-0` | SOP-04-全栈工程师-功能开发 Step 3 | atomic | general | 1.0.0 |
@@ -625,6 +659,13 @@
 | `uskill-atomic-sop-04-全栈工程师-功能开发-75-相关技能-架构师-ai时代价值系统的核心引擎-架-v1-0-0` | SOP-04-全栈工程师-功能开发 Step 75 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-04-全栈工程师-功能开发-76-相关sop-sop-01-架构师系统设计分析-s-v1-0-0` | SOP-04-全栈工程师-功能开发 Step 76 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-04-全栈工程师-功能开发-77-uprompt模板-全栈工程师-功能开发模板链接-v1-0-0` | SOP-04-全栈工程师-功能开发 Step 77 | atomic | general | 1.0.0 |
+
+## SOP-05-产品经理-产品需求文档PRD
+
+技能数：**58**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-05-产品经理-产品需求文档prd-01-从0到1产品规划-当只有一个模糊的想法-需要将其-v1-0-0` | SOP-05-产品经理-产品需求文档PRD Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-05-产品经理-产品需求文档prd-02-复杂功能定义-当需要设计一个逻辑复杂-涉及多方交-v1-0-0` | SOP-05-产品经理-产品需求文档PRD Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-05-产品经理-产品需求文档prd-03-跨部门需求对齐-在开发启动前-需要与研发-设计--v1-0-0` | SOP-05-产品经理-产品需求文档PRD Step 3 | atomic | general | 1.0.0 |
@@ -683,6 +724,13 @@
 | `uskill-atomic-sop-05-产品经理-产品需求文档prd-56-相关sop-sop-01-架构师系统设计分析-s-v1-0-0` | SOP-05-产品经理-产品需求文档PRD Step 56 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-05-产品经理-产品需求文档prd-57-历史最佳范例-uprompt产品需求文档v1-0-v1-0-0` | SOP-05-产品经理-产品需求文档PRD Step 57 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-05-产品经理-产品需求文档prd-58-uprompt模板-产品-prd撰写模板链接-v1-0-0` | SOP-05-产品经理-产品需求文档PRD Step 58 | atomic | general | 1.0.0 |
+
+## SOP-06-云计算专家-容器化部署
+
+技能数：**72**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-06-云计算专家-容器化部署-01-ai模型服务部署-当需要将一个训练好的大模型-如-v1-0-0` | SOP-06-云计算专家-容器化部署 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-06-云计算专家-容器化部署-02-微服务迁移上云-将传统的单体应用拆分为微服务-并-v1-0-0` | SOP-06-云计算专家-容器化部署 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-06-云计算专家-容器化部署-03-多环境一致性交付-确保开发-测试-生产环境的一致-v1-0-0` | SOP-06-云计算专家-容器化部署 Step 3 | atomic | general | 1.0.0 |
@@ -755,6 +803,13 @@
 | `uskill-atomic-sop-06-云计算专家-容器化部署-70-相关技能-架构师-ai时代价值系统的核心引擎-架-v1-0-0` | SOP-06-云计算专家-容器化部署 Step 70 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-06-云计算专家-容器化部署-71-相关sop-sop-01-架构师系统设计分析-s-v1-0-0` | SOP-06-云计算专家-容器化部署 Step 71 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-06-云计算专家-容器化部署-72-uprompt模板-云计算-容器化部署模板链接-v1-0-0` | SOP-06-云计算专家-容器化部署 Step 72 | atomic | general | 1.0.0 |
+
+## SOP-07-知识产权顾问-专利申请文书
+
+技能数：**70**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-07-知识产权顾问-专利申请文书-01-核心算法保护-当研发团队攻克了一个关键的ai算法-v1-0-0` | SOP-07-知识产权顾问-专利申请文书 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-07-知识产权顾问-专利申请文书-02-产品功能专利化-在产品发布前-挖掘其独特的交互逻-v1-0-0` | SOP-07-知识产权顾问-专利申请文书 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-07-知识产权顾问-专利申请文书-03-专利驳回应对-当收到专利局的审查意见通知书-oa-v1-0-0` | SOP-07-知识产权顾问-专利申请文书 Step 3 | atomic | general | 1.0.0 |
@@ -825,6 +880,13 @@
 | `uskill-atomic-sop-07-知识产权顾问-专利申请文书-68-相关sop-sop-21-知识管理-用于管理技术-v1-0-0` | SOP-07-知识产权顾问-专利申请文书 Step 68 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-07-知识产权顾问-专利申请文书-69-历史最佳范例-uprompt核心算法专利申请文件-v1-0-0` | SOP-07-知识产权顾问-专利申请文书 Step 69 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-07-知识产权顾问-专利申请文书-70-uprompt模板-知识产权-ai发明专利模板链-v1-0-0` | SOP-07-知识产权顾问-专利申请文书 Step 70 | atomic | general | 1.0.0 |
+
+## SOP-08-开源发烧友-技术博客撰写
+
+技能数：**67**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-08-开源发烧友-技术博客撰写-01-技术复盘总结-在完成一个高难度的项目后-需要系统-v1-0-0` | SOP-08-开源发烧友-技术博客撰写 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-08-开源发烧友-技术博客撰写-02-个人品牌建设-希望通过持续输出高质量的技术文章--v1-0-0` | SOP-08-开源发烧友-技术博客撰写 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-08-开源发烧友-技术博客撰写-03-复杂概念科普-需要将深奥的技术原理-如trans-v1-0-0` | SOP-08-开源发烧友-技术博客撰写 Step 3 | atomic | general | 1.0.0 |
@@ -892,6 +954,13 @@
 | `uskill-atomic-sop-08-开源发烧友-技术博客撰写-65-相关技能-终身学习者-ai时代智慧学习与知识复利-v1-0-0` | SOP-08-开源发烧友-技术博客撰写 Step 65 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-08-开源发烧友-技术博客撰写-66-uprompt模板-技术博客撰写模板链接-v1-0-0` | SOP-08-开源发烧友-技术博客撰写 Step 66 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-08-开源发烧友-技术博客撰写-67-发布平台-个人博客-知乎专栏-掘金-medium-v1-0-0` | SOP-08-开源发烧友-技术博客撰写 Step 67 | atomic | general | 1.0.0 |
+
+## SOP-09-终身学习者-个性化学习计划
+
+技能数：**56**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-09-终身学习者-个性化学习计划-01-新领域快速入门-当需要在一个月内快速掌握一门新技-v1-0-0` | SOP-09-终身学习者-个性化学习计划 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-09-终身学习者-个性化学习计划-02-知识体系构建-感觉自己的知识碎片化严重-需要系统-v1-0-0` | SOP-09-终身学习者-个性化学习计划 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-09-终身学习者-个性化学习计划-03-瓶颈期突破-在某个技能水平停滞不前-需要制定针对-v1-0-0` | SOP-09-终身学习者-个性化学习计划 Step 3 | atomic | general | 1.0.0 |
@@ -948,6 +1017,13 @@
 | `uskill-atomic-sop-09-终身学习者-个性化学习计划-54-核心平台-obsidian-第二大脑-uprom-v1-0-0` | SOP-09-终身学习者-个性化学习计划 Step 54 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-09-终身学习者-个性化学习计划-55-相关sop-sop-21-知识管理-sop-20-v1-0-0` | SOP-09-终身学习者-个性化学习计划 Step 55 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-09-终身学习者-个性化学习计划-56-uprompt模板-终身学习者-学习计划模板链接-v1-0-0` | SOP-09-终身学习者-个性化学习计划 Step 56 | atomic | general | 1.0.0 |
+
+## SOP-10-国学大师-古籍文献解读
+
+技能数：**66**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-10-国学大师-古籍文献解读-01-经典深度研读-计划用一年时间-对-道德经-进行逐-v1-0-0` | SOP-10-国学大师-古籍文献解读 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-10-国学大师-古籍文献解读-02-文化内容创作-需要从古籍中汲取灵感-创作一篇关于-v1-0-0` | SOP-10-国学大师-古籍文献解读 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-10-国学大师-古籍文献解读-03-跨时空对话-遇到人生困惑-希望通过研读先秦诸子思-v1-0-0` | SOP-10-国学大师-古籍文献解读 Step 3 | atomic | general | 1.0.0 |
@@ -1014,6 +1090,13 @@
 | `uskill-atomic-sop-10-国学大师-古籍文献解读-64-相关sop-sop-21-知识管理-sop-08-v1-0-0` | SOP-10-国学大师-古籍文献解读 Step 64 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-10-国学大师-古籍文献解读-65-历史最佳范例-论语-学而篇-知识图谱构建报告链接-v1-0-0` | SOP-10-国学大师-古籍文献解读 Step 65 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-10-国学大师-古籍文献解读-66-uprompt模板-国学大师-古籍解读模板链接-v1-0-0` | SOP-10-国学大师-古籍文献解读 Step 66 | atomic | general | 1.0.0 |
+
+## SOP-11-心理学专家-心理评估报告
+
+技能数：**71**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-11-心理学专家-心理评估报告-01-用户行为洞察-分析产品后台数据和用户访谈记录-找-v1-0-0` | SOP-11-心理学专家-心理评估报告 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-11-心理学专家-心理评估报告-02-团队协作诊断-当团队出现沟通不畅或士气低落-需要-v1-0-0` | SOP-11-心理学专家-心理评估报告 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-11-心理学专家-心理评估报告-03-个人决策复盘-在做出重大投资或职业选择后-复盘决-v1-0-0` | SOP-11-心理学专家-心理评估报告 Step 3 | atomic | general | 1.0.0 |
@@ -1085,6 +1168,13 @@
 | `uskill-atomic-sop-11-心理学专家-心理评估报告-69-相关sop-sop-05-ai赋能的产品价值发现-v1-0-0` | SOP-11-心理学专家-心理评估报告 Step 69 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-11-心理学专家-心理评估报告-70-历史最佳范例-uprompt用户心智模型分析报告-v1-0-0` | SOP-11-心理学专家-心理评估报告 Step 70 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-11-心理学专家-心理评估报告-71-uprompt模板-心理学-行为洞察分析模板链接-v1-0-0` | SOP-11-心理学专家-心理评估报告 Step 71 | atomic | general | 1.0.0 |
+
+## SOP-12-生活艺术家-生活美学设计
+
+技能数：**63**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-12-生活艺术家-生活美学设计-01-居家空间改造-计划将书房改造成一个既能高效工作又-v1-0-0` | SOP-12-生活艺术家-生活美学设计 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-12-生活艺术家-生活美学设计-02-主题活动策划-需要策划一场具有独特审美和情感体验-v1-0-0` | SOP-12-生活艺术家-生活美学设计 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-12-生活艺术家-生活美学设计-03-个人形象塑造-希望通过穿搭和个人物品的选择-打造-v1-0-0` | SOP-12-生活艺术家-生活美学设计 Step 3 | atomic | general | 1.0.0 |
@@ -1148,6 +1238,13 @@
 | `uskill-atomic-sop-12-生活艺术家-生活美学设计-61-相关sop-sop-13-健身跑者训练计划制定--v1-0-0` | SOP-12-生活艺术家-生活美学设计 Step 61 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-12-生活艺术家-生活美学设计-62-uprompt模板-生活艺术家-美学设计模板链接-v1-0-0` | SOP-12-生活艺术家-生活美学设计 Step 62 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-12-生活艺术家-生活美学设计-63-设计工具-figma-pinterest-mid-v1-0-0` | SOP-12-生活艺术家-生活美学设计 Step 63 | atomic | general | 1.0.0 |
+
+## SOP-13-健身跑者-训练计划制定
+
+技能数：**54**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-13-健身跑者-训练计划制定-01-首马备赛-报名了人生第一场全程马拉松-需要制定科-v1-0-0` | SOP-13-健身跑者-训练计划制定 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-13-健身跑者-训练计划制定-02-伤后恢复-从伤病中恢复-需要制定循序渐进的复健跑-v1-0-0` | SOP-13-健身跑者-训练计划制定 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-13-健身跑者-训练计划制定-03-平台期突破-长期处于配速瓶颈-需要通过间歇跑和力-v1-0-0` | SOP-13-健身跑者-训练计划制定 Step 3 | atomic | general | 1.0.0 |
@@ -1202,6 +1299,13 @@
 | `uskill-atomic-sop-13-健身跑者-训练计划制定-52-相关sop-sop-18-数字人生个人数据分析报-v1-0-0` | SOP-13-健身跑者-训练计划制定 Step 52 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-13-健身跑者-训练计划制定-53-数据平台-strava-garmin-conne-v1-0-0` | SOP-13-健身跑者-训练计划制定 Step 53 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-13-健身跑者-训练计划制定-54-uprompt模板-健身跑者-训练计划模板链接-v1-0-0` | SOP-13-健身跑者-训练计划制定 Step 54 | atomic | general | 1.0.0 |
+
+## SOP-14-葡萄酒大师-品鉴笔记撰写
+
+技能数：**53**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-14-葡萄酒大师-品鉴笔记撰写-01-专业品鉴记录-参加一场垂直品鉴会-需要快速-准确-v1-0-0` | SOP-14-葡萄酒大师-品鉴笔记撰写 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-14-葡萄酒大师-品鉴笔记撰写-02-选酒指南创作-需要为朋友或读者推荐一款高性价比--v1-0-0` | SOP-14-葡萄酒大师-品鉴笔记撰写 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-14-葡萄酒大师-品鉴笔记撰写-03-酒庄游记-在参观酒庄后-整理见闻和品鉴体验-形成-v1-0-0` | SOP-14-葡萄酒大师-品鉴笔记撰写 Step 3 | atomic | general | 1.0.0 |
@@ -1255,6 +1359,13 @@
 | `uskill-atomic-sop-14-葡萄酒大师-品鉴笔记撰写-51-相关sop-sop-08-ai赋能的高影响力技术-v1-0-0` | SOP-14-葡萄酒大师-品鉴笔记撰写 Step 51 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-14-葡萄酒大师-品鉴笔记撰写-52-核心平台-obsidian-vivino-win-v1-0-0` | SOP-14-葡萄酒大师-品鉴笔记撰写 Step 52 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-14-葡萄酒大师-品鉴笔记撰写-53-历史最佳范例-西班牙里奥哈名庄横评品鉴报告链接-v1-0-0` | SOP-14-葡萄酒大师-品鉴笔记撰写 Step 53 | atomic | general | 1.0.0 |
+
+## SOP-15-摄影家-摄影作品后期处理
+
+技能数：**68**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-15-摄影家-摄影作品后期处理-01-风光大片精修-拍摄了一组壮丽的日落风光-需要通过-v1-0-0` | SOP-15-摄影家-摄影作品后期处理 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-15-摄影家-摄影作品后期处理-02-人像精修-需要对一组人像照片进行磨皮-液化和调色-v1-0-0` | SOP-15-摄影家-摄影作品后期处理 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-15-摄影家-摄影作品后期处理-03-系列作品统一-需要将一组不同场景拍摄的照片-统一-v1-0-0` | SOP-15-摄影家-摄影作品后期处理 Step 3 | atomic | general | 1.0.0 |
@@ -1323,6 +1434,13 @@
 | `uskill-atomic-sop-15-摄影家-摄影作品后期处理-66-相关sop-sop-08-ai赋能的高影响力技术-v1-0-0` | SOP-15-摄影家-摄影作品后期处理 Step 66 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-15-摄影家-摄影作品后期处理-67-后期软件-adobe-lightroom-cla-v1-0-0` | SOP-15-摄影家-摄影作品后期处理 Step 67 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-15-摄影家-摄影作品后期处理-68-uprompt模板-摄影家-后期处理模板链接-v1-0-0` | SOP-15-摄影家-摄影作品后期处理 Step 68 | atomic | general | 1.0.0 |
+
+## SOP-16-游戏王者-游戏攻略分析
+
+技能数：**59**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-16-游戏王者-游戏攻略分析-01-新赛季冲分-赛季初版本大更新-需要快速摸清版本强-v1-0-0` | SOP-16-游戏王者-游戏攻略分析 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-16-游戏王者-游戏攻略分析-02-瓶颈期复盘-个人排位卡在某个段位-如荣耀王者50-v1-0-0` | SOP-16-游戏王者-游戏攻略分析 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-16-游戏王者-游戏攻略分析-03-攻略内容制作-发现了一个冷门但强力的英雄打法-准-v1-0-0` | SOP-16-游戏王者-游戏攻略分析 Step 3 | atomic | general | 1.0.0 |
@@ -1382,6 +1500,13 @@
 | `uskill-atomic-sop-16-游戏王者-游戏攻略分析-57-相关sop-sop-08-ai赋能的高影响力技术-v1-0-0` | SOP-16-游戏王者-游戏攻略分析 Step 57 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-16-游戏王者-游戏攻略分析-58-uprompt模板-游戏王者-攻略分析模板链接-v1-0-0` | SOP-16-游戏王者-游戏攻略分析 Step 58 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-16-游戏王者-游戏攻略分析-59-发布平台-知乎-b站-抖音-v1-0-0` | SOP-16-游戏王者-游戏攻略分析 Step 59 | atomic | general | 1.0.0 |
+
+## SOP-17-北京文化使者-文化研究报告
+
+技能数：**65**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-17-北京文化使者-文化研究报告-01-深度内容创作-计划撰写一篇关于-北京中轴线申遗--v1-0-0` | SOP-17-北京文化使者-文化研究报告 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-17-北京文化使者-文化研究报告-02-文化导览策划-接待外国友人来访-需要策划一条既有-v1-0-0` | SOP-17-北京文化使者-文化研究报告 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-17-北京文化使者-文化研究报告-03-跨文化交流-在参加国际文化交流活动时-需要做一个-v1-0-0` | SOP-17-北京文化使者-文化研究报告 Step 3 | atomic | general | 1.0.0 |
@@ -1447,6 +1572,13 @@
 | `uskill-atomic-sop-17-北京文化使者-文化研究报告-63-相关sop-sop-08-ai赋能的高影响力技术-v1-0-0` | SOP-17-北京文化使者-文化研究报告 Step 63 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-17-北京文化使者-文化研究报告-64-uprompt模板-北京文化使者-内容创作模板链-v1-0-0` | SOP-17-北京文化使者-文化研究报告 Step 64 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-17-北京文化使者-文化研究报告-65-发布平台-个人博客-知乎-b站-youtube--v1-0-0` | SOP-17-北京文化使者-文化研究报告 Step 65 | atomic | general | 1.0.0 |
+
+## SOP-18-数字人生-个人数据分析报告
+
+技能数：**64**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-18-数字人生-个人数据分析报告-01-月度战略复盘-每月最后一天-需要汇总分析本月的运-v1-0-0` | SOP-18-数字人生-个人数据分析报告 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-18-数字人生-个人数据分析报告-02-异常状态诊断-感觉近期效率低下-情绪焦虑-需要通-v1-0-0` | SOP-18-数字人生-个人数据分析报告 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-18-数字人生-个人数据分析报告-03-年度目标校准-在季度末-根据过去三个月的数据趋势-v1-0-0` | SOP-18-数字人生-个人数据分析报告 Step 3 | atomic | general | 1.0.0 |
@@ -1511,6 +1643,13 @@
 | `uskill-atomic-sop-18-数字人生-个人数据分析报告-62-相关sop-sop-22-目标管理-sop-23-v1-0-0` | SOP-18-数字人生-个人数据分析报告 Step 62 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-18-数字人生-个人数据分析报告-63-数据来源-strava-garmin-toggl-v1-0-0` | SOP-18-数字人生-个人数据分析报告 Step 63 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-18-数字人生-个人数据分析报告-64-uprompt模板-数字人生-数据复盘模板链接-v1-0-0` | SOP-18-数字人生-个人数据分析报告 Step 64 | atomic | general | 1.0.0 |
+
+## SOP-19-户外大神-户外路线规划
+
+技能数：**71**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-19-户外大神-户外路线规划-01-高海拔徒步-计划去川西进行一次为期5天的重装徒步-v1-0-0` | SOP-19-户外大神-户外路线规划 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-19-户外大神-户外路线规划-02-未知区域探索-想要探索家附近山区的一条非成熟路线-v1-0-0` | SOP-19-户外大神-户外路线规划 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-19-户外大神-户外路线规划-03-团队活动领队-作为领队带领一支经验参差不齐的队伍-v1-0-0` | SOP-19-户外大神-户外路线规划 Step 3 | atomic | general | 1.0.0 |
@@ -1582,6 +1721,13 @@
 | `uskill-atomic-sop-19-户外大神-户外路线规划-69-硬件工具-garmin-inreach-gps手-v1-0-0` | SOP-19-户外大神-户外路线规划 Step 69 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-19-户外大神-户外路线规划-70-软件平台-两步路-六只脚-strava-wind-v1-0-0` | SOP-19-户外大神-户外路线规划 Step 70 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-19-户外大神-户外路线规划-71-uprompt模板-户外大神-路线规划模板链接-v1-0-0` | SOP-19-户外大神-户外路线规划 Step 71 | atomic | general | 1.0.0 |
+
+## SOP-20-深度阅读与知识管理
+
+技能数：**65**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-20-深度阅读与知识管理-01-主题研究-攻克新领域-如-生成式ai原理-集中阅-v1-0-0` | SOP-20-深度阅读与知识管理 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-20-深度阅读与知识管理-02-经典研读-攻克大部头经典-如-纯粹理性批判-需要-v1-0-0` | SOP-20-深度阅读与知识管理 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-20-深度阅读与知识管理-03-知识沉淀-读完好书后-将精华转化为-原子化-知识-v1-0-0` | SOP-20-深度阅读与知识管理 Step 3 | atomic | general | 1.0.0 |
@@ -1647,6 +1793,13 @@
 | `uskill-atomic-sop-20-深度阅读与知识管理-63-相关sop-sop-09-终身学习者-个性化学习-v1-0-0` | SOP-20-深度阅读与知识管理 Step 63 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-20-深度阅读与知识管理-64-核心平台-obsidian-kindle-微信读-v1-0-0` | SOP-20-深度阅读与知识管理 Step 64 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-20-深度阅读与知识管理-65-最佳范例-80-20法则-读书笔记-v1-0-0` | SOP-20-深度阅读与知识管理 Step 65 | atomic | general | 1.0.0 |
+
+## SOP-21-知识管理
+
+技能数：**71**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-21-知识管理-01-信息碎片整理-每天面对大量的微信文章-推特动态和-v1-0-0` | SOP-21-知识管理 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-21-知识管理-02-项目知识构建-启动一个新的复杂项目-如-开发个人-v1-0-0` | SOP-21-知识管理 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-21-知识管理-03-创意灵感孵化-在准备写一篇深度文章时-需要从过往-v1-0-0` | SOP-21-知识管理 Step 3 | atomic | general | 1.0.0 |
@@ -1718,6 +1871,13 @@
 | `uskill-atomic-sop-21-知识管理-69-相关sop-sop-20-ai赋能的深度阅读与知-v1-0-0` | SOP-21-知识管理 Step 69 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-21-知识管理-70-核心平台-obsidian-readwise-c-v1-0-0` | SOP-21-知识管理 Step 70 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-21-知识管理-71-uprompt模板-知识管理-第二大脑操作模板链-v1-0-0` | SOP-21-知识管理 Step 71 | atomic | general | 1.0.0 |
+
+## SOP-22-目标管理
+
+技能数：**62**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-22-目标管理-01-季度目标设定-新季度开始-需要结合年度愿景-设定-v1-0-0` | SOP-22-目标管理 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-22-目标管理-02-周度进度检视-每周五下午-需要客观评估本周关键结-v1-0-0` | SOP-22-目标管理 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-22-目标管理-03-战略方向调整-发现某个季度目标-o-不再符合当前-v1-0-0` | SOP-22-目标管理 Step 3 | atomic | general | 1.0.0 |
@@ -1780,6 +1940,13 @@
 | `uskill-atomic-sop-22-目标管理-60-核心文档-我的2025成果导航-v1-0-0` | SOP-22-目标管理 Step 60 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-22-目标管理-61-管理工具-notion-trello-asana-v1-0-0` | SOP-22-目标管理 Step 61 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-22-目标管理-62-uprompt模板-目标管理-okr设定模板链接-v1-0-0` | SOP-22-目标管理 Step 62 | atomic | general | 1.0.0 |
+
+## SOP-23-效率分析
+
+技能数：**51**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-23-效率分析-01-时间黑洞识别-感觉每天都很忙但产出很少-需要通过-v1-0-0` | SOP-23-效率分析 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-23-效率分析-02-拖延症根源分析-发现自己总是拖延某类特定任务-如-v1-0-0` | SOP-23-效率分析 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-23-效率分析-03-自动化流程优化-识别出一个每天重复发生的低价值手-v1-0-0` | SOP-23-效率分析 Step 3 | atomic | general | 1.0.0 |
@@ -1831,6 +1998,13 @@
 | `uskill-atomic-sop-23-效率分析-49-相关sop-sop-18-ai驱动的个人战略目标-v1-0-0` | SOP-23-效率分析 Step 49 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-23-效率分析-50-数据来源-toggl-rescuetime-任务-v1-0-0` | SOP-23-效率分析 Step 50 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-23-效率分析-51-uprompt模板-效率分析-个人效能改进模板链-v1-0-0` | SOP-23-效率分析 Step 51 | atomic | general | 1.0.0 |
+
+## SOP-24-产品经理-竞品分析
+
+技能数：**43**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-24-产品经理-竞品分析-01-从0到1新产品立项-需要快速了解市场格局-寻找切-v1-0-0` | SOP-24-产品经理-竞品分析 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-24-产品经理-竞品分析-02-核心功能迭代-在设计某个关键功能时-需要参考行业-v1-0-0` | SOP-24-产品经理-竞品分析 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-24-产品经理-竞品分析-03-年度-季度战略规划-需要审视主要竞争对手的动向--v1-0-0` | SOP-24-产品经理-竞品分析 Step 3 | atomic | general | 1.0.0 |
@@ -1874,6 +2048,13 @@
 | `uskill-atomic-sop-24-产品经理-竞品分析-41-相关sop-sop-05-产品经理-产品需求文档-v1-0-0` | SOP-24-产品经理-竞品分析 Step 41 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-24-产品经理-竞品分析-42-核心平台-工具-perplexity-pro-s-v1-0-0` | SOP-24-产品经理-竞品分析 Step 42 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-24-产品经理-竞品分析-43-历史最佳范例-链接到某次成功的竞品分析报告-v1-0-0` | SOP-24-产品经理-竞品分析 Step 43 | atomic | general | 1.0.0 |
+
+## SOP-25-投资经理-IM报告撰写
+
+技能数：**75**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-25-投资经理-im报告撰写-01-项目立项会-在接触项目初期-需要一份详实的项目分-v1-0-0` | SOP-25-投资经理-IM报告撰写 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-25-投资经理-im报告撰写-02-投决会-ic-在完成尽职调查后-需要提交最终的投-v1-0-0` | SOP-25-投资经理-IM报告撰写 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-25-投资经理-im报告撰写-03-lp汇报-向基金出资人-lp-解释为何投资某项目-v1-0-0` | SOP-25-投资经理-IM报告撰写 Step 3 | atomic | general | 1.0.0 |
@@ -1949,6 +2130,13 @@
 | `uskill-atomic-sop-25-投资经理-im报告撰写-73-核心技能-投资人-ai驱动的理性价值发现引擎-v1-0-0` | SOP-25-投资经理-IM报告撰写 Step 73 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-25-投资经理-im报告撰写-74-参照范例-project-im报告-江苏天兵航天-v1-0-0` | SOP-25-投资经理-IM报告撰写 Step 74 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-25-投资经理-im报告撰写-75-相关sop-sop-02-投资人-投资机会分析--v1-0-0` | SOP-25-投资经理-IM报告撰写 Step 75 | atomic | general | 1.0.0 |
+
+## SOP-26-RPVI-大规模代码AI开发工作流
+
+技能数：**239**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-26-rpvi-大规模代码ai开发工作流-01-大型项目开发-当ai需要处理超过5000行代码库-v1-0-0` | SOP-26-RPVI-大规模代码AI开发工作流 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-26-rpvi-大规模代码ai开发工作流-02-复杂功能迭代-需要在现有大型代码基础上添加新模块-v1-0-0` | SOP-26-RPVI-大规模代码AI开发工作流 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-26-rpvi-大规模代码ai开发工作流-03-bug修复与优化-面对复杂系统级bug-需要快速-v1-0-0` | SOP-26-RPVI-大规模代码AI开发工作流 Step 3 | atomic | general | 1.0.0 |
@@ -2188,6 +2376,13 @@
 | `uskill-atomic-sop-26-rpvi-大规模代码ai开发工作流-97-通过率-100-v1-0-0` | SOP-26-RPVI-大规模代码AI开发工作流 Step 97 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-26-rpvi-大规模代码ai开发工作流-98-执行时间-5分钟-v1-0-0` | SOP-26-RPVI-大规模代码AI开发工作流 Step 98 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-26-rpvi-大规模代码ai开发工作流-99-bug密度-0-1-千行-v1-0-0` | SOP-26-RPVI-大规模代码AI开发工作流 Step 99 | atomic | general | 1.0.0 |
+
+## SOP-26-人生操作系统-自主进化流程
+
+技能数：**19**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-26-人生操作系统-自主进化流程-01-定时触发-每季度第一周自动启动季度进化-v1-0-0` | SOP-26-人生操作系统-自主进化流程 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-26-人生操作系统-自主进化流程-02-阈值触发-当周完成率连续低于50-时启动紧急优化-v1-0-0` | SOP-26-人生操作系统-自主进化流程 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-26-人生操作系统-自主进化流程-03-主动触发-用户主动执行-python-life--v1-0-0` | SOP-26-人生操作系统-自主进化流程 Step 3 | atomic | general | 1.0.0 |
@@ -2207,6 +2402,13 @@
 | `uskill-atomic-sop-26-人生操作系统-自主进化流程-17-自主进化的人生操作系统-v1-0-0` | SOP-26-人生操作系统-自主进化流程 Step 17 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-26-人生操作系统-自主进化流程-18-人生操作系统-快速启动-v1-0-0` | SOP-26-人生操作系统-自主进化流程 Step 18 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-26-人生操作系统-自主进化流程-19-sop-22-目标管理-v1-0-0` | SOP-26-人生操作系统-自主进化流程 Step 19 | atomic | general | 1.0.0 |
+
+## SOP-27-P4-Agentic-Finance-对抗性投研系统
+
+技能数：**361**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-27-p4-agentic-finance-对抗性投研系-01-高净值投资决策-为高净值客户提供ai增强的投资决-v1-0-0` | SOP-27-P4-Agentic-Finance-对抗性投研系统 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-27-p4-agentic-finance-对抗性投研系-02-量化策略研发-通过多agent对抗发现有效策略--v1-0-0` | SOP-27-P4-Agentic-Finance-对抗性投研系统 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-27-p4-agentic-finance-对抗性投研系-03-风险控制验证-独立风控agent提供一票否决-防-v1-0-0` | SOP-27-P4-Agentic-Finance-对抗性投研系统 Step 3 | atomic | general | 1.0.0 |
@@ -2568,6 +2770,13 @@
 | `uskill-atomic-sop-27-p4-agentic-finance-对抗性投研系-97-交易api封装-券商-交易所-v1-0-0` | SOP-27-P4-Agentic-Finance-对抗性投研系统 Step 97 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-27-p4-agentic-finance-对抗性投研系-98-订单管理-限价-市价-止损-v1-0-0` | SOP-27-P4-Agentic-Finance-对抗性投研系统 Step 98 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-27-p4-agentic-finance-对抗性投研系-99-仓位管理-资金分配-风险分散-v1-0-0` | SOP-27-P4-Agentic-Finance-对抗性投研系统 Step 99 | atomic | general | 1.0.0 |
+
+## SOP-28-电视剧深度解读
+
+技能数：**89**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
 | `uskill-atomic-sop-28-电视剧深度解读-01-sop-名称-电视剧全维度深度解读标准化流程-v1-0-0` | SOP-28-电视剧深度解读 Step 1 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-28-电视剧深度解读-02-适用范围-单集解析-全剧复盘-人物弧光-主题隐喻-v1-0-0` | SOP-28-电视剧深度解读 Step 2 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-28-电视剧深度解读-03-输出物-v1-0-0` | SOP-28-电视剧深度解读 Step 3 | atomic | general | 1.0.0 |
@@ -2657,3 +2866,60 @@
 | `uskill-atomic-sop-28-电视剧深度解读-87-标题-封面文案-金句-v1-0-0` | SOP-28-电视剧深度解读 Step 87 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-28-电视剧深度解读-88-证据包-台词-细节-截图点位-v1-0-0` | SOP-28-电视剧深度解读 Step 88 | atomic | general | 1.0.0 |
 | `uskill-atomic-sop-28-电视剧深度解读-89-可复用解读框架-下次直接套用-v1-0-0` | SOP-28-电视剧深度解读 Step 89 | atomic | general | 1.0.0 |
+
+## my_sop
+
+技能数：**26**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
+| `uskill-atomic-my-sop-01-简述-设计ai原生-云原生-且llmops就绪的-v1-0-0` | my_sop Step 1 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-02-简述-建立以测试驱动开发-tdd-为核心-由ai-v1-0-0` | my_sop Step 2 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-03-简述-以用户价值为核心-高效-精准地发现市场机会-v1-0-0` | my_sop Step 3 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-04-简述-将任何应用-尤其是ai应用-高效-可靠地通-v1-0-0` | my_sop Step 4 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-05-简述-针对ai算法-软件架构等复杂技术-高效-精-v1-0-0` | my_sop Step 5 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-06-简述-持续-高效地生产具有深度-独特性和广泛影响-v1-0-0` | my_sop Step 6 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-07-简述-通过ai驱动的情报采集与分析流程-从海量噪-v1-0-0` | my_sop Step 7 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-08-简述-建立一套工业级提示词-prompt-的全生-v1-0-0` | my_sop Step 8 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-09-简述-规范化-高效-深入地完成对潜在投资标的的全-v1-0-0` | my_sop Step 9 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-10-简述-将标准投资备忘录-im-报告的撰写周期从5-v1-0-0` | my_sop Step 10 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-11-简述-建立以战略目标为导向-ai全面赋能的闭环学-v1-0-0` | my_sop Step 11 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-12-简述-对古籍文献进行深度-准确-多维度的解读-并-v1-0-0` | my_sop Step 12 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-13-简述-在非临床场景下-对个人-团队或用户群体的行-v1-0-0` | my_sop Step 13 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-14-简述-建立从战略选书到知识内化的ai增强闭环流程-v1-0-0` | my_sop Step 14 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-15-简述-基于p-a-r-a-和zettelkast-v1-0-0` | my_sop Step 15 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-16-简述-通过标准化的月度复盘流程-系统化地聚合-分-v1-0-0` | my_sop Step 16 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-17-简述-基于okr框架-建立由ai赋能的个人目标设-v1-0-0` | my_sop Step 17 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-18-简述-系统性地识别-分析和消除个人工作与生活中的-v1-0-0` | my_sop Step 18 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-19-简述-定义lifeos-v2026的三循环进化机-v1-0-0` | my_sop Step 19 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-20-简述-将抽象的美学理念和生活构想-转化为具体-可-v1-0-0` | my_sop Step 20 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-21-简述-建立以长期主义为核心-数据驱动-ai赋能的-v1-0-0` | my_sop Step 21 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-22-简述-系统化地品鉴-分析葡萄酒-并高效地将感官体-v1-0-0` | my_sop Step 22 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-23-简述-以叙事增强和风格塑造为核心-建立由ai全面-v1-0-0` | my_sop Step 23 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-24-简述-通过职业级的-数据驱动的流程-深度分析游戏-v1-0-0` | my_sop Step 24 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-25-简述-系统化地研究北京文化主题-并将其创作-包装-v1-0-0` | my_sop Step 25 | atomic | general | 1.0.0 |
+| `uskill-atomic-my-sop-26-简述-规划和管理具有挑战性的户外探险活动-将风险-v1-0-0` | my_sop Step 26 | atomic | general | 1.0.0 |
+
+## skill-creator 技能驾驭 SOP
+
+技能数：**1**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
+| `uskill-domain-skill-creator-governance-demo-v1-0-0` | skill-creator 驾驭示例 | domain | codex-skills | 1.0.0 |
+
+## 历史提示词资产
+
+技能数：**1**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
+| `uskill-atomic-text-keyword-extract-v1-0-0` | 文本关键词提取 | atomic | nlp | 1.0.0 |
+
+## 驾驭工程执行规范
+
+技能数：**1**
+
+| Skill ID | Name | Category | Domain | Version |
+| --- | --- | --- | --- | --- |
+| `uskill-governance-execution-guard-v1-0-0` | 执行合规守卫 | governance | governance | 1.0.0 |
