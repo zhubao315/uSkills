@@ -1,0 +1,81 @@
+skill_id: uskill-atomic-code-review-v1-0-0
+meta:
+  name: 代码审查
+  version: "1.0.0"
+  category: atomic
+  domain: engineering
+  description: 对代码片段进行审查，识别潜在问题并提供改进建议。
+  tags:
+    - code
+    - review
+    - engineering
+    - atomic
+  owner: uSkills
+input:
+  params:
+    - name: code
+      type: string
+      required: true
+      description: 待审查的代码片段
+    - name: language
+      type: string
+      required: false
+      description: 编程语言（如 python, javascript）
+      default: python
+    - name: focus
+      type: string
+      required: false
+      description: 审查重点（security, performance, readability）
+      default: readability
+execute:
+  prompt_template: |
+    请审查以下 {{language}} 代码，重点关注 {{focus}}：
+
+    ```{{language}}
+    {{code}}
+    ```
+
+    审查维度：
+    1. 代码质量和可读性
+    2. 潜在的 Bug 和边界情况
+    3. 性能优化空间
+    4. 安全漏洞（如适用）
+
+    输出 JSON 格式：
+    {
+      "score": 0-100,
+      "issues": [{"type": "...", "line": 0, "message": "...", "severity": "low|medium|high"}],
+      "suggestions": ["..."],
+      "refactored_code": "..."
+    }
+  steps:
+    - 解析代码结构
+    - 识别潜在问题
+    - 评估代码质量
+    - 生成改进建议
+  temperature: 0.1
+  model: gpt-4o
+  tools: []
+  fallback:
+    - manual-review
+output:
+  format: json
+  params:
+    - score
+    - issues
+    - suggestions
+    - refactored_code
+  validation_rules:
+    - score 在 0-100 之间
+    - issues 数组中的每个元素必须包含 type, message, severity
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: 工程技能集
+  sop_path: examples/engineering_sop.md
+  step_index: 1
+  raw_step: 对代码进行审查并提供改进建议

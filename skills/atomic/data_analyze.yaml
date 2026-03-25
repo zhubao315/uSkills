@@ -1,0 +1,80 @@
+skill_id: uskill-atomic-data-analyze-v1-0-0
+meta:
+  name: 数据分析
+  version: "1.0.0"
+  category: atomic
+  domain: data
+  description: 对结构化数据进行分析，提取关键洞察和趋势。
+  tags:
+    - data
+    - analysis
+    - insights
+    - atomic
+  owner: uSkills
+input:
+  params:
+    - name: data
+      type: string
+      required: true
+      description: 待分析的数据（CSV、JSON 或表格格式）
+    - name: question
+      type: string
+      required: false
+      description: 具体的分析问题
+      default: 分析数据中的主要趋势和异常
+execute:
+  prompt_template: |
+    请分析以下数据：
+
+    {{data}}
+
+    分析目标：{{question}}
+
+    请提供：
+    1. 数据概览（行数、列数、数据类型）
+    2. 关键统计指标
+    3. 主要趋势和模式
+    4. 异常值识别
+    5. 可操作的洞察建议
+
+    输出 JSON：
+    {
+      "overview": {"rows": 0, "columns": 0, "types": {}},
+      "statistics": {},
+      "trends": ["..."],
+      "anomalies": ["..."],
+      "insights": ["..."]
+    }
+  steps:
+    - 解析数据结构
+    - 计算统计指标
+    - 识别趋势和模式
+    - 检测异常值
+    - 生成洞察
+  temperature: 0.1
+  model: gpt-4o
+  tools: []
+  fallback:
+    - manual-analysis
+output:
+  format: json
+  params:
+    - overview
+    - statistics
+    - trends
+    - anomalies
+    - insights
+  validation_rules:
+    - overview 必须包含 rows, columns
+    - insights 至少包含 1 条建议
+control:
+  timeout: 30
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: 数据技能集
+  sop_path: examples/data_sop.md
+  step_index: 1
+  raw_step: 对结构化数据进行分析并提取洞察

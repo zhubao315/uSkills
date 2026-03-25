@@ -1,10 +1,80 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uskills"
+version = "1.0.0"
+description = "uSkills - The controllable, reusable, callable skill foundation for Agents"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "zhubao315", email = "zhubao315@example.com"}
+]
+keywords = ["agent", "skills", "prompt", "sop", "ai", "llmops"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "pydantic>=2.8,<3.0",
+    "PyYAML>=6.0,<7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3,<9.0",
+    "ruff>=0.11,<0.12",
+    "mypy>=1.10,<2.0",
+]
+docs = [
+    "mkdocs>=1.6,<2.0",
+    "mkdocs-material>=9.5,<10.0",
+    "pymdown-extensions>=10.14,<11.0",
+]
+all = [
+    "uskills[dev,docs]",
+]
+
+[project.urls]
+Homepage = "https://zhubao315.github.io/uSkills/"
+Repository = "https://github.com/zhubao315/uSkills"
+Documentation = "https://zhubao315.github.io/uSkills/"
+Issues = "https://github.com/zhubao315/uSkills/issues"
+
+[project.scripts]
+uskills = "cli.uskills_cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["core*", "cli*"]
+
 [tool.pytest.ini_options]
 pythonpath = [".", "core"]
 testpaths = ["tests"]
+addopts = "-v --tb=short"
 
 [tool.ruff]
 line-length = 100
 target-version = "py310"
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "B"]
+select = ["E", "F", "I", "B", "W", "UP", "SIM"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["core", "cli"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

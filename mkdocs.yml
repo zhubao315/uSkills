@@ -1,29 +1,120 @@
 site_name: uSkills
 site_url: https://zhubao315.github.io/uSkills/
-site_description: The open skill foundation for controllable Agent execution.
+site_description: The controllable, reusable, callable skill foundation for Agents
 repo_url: https://github.com/zhubao315/uSkills
 repo_name: zhubao315/uSkills
+site_author: zhubao315
+
 theme:
   name: material
   language: zh
+  custom_dir: docs/overrides
+  
+  # Logo configuration
+  logo: assets/images/logo.svg
+  favicon: assets/images/favicon.svg
+  
   features:
     - navigation.tabs
     - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
     - content.code.copy
+    - content.code.annotate
+    - search.highlight
+    - search.share
+    - toc.follow
+    - announce.dismiss
+
   palette:
-    primary: teal
-    accent: amber
+    # Light mode
+    - scheme: default
+      primary: custom blue
+      accent: custom teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    
+    # Dark mode
+    - scheme: slate
+      primary: custom blue
+      accent: custom teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  icon:
+    repo: fontawesome/brands/github
+
+# Custom color scheme based on design specs
+extra:
+  palette:
+    primary: "#005FB8"  # Engineering Blue
+    accent: "#00C2CB"   # Intelligent Teal
+    accent2: "#FF8C00"  # Activation Orange
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/zhubao315
+      name: GitHub
+
+extra_css:
+  - assets/stylesheets/extra.css
+
 markdown_extensions:
+  # Standard extensions
   - admonition
   - tables
-  - pymdownx.highlight
-  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - toc:
+      permalink: true
+  
+  # Code highlighting
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  
+  # Other extensions
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search:
+      lang: zh
+  - minify:
+      minify_html: true
+
 nav:
   - 首页: index.md
   - 快速开始: quickstart.md
   - 架构: architecture.md
   - Schema: schema.md
   - 技能分类: skills.md
-  - skill-creator 驾驭示例: skill-creator-case.md
+  - 驾驭示例: skill-creator-case.md
   - 技能库: generated/skills-index.md
   - Roadmap: roadmap.md

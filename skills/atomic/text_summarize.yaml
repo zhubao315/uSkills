@@ -1,0 +1,62 @@
+skill_id: uskill-atomic-text-summarize-v1-0-0
+meta:
+  name: 文本摘要
+  version: "1.0.0"
+  category: atomic
+  domain: nlp
+  description: 将长文本压缩为简洁摘要，保留核心信息。
+  tags:
+    - nlp
+    - summarize
+    - atomic
+  owner: uSkills
+input:
+  params:
+    - name: text
+      type: string
+      required: true
+      description: 待摘要的原始文本
+    - name: max_length
+      type: integer
+      required: false
+      description: 摘要最大字数（默认 200）
+      default: 200
+execute:
+  prompt_template: |
+    请将以下文本压缩为不超过 {{max_length}} 字的摘要：
+
+    {{text}}
+
+    要求：
+    1. 保留核心论点和关键数据
+    2. 移除冗余和重复内容
+    3. 输出结构化 JSON：{"summary": "...", "key_points": ["..."]}
+  steps:
+    - 识别文本主题和结构
+    - 提取核心论点
+    - 压缩并重组内容
+    - 输出结构化摘要
+  temperature: 0.2
+  model: gpt-4o-mini
+  tools: []
+  fallback:
+    - truncate-head
+output:
+  format: json
+  params:
+    - summary
+    - key_points
+  validation_rules:
+    - summary 字数不超过 max_length
+    - key_points 至少包含 1 个要点
+control:
+  timeout: 15
+  retry: 2
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: NLP 基础技能集
+  sop_path: examples/nlp_sop.md
+  step_index: 1
+  raw_step: 将长文本压缩为简洁摘要

@@ -1,0 +1,69 @@
+skill_id: uskill-composite-content-pipeline-v1-0-0
+meta:
+  name: 内容处理流水线
+  version: "1.0.0"
+  category: composite
+  domain: content
+  description: 组合技能：对内容进行提取关键词、摘要、翻译的完整处理流水线。
+  tags:
+    - composite
+    - pipeline
+    - content
+    - nlp
+  owner: uSkills
+input:
+  params:
+    - name: text
+      type: string
+      required: true
+      description: 待处理的原始文本
+    - name: target_lang
+      type: string
+      required: false
+      description: 翻译目标语言（不填则不翻译）
+      default: ""
+execute:
+  prompt_template: |
+    执行内容处理流水线，输入文本：
+    {{text}}
+
+    流程：
+    1. 提取关键词（调用 text_keyword_extract）
+    2. 生成摘要（调用 text_summarize）
+    3. 如指定 target_lang，则翻译摘要（调用 text_translate）
+
+    输出完整处理结果。
+  steps:
+    - 提取关键词
+    - 生成摘要
+    - 翻译（可选）
+    - 汇总结果
+  temperature: 0.1
+  model: gpt-4o-mini
+  tools:
+    - text_keyword_extract
+    - text_summarize
+    - text_translate
+  fallback:
+    - partial-execution
+output:
+  format: json
+  params:
+    - keywords
+    - summary
+    - translation
+    - processing_time
+  validation_rules:
+    - keywords 和 summary 必须存在
+    - 如果指定了 target_lang，translation 必须存在
+control:
+  timeout: 60
+  retry: 1
+  interrupt: true
+  breakpoint_allowed: true
+  mockable: true
+source:
+  sop_name: 内容处理 SOP
+  sop_path: examples/content_pipeline_sop.md
+  step_index: 1
+  raw_step: 组合执行关键词提取、摘要生成和翻译
