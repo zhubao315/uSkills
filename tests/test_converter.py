@@ -101,7 +101,7 @@ class TestConvertSopText:
         skills = convert_sop_text(text, "Test SOP")
 
         assert skills[0].skill_id.startswith("uskill-atomic-")
-        assert skills[0].skill_id.endswith("-v1-0-0")
+        assert skills[0].skill_id.endswith("-v1-1-0")
 
     def test_meta_fields(self) -> None:
         """Test metadata fields."""

@@ -56,10 +56,10 @@ class TestValidateSkillData:
     def test_validate_valid_data(self) -> None:
         """Test validation of valid data."""
         data = {
-            "skill_id": "uskill-atomic-test-v1-0-0",
+            "skill_id": "uskill-atomic-test-v1-1-0",
             "meta": {
                 "name": "Test Skill",
-                "version": "1.0.0",
+                "version": "1.1.0",
                 "category": "atomic",
                 "domain": "test",
                 "description": "A test skill",
@@ -92,7 +92,7 @@ class TestValidateSkillId:
 
     def test_valid_skill_id(self) -> None:
         """Test valid skill ID format."""
-        ok, _ = validate_skill_id("uskill-atomic-test-skill-v1-0-0")
+        ok, _ = validate_skill_id("uskill-atomic-test-skill-v1-1-0")
         assert ok is True
 
     def test_invalid_skill_id(self) -> None:
@@ -102,7 +102,7 @@ class TestValidateSkillId:
 
     def test_skill_id_with_chinese(self) -> None:
         """Test skill ID with Chinese characters."""
-        ok, _ = validate_skill_id("uskill-atomic-测试技能-v1-0-0")
+        ok, _ = validate_skill_id("uskill-atomic-测试技能-v1-1-0")
         assert ok is True
 
 
