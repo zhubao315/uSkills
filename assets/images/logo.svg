@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#005FB8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00C2CB;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Hexagon icon -->
+  <g transform="translate(5, 5)">
+    <!-- Outer hexagon -->
+    <polygon points="25,2 47,14 47,38 25,50 3,38 3,14" fill="url(#logoGrad)"/>
+    <!-- Inner U shape -->
+    <path d="M14,16 L14,34 Q14,42 25,42 Q36,42 36,34 L36,16" 
+          stroke="#ffffff" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <!-- Skill dot -->
+    <circle cx="25" cy="36" r="3" fill="#FF8C00"/>
+  </g>
+  
+  <!-- Text: uSkills -->
+  <text x="65" y="42" font-family="Inter, sans-serif" font-size="32" font-weight="700">
+    <tspan fill="#005FB8">u</tspan><tspan fill="#333333">Skills</tspan>
+  </text>
+</svg>
