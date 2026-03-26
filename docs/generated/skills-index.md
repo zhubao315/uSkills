@@ -25,8 +25,8 @@
 
 | Skill ID | Name | Category | Domain | Version |
 | --- | --- | --- | --- | --- |
-| `uskill-atomic-text-summarize-v1-0-0` | 文本摘要 | atomic | nlp | 1.0.0 |
-| `uskill-atomic-text-translate-v1-0-0` | 文本翻译 | atomic | nlp | 1.0.0 |
+| `uskill-atomic-text-summarize-v1-1-0` | 文本摘要 | atomic | nlp | 1.1.0 |
+| `uskill-atomic-text-translate-v1-1-0` | 文本翻译 | atomic | nlp | 1.1.0 |
 
 ## skill-creator 技能驾驭 SOP
 
@@ -34,7 +34,7 @@
 
 | Skill ID | Name | Category | Domain | Version |
 | --- | --- | --- | --- | --- |
-| `uskill-domain-skill-creator-governance-demo-v1-0-0` | skill-creator 驾驭示例 | domain | codex-skills | 1.0.0 |
+| `uskill-domain-skill-creator-governance-demo-v1-1-0` | skill-creator 驾驭示例 | domain | codex-skills | 1.1.0 |
 
 ## 内容处理 SOP
 
@@ -42,7 +42,7 @@
 
 | Skill ID | Name | Category | Domain | Version |
 | --- | --- | --- | --- | --- |
-| `uskill-composite-content-pipeline-v1-0-0` | 内容处理流水线 | composite | content | 1.0.0 |
+| `uskill-composite-content-pipeline-v1-1-0` | 内容处理流水线 | composite | content | 1.1.0 |
 
 ## 历史提示词资产
 
@@ -50,7 +50,7 @@
 
 | Skill ID | Name | Category | Domain | Version |
 | --- | --- | --- | --- | --- |
-| `uskill-atomic-text-keyword-extract-v1-0-0` | 文本关键词提取 | atomic | nlp | 1.0.0 |
+| `uskill-atomic-text-keyword-extract-v1-1-0` | 文本关键词提取 | atomic | nlp | 1.1.0 |
 
 ## 工程技能集
 
@@ -58,7 +58,7 @@
 
 | Skill ID | Name | Category | Domain | Version |
 | --- | --- | --- | --- | --- |
-| `uskill-atomic-code-review-v1-0-0` | 代码审查 | atomic | engineering | 1.0.0 |
+| `uskill-atomic-code-review-v1-1-0` | 代码审查 | atomic | engineering | 1.1.0 |
 
 ## 数据技能集
 
@@ -66,7 +66,7 @@
 
 | Skill ID | Name | Category | Domain | Version |
 | --- | --- | --- | --- | --- |
-| `uskill-atomic-data-analyze-v1-0-0` | 数据分析 | atomic | data | 1.0.0 |
+| `uskill-atomic-data-analyze-v1-1-0` | 数据分析 | atomic | data | 1.1.0 |
 
 ## 驾驭工程执行规范
 
@@ -74,4 +74,4 @@
 
 | Skill ID | Name | Category | Domain | Version |
 | --- | --- | --- | --- | --- |
-| `uskill-governance-execution-guard-v1-0-0` | 执行合规守卫 | governance | governance | 1.0.0 |
+| `uskill-governance-execution-guard-v1-1-0` | 执行合规守卫 | governance | governance | 1.1.0 |

@@ -1,7 +1,7 @@
-skill_id: uskill-domain-skill-creator-governance-demo-v1-0-0
+skill_id: uskill-domain-skill-creator-governance-demo-v1-1-0
 meta:
   name: skill-creator 驾驭示例
-  version: 1.0.0
+  version: 1.1.0
   category: domain
   domain: codex-skills
   description: 以最新版 skill-creator 为对象，展示如何对一个技能执行定义驾驭、过程驾驭、结果驾驭与迭代驾驭。

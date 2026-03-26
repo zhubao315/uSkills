@@ -37,9 +37,9 @@ class SkillMeta(BaseModel):
 
     name: str = Field(..., min_length=1, max_length=200, description="Skill display name")
     version: str = Field(
-        default="1.0.0",
+        default="1.1.0",
         pattern=r"^\d+\.\d+\.\d+$",
-        description="Semantic version (e.g., 1.0.0)",
+        description="Semantic version (e.g., 1.1.0)",
     )
     category: SkillCategory = Field(..., description="Skill category")
     domain: str = Field(default="general", min_length=1, max_length=100, description="Skill domain")

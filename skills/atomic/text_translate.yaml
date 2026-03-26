@@ -1,7 +1,7 @@
-skill_id: uskill-atomic-text-translate-v1-0-0
+skill_id: uskill-atomic-text-translate-v1-1-0
 meta:
   name: 文本翻译
-  version: "1.0.0"
+  version: "1.1.0"
   category: atomic
   domain: nlp
   description: 将文本从源语言翻译到目标语言，保持原意和风格。

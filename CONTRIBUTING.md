@@ -125,10 +125,10 @@ docs(readme): update installation guide
 
 3. 确保技能定义包含所有必要字段：
    ```yaml
-   skill_id: uskill-atomic-your-skill-v1-0-0
+   skill_id: uskill-atomic-your-skill-v1-1-0
    meta:
      name: 技能名称
-     version: "1.0.0"
+     version: "1.1.0"
      category: atomic  # atomic, composite, domain, governance
      domain: general
      description: 技能描述

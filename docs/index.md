@@ -190,10 +190,10 @@ uSkills 基于"驾驭工程"推进 Agent 技能资产化：
 一个典型的 uSkill 定义（YAML 格式）：
 
 ```yaml title="text_keyword_extract.yaml"
-skill_id: uskill-atomic-text-keyword-extract-v1-0-0
+skill_id: uskill-atomic-text-keyword-extract-v1-1-0
 meta:
   name: 文本关键词提取
-  version: "1.0.0"
+  version: "1.1.0"
   category: atomic
   domain: nlp
   description: 从输入文本中提取关键词，并返回结构化结果

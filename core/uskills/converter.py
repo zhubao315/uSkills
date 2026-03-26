@@ -96,7 +96,7 @@ def extract_steps(text: str) -> list[str]:
 def _generate_skill_id(sop_slug: str, index: int, step_slug: str) -> str:
     """Generate a standardized skill ID.
 
-    Format: uskill-atomic-{sop_slug}-{index:02d}-{step_slug}-v1-0-0
+    Format: uskill-atomic-{sop_slug}-{index:02d}-{step_slug}-v1-1-0
 
     Args:
         sop_slug: Slugified SOP name.
@@ -106,7 +106,7 @@ def _generate_skill_id(sop_slug: str, index: int, step_slug: str) -> str:
     Returns:
         Formatted skill ID.
     """
-    return f"uskill-atomic-{sop_slug}-{index:02d}-{step_slug}-v1-0-0"
+    return f"uskill-atomic-{sop_slug}-{index:02d}-{step_slug}-v1-1-0"
 
 
 def _build_prompt_template(sop_name: str, step: str) -> str:

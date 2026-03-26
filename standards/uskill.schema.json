@@ -2,29 +2,39 @@
   "$defs": {
     "ControlConfig": {
       "additionalProperties": false,
+      "description": "Execution control configuration.",
       "properties": {
         "timeout": {
           "default": 30,
+          "description": "Execution timeout in seconds",
+          "maximum": 3600,
+          "minimum": 1,
           "title": "Timeout",
           "type": "integer"
         },
         "retry": {
           "default": 1,
+          "description": "Retry count on failure",
+          "maximum": 10,
+          "minimum": 0,
           "title": "Retry",
           "type": "integer"
         },
         "interrupt": {
           "default": true,
+          "description": "Allow execution interruption",
           "title": "Interrupt",
           "type": "boolean"
         },
         "breakpoint_allowed": {
           "default": true,
+          "description": "Allow breakpoints",
           "title": "Breakpoint Allowed",
           "type": "boolean"
         },
         "mockable": {
           "default": true,
+          "description": "Allow mock execution",
           "title": "Mockable",
           "type": "boolean"
         }
@@ -34,39 +44,55 @@
     },
     "ExecuteConfig": {
       "additionalProperties": false,
+      "description": "Execution configuration for skill.",
       "properties": {
         "prompt_template": {
+          "description": "Prompt template with variables",
+          "maxLength": 10000,
+          "minLength": 1,
           "title": "Prompt Template",
           "type": "string"
         },
         "steps": {
+          "description": "Execution steps",
           "items": {
             "type": "string"
           },
+          "maxItems": 100,
           "title": "Steps",
           "type": "array"
         },
         "temperature": {
           "default": 0.1,
+          "description": "LLM temperature parameter",
+          "maximum": 2.0,
+          "minimum": 0.0,
           "title": "Temperature",
           "type": "number"
         },
         "model": {
-          "default": "gpt-5.4-mini",
+          "default": "gpt-4o-mini",
+          "description": "LLM model name",
+          "maxLength": 100,
+          "minLength": 1,
           "title": "Model",
           "type": "string"
         },
         "tools": {
+          "description": "Required tools",
           "items": {
             "type": "string"
           },
+          "maxItems": 20,
           "title": "Tools",
           "type": "array"
         },
         "fallback": {
+          "description": "Fallback strategies",
           "items": {
             "type": "string"
           },
+          "maxItems": 10,
           "title": "Fallback",
           "type": "array"
         }
@@ -79,23 +105,30 @@
     },
     "OutputConfig": {
       "additionalProperties": false,
+      "description": "Output configuration for skill.",
       "properties": {
         "format": {
           "default": "json",
+          "description": "Output format",
+          "pattern": "^(json|yaml|text|markdown)$",
           "title": "Format",
           "type": "string"
         },
         "params": {
+          "description": "Output parameters",
           "items": {
             "type": "string"
           },
+          "maxItems": 50,
           "title": "Params",
           "type": "array"
         },
         "validation_rules": {
+          "description": "Output validation rules",
           "items": {
             "type": "string"
           },
+          "maxItems": 20,
           "title": "Validation Rules",
           "type": "array"
         }
@@ -104,6 +137,7 @@
       "type": "object"
     },
     "SkillCategory": {
+      "description": "Skill category enumeration.",
       "enum": [
         "atomic",
         "composite",
@@ -113,52 +147,74 @@
       "title": "SkillCategory",
       "type": "string"
     },
-    "SkillInput": {
+    "SkillInputConfig": {
       "additionalProperties": false,
+      "description": "Skill input configuration.",
       "properties": {
         "params": {
+          "description": "Input parameters",
           "items": {
             "$ref": "#/$defs/SkillParam"
           },
+          "maxItems": 50,
           "title": "Params",
           "type": "array"
         }
       },
-      "title": "SkillInput",
+      "title": "SkillInputConfig",
       "type": "object"
     },
     "SkillMeta": {
       "additionalProperties": false,
+      "description": "Skill metadata configuration.",
       "properties": {
         "name": {
+          "description": "Skill display name",
+          "maxLength": 200,
+          "minLength": 1,
           "title": "Name",
           "type": "string"
         },
         "version": {
-          "default": "1.0.0",
+          "default": "1.1.0",
+          "description": "Semantic version (e.g., 1.1.0)",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
           "title": "Version",
           "type": "string"
         },
         "category": {
-          "$ref": "#/$defs/SkillCategory"
+          "$ref": "#/$defs/SkillCategory",
+          "description": "Skill category"
         },
         "domain": {
+          "default": "general",
+          "description": "Skill domain",
+          "maxLength": 100,
+          "minLength": 1,
           "title": "Domain",
           "type": "string"
         },
         "description": {
+          "description": "Skill description",
+          "maxLength": 2000,
+          "minLength": 1,
           "title": "Description",
           "type": "string"
         },
         "tags": {
+          "description": "Skill tags for categorization",
           "items": {
             "type": "string"
           },
+          "maxItems": 20,
           "title": "Tags",
           "type": "array"
         },
         "owner": {
           "default": "community",
+          "description": "Skill owner",
+          "maxLength": 100,
+          "minLength": 1,
           "title": "Owner",
           "type": "string"
         }
@@ -166,7 +222,6 @@
       "required": [
         "name",
         "category",
-        "domain",
         "description"
       ],
       "title": "SkillMeta",
@@ -174,22 +229,32 @@
     },
     "SkillParam": {
       "additionalProperties": false,
+      "description": "Skill input parameter definition.",
       "properties": {
         "name": {
+          "description": "Parameter name",
+          "maxLength": 100,
+          "minLength": 1,
           "title": "Name",
           "type": "string"
         },
         "type": {
+          "description": "Parameter type (string, number, boolean, object, array)",
+          "maxLength": 50,
+          "minLength": 1,
           "title": "Type",
           "type": "string"
         },
         "required": {
           "default": true,
+          "description": "Whether parameter is required",
           "title": "Required",
           "type": "boolean"
         },
         "description": {
           "default": "",
+          "description": "Parameter description",
+          "maxLength": 500,
           "title": "Description",
           "type": "string"
         },
@@ -201,6 +266,7 @@
             }
           ],
           "default": null,
+          "description": "Default value if not required",
           "title": "Default"
         }
       },
@@ -213,27 +279,38 @@
     },
     "SourceTrace": {
       "additionalProperties": false,
+      "description": "Source traceability information.",
       "properties": {
         "sop_name": {
+          "description": "Source SOP name",
+          "maxLength": 200,
+          "minLength": 1,
           "title": "Sop Name",
           "type": "string"
         },
         "sop_path": {
+          "default": "",
+          "description": "Source SOP file path",
+          "maxLength": 500,
           "title": "Sop Path",
           "type": "string"
         },
         "step_index": {
+          "description": "Step index in source SOP",
+          "minimum": 0,
           "title": "Step Index",
           "type": "integer"
         },
         "raw_step": {
+          "description": "Raw step content",
+          "maxLength": 2000,
+          "minLength": 1,
           "title": "Raw Step",
           "type": "string"
         }
       },
       "required": [
         "sop_name",
-        "sop_path",
         "step_index",
         "raw_step"
       ],
@@ -242,28 +319,38 @@
     }
   },
   "additionalProperties": false,
+  "description": "Main uSkill model definition.",
   "properties": {
     "skill_id": {
+      "description": "Unique skill identifier",
+      "maxLength": 200,
+      "minLength": 1,
       "title": "Skill Id",
       "type": "string"
     },
     "meta": {
-      "$ref": "#/$defs/SkillMeta"
+      "$ref": "#/$defs/SkillMeta",
+      "description": "Skill metadata"
     },
     "input": {
-      "$ref": "#/$defs/SkillInput"
+      "$ref": "#/$defs/SkillInputConfig",
+      "description": "Input configuration"
     },
     "execute": {
-      "$ref": "#/$defs/ExecuteConfig"
+      "$ref": "#/$defs/ExecuteConfig",
+      "description": "Execution configuration"
     },
     "output": {
-      "$ref": "#/$defs/OutputConfig"
+      "$ref": "#/$defs/OutputConfig",
+      "description": "Output configuration"
     },
     "control": {
-      "$ref": "#/$defs/ControlConfig"
+      "$ref": "#/$defs/ControlConfig",
+      "description": "Control configuration"
     },
     "source": {
-      "$ref": "#/$defs/SourceTrace"
+      "$ref": "#/$defs/SourceTrace",
+      "description": "Source traceability"
     }
   },
   "required": [
@@ -276,5 +363,7 @@
     "source"
   ],
   "title": "USkill",
-  "type": "object"
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://zhubao315.github.io/uSkills/schema/v1.1.0.json"
 }
