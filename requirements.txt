@@ -1,6 +1,8 @@
 # Core dependencies
 pydantic>=2.8,<3.0
 PyYAML>=6.0,<7.0
+openai>=1.0.0
+python-dotenv>=1.0.0
 
 # Documentation
 mkdocs>=1.6,<2.0

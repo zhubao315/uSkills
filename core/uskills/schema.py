@@ -13,7 +13,7 @@ from typing import Any
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 # Schema version for compatibility tracking
-SCHEMA_VERSION = "1.0.0"
+SCHEMA_VERSION = "1.1.0"
 
 # Skill ID pattern: uskill-{category}-{name}-{version}
 SKILL_ID_PATTERN = re.compile(

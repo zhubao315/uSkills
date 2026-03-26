@@ -2,10 +2,12 @@
 
 This package provides the core functionality for uSkills including:
 - Schema definitions and validation
-- SOP to Skill conversion
+- SOP to Skill conversion (including AI-powered)
+- Skill execution engine
 - Skill indexing and cataloging
 """
 
+from .ai_converter import AIConverter
 from .converter import (
     ConversionError,
     convert_sop_file,
@@ -13,6 +15,7 @@ from .converter import (
     convert_sop_to_dict,
     extract_steps,
 )
+from .executor import SkillExecutor
 from .indexer import build_skills_index, get_skill_stats
 from .schema import (
     SCHEMA_VERSION,
@@ -59,6 +62,10 @@ __all__ = [
     "convert_sop_text",
     "convert_sop_to_dict",
     "extract_steps",
+    # AI
+    "AIConverter",
+    # Executor
+    "SkillExecutor",
     # Indexer
     "build_skills_index",
     "get_skill_stats",
@@ -73,4 +80,4 @@ __all__ = [
     "validate_template_variables",
 ]
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
