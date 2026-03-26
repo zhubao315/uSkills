@@ -1,7 +1,6 @@
 """Tests for uSkills V1.1.0 new features."""
 
-import pytest
-from core.uskills.schema import USkill, SCHEMA_VERSION
+from core.uskills.schema import SCHEMA_VERSION, USkill
 
 
 def test_schema_version_v1_1_0():

@@ -21,6 +21,7 @@ from .schema import (
     SkillCategory,
     SkillInputConfig,
     SkillMeta,
+    SkillParam,
     SourceTrace,
     USkill,
 )
@@ -166,7 +167,7 @@ def convert_sop_text(
             skill_id=skill_id,
             meta=SkillMeta(
                 name=f"{sop_name} Step {index}",
-                version="1.0.0",
+                version="1.1.0",
                 category=SkillCategory.atomic,
                 domain=domain,
                 description=step,
@@ -175,12 +176,12 @@ def convert_sop_text(
             ),
             input=SkillInputConfig(
                 params=[
-                    {
-                        "name": "context",
-                        "type": "string",
-                        "required": False,
-                        "description": "Execution context shared across the SOP chain.",
-                    }
+                    SkillParam(
+                        name="context",
+                        type="string",
+                        required=False,
+                        description="Execution context shared across the SOP chain.",
+                    )
                 ]
             ),
             execute=ExecuteConfig(

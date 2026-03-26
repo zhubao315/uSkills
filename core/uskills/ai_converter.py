@@ -9,7 +9,6 @@ from __future__ import annotations
 
 import json
 import os
-from typing import Any
 
 from openai import OpenAI
 from pydantic import ValidationError
@@ -64,18 +63,24 @@ class AIConverter:
             response_format={"type": "json_object"},
         )
 
+        content = response.choices[0].message.content
+        if not content:
+            return []
+
         try:
-            raw_data = json.loads(response.choices[0].message.content)
+            raw_data = json.loads(content)
             # Handle list vs single object wrapping
-            skills_data = raw_data.get("skills", [raw_data]) if isinstance(raw_data, dict) else raw_data
-            
+            skills_data = (
+                raw_data.get("skills", [raw_data]) if isinstance(raw_data, dict) else raw_data
+            )
+
             validated_skills = []
             for data in skills_data:
                 try:
                     validated_skills.append(USkill(**data))
                 except ValidationError as e:
                     print(f"Skipping invalid skill generation: {e}")
-            
+
             return validated_skills
         except Exception as e:
             print(f"Failed to parse AI response: {e}")

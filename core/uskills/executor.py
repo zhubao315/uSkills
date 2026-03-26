@@ -9,9 +9,11 @@ from __future__ import annotations
 import json
 import os
 import time
-from typing import Any
+from typing import Any, Literal
 
 from openai import OpenAI
+from openai.types.chat import ChatCompletionNamedToolChoiceParam
+
 from .schema import USkill
 
 
@@ -45,10 +47,13 @@ class SkillExecutor:
 
         # 2. LLM Call
         start_time = time.time()
-        
+
         # Prepare response format based on skill output config
-        response_format = {"type": "json_object"} if skill.output.format == "json" else {"type": "text"}
-        
+        # Use explicit type for mypy compatibility
+        response_format: Any = (
+            {"type": "json_object"} if skill.output.format == "json" else {"type": "text"}
+        )
+
         response = self.client.chat.completions.create(
             model=skill.execute.model or self.default_model,
             messages=[
@@ -59,11 +64,11 @@ class SkillExecutor:
             response_format=response_format,
         )
 
-        content = response.choices[0].message.content
+        content = response.choices[0].message.content or ""
         execution_time = time.time() - start_time
 
         # 3. Output Processing
-        result = content
+        result: Any = content
         if skill.output.format == "json":
             try:
                 result = json.loads(content)
@@ -77,5 +82,5 @@ class SkillExecutor:
                 "execution_time": execution_time,
                 "model": skill.execute.model,
                 "usage": response.usage.model_dump() if response.usage else None,
-            }
+            },
         }
