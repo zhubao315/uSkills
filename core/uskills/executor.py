@@ -9,10 +9,9 @@ from __future__ import annotations
 import json
 import os
 import time
-from typing import Any, Literal
+from typing import Any
 
 from openai import OpenAI
-from openai.types.chat import ChatCompletionNamedToolChoiceParam
 
 from .schema import USkill
 
