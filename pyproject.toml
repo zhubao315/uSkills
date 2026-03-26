@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "uskills"
-version = "1.0.0"
+version = "1.1.0"
 description = "uSkills - The controllable, reusable, callable skill foundation for Agents"
 readme = "README.md"
 license = {text = "MIT"}
@@ -14,7 +14,7 @@ authors = [
 ]
 keywords = ["agent", "skills", "prompt", "sop", "ai", "llmops"]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
@@ -27,6 +27,8 @@ classifiers = [
 dependencies = [
     "pydantic>=2.8,<3.0",
     "PyYAML>=6.0,<7.0",
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
 ]
 
 [project.optional-dependencies]

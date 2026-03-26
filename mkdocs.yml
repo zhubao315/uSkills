@@ -106,8 +106,6 @@ markdown_extensions:
 plugins:
   - search:
       lang: zh
-  - minify:
-      minify_html: true
 
 nav:
   - 首页: index.md

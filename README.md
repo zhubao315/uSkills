@@ -1,13 +1,13 @@
 <div align="center">
 
-# uSkills
+<img src="docs/assets/logo.svg" alt="uSkills Logo" width="400">
 
 **Agent 标准化技能底座**
 
 以驾驭工程为方法论，将历史 SOP Prompt 批量转换为可驾驭、可复用、可调用、可迭代的标准化 Skills。
 
 [![Build](https://img.shields.io/badge/Build-Passing-brightgreen?style=flat-square)](https://github.com/zhubao315/uSkills/actions)
-[![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square)](https://github.com/zhubao315/uSkills/releases)
+[![Version](https://img.shields.io/badge/Version-1.1.0-blue?style=flat-square)](https://github.com/zhubao315/uSkills/releases)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://github.com/zhubao315/uSkills/blob/main/LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![Docs](https://img.shields.io/badge/Docs-Published-00C2CB?style=flat-square)](https://zhubao315.github.io/uSkills/)
@@ -24,8 +24,8 @@
 |:---:|:---|
 | 🎯 **可驾驭** | 技能定义、执行、结果、迭代全生命周期可控 |
 | ♻️ **可复用** | 将零散 Prompt 沉淀为跨项目复用的技能资产 |
-| 🔌 **可调用** | 提供统一 Schema、CLI 与 Python 接口 |
-| 🔄 **可迭代** | 借助 Git + CI + 测试 + Pages 形成闭环 |
+| 🔌 **可调用** | 提供统一 Schema、CLI、Python 接口及 **原生 Executor** |
+| 🔄 **可迭代** | 借助 Git + CI + 测试 + AI 自动优化形成闭环 |
 | 💡 **零成本开源** | 代码、文档、技能、发布全部托管在 GitHub |
 
 ## SOP 转换流程
@@ -33,15 +33,22 @@
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
 │                 │     │                 │     │                 │
-│   SOP 文本      │────▶│   转换引擎      │────▶│   标准化 Skills │
-│  (Prompt)       │     │  (Converter)    │     │  (YAML/JSON)    │
+│   SOP 文本      │────▶│   AI 转换引擎   │────▶│   标准化 Skills │
+│  (Prompt)       │     │  (AIConverter)  │     │  (YAML/JSON)    │
 │                 │     │                 │     │                 │
 └─────────────────┘     └─────────────────┘     └─────────────────┘
         │                       │                       │
         ▼                       ▼                       ▼
-   原始步骤              步骤提取 & 拆分           Schema 验证
-   非结构化              标准化处理               版本化管理
+   原始步骤              智能提取 & 拆分           Schema 验证
+   非结构化              参数自动推断             版本化管理
 ```
+
+## V1.1 新能力 (Beta)
+
+- [x] **AI 智能转换引擎**：使用 LLM 自动将非结构化 SOP 解析为结构化 Skill
+- [x] **原生 Skill 执行器 (Executor)**：直接运行 YAML 定义的技能，内置参数注入
+- [x] **标准化视觉识别**：全新 Logo 与 Favicon 设计
+- [x] **多模型适配**：原生支持 OpenAI 及其兼容 API
 
 ## 项目结构
 
