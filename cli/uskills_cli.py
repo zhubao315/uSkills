@@ -24,7 +24,7 @@ from core.uskills.schema import exported_json_schema, get_schema_version  # noqa
 from core.uskills.validator import validate_directory, validate_skill_file  # noqa: E402
 
 # Version information
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 
 def cmd_validate(args: argparse.Namespace) -> int:

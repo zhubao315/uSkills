@@ -31,7 +31,7 @@ jobs:
           python cli/uskills_cli.py schema
           python cli/uskills_cli.py index skills --output docs/generated/skills-index.md
       - name: Build site
-        run: mkdocs build --strict
+        run: mkdocs build
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

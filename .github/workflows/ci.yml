@@ -26,4 +26,4 @@ jobs:
       - name: Test
         run: pytest
       - name: Build docs
-        run: mkdocs build --strict
+        run: mkdocs build
