@@ -1,7 +1,7 @@
 <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="32" height="32" rx="6" fill="#1D1D1F" />
-  <!-- The Stylized S Fragments -->
-  <path d="M10 8 H24 L22 12 H10 Z" fill="#0071E3" />
-  <path d="M10 14 L13 10 H24 V18 L21 22 H8 V14 Z" fill="#FFF" />
-  <path d="M12 20 H26 L24 24 H10 L12 20 Z" fill="#0071E3" />
+  <rect x="0" y="0" width="32" height="32" rx="7" fill="#121212" />
+  <g transform="translate(8, 8) scale(0.25)">
+    <path d="M48 6 C28 6 16 18 16 32 C16 46 28 50 40 54 C52 58 60 62 60 76 C60 90 48 102 28 102" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/>
+    <path d="M16 98 C36 98 48 86 48 72 C48 58 36 54 24 50 C12 46 4 42 4 28 C4 14 16 2 36 2" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round"/>
+  </g>
 </svg>

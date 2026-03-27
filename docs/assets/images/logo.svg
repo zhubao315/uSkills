@@ -1,30 +1,22 @@
-<svg width="512" height="128" viewBox="0 0 512 128" xmlns="http://www.w3.org/2000/svg">
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <clipPath id="s-clip">
-      <rect x="0" y="0" width="120" height="120" rx="12" />
-    </clipPath>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A5D6FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1" />
+    </linearGradient>
   </defs>
-  
-  <!-- Structural S Icon -->
-  <g transform="translate(10, 8)">
-    <!-- Background Plate (Subtle) -->
-    <rect x="0" y="0" width="112" height="112" rx="16" fill="#F5F5F7" />
-    
-    <!-- The S Blocks -->
-    <!-- Top Block -->
-    <path d="M30 35 H85 L75 50 H30 Z" fill="#0071E3" />
-    <!-- Middle Block -->
-    <path d="M30 58 L40 43 H85 V75 L75 90 H20 V58 Z" fill="#1D1D1F" />
-    <!-- Bottom Block -->
-    <path d="M35 83 H90 L80 98 H25 L35 83 Z" fill="#0071E3" />
-    
-    <!-- Accent Point -->
-    <rect x="85" y="35" width="8" height="8" rx="1" fill="#0071E3" />
-  </g>
 
-  <!-- Text Part -->
-  <text x="145" y="80" font-family="SF Pro Display, Inter, system-ui, sans-serif" font-size="74" fill="#1D1D1F" style="letter-spacing: -1.5px;">
-    <tspan font-weight="300" fill="#86868B">u</tspan><tspan font-weight="700">Skills</tspan>
-  </text>
-  <text x="148" y="106" font-family="SF Pro Text, sans-serif" font-size="12" font-weight="600" fill="#0071E3" style="letter-spacing: 6px; text-transform: uppercase;">The Controllable Skill Engine</text>
+  <!-- Squircle Background -->
+  <rect x="0" y="0" width="128" height="128" rx="28" fill="#121212" />
+
+  <!-- Minimalist S Symbol -->
+  <g transform="translate(32, 32)">
+    <!-- Top Part -->
+    <path d="M48 6 C28 6 16 18 16 32 C16 46 28 50 40 54 C52 58 60 62 60 76 C60 90 48 102 28 102" fill="none" stroke="url(#shieldGrad)" stroke-width="14" stroke-linecap="round" transform="scale(0.5) translate(16, 16)"/>
+    <!-- Bottom Part -->
+    <path d="M16 98 C36 98 48 86 48 72 C48 58 36 54 24 50 C12 46 4 42 4 28 C4 14 16 2 36 2" fill="none" stroke="url(#shieldGrad)" stroke-width="14" stroke-linecap="round" transform="scale(0.5) translate(16, 16)"/>
+  </g>
+  
+  <!-- Glossy Reflection (Subtle) -->
+  <path d="M28 15 Q64 5 100 15" fill="none" stroke="white" stroke-width="1" stroke-opacity="0.1" stroke-linecap="round" />
 </svg>
