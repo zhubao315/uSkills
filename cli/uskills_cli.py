@@ -270,7 +270,7 @@ def main() -> int:
     """
     parser = build_parser()
     args = parser.parse_args()
-    return args.func(args)
+    return int(args.func(args))
 
 
 if __name__ == "__main__":
