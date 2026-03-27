@@ -1,22 +1,30 @@
 <svg width="512" height="128" viewBox="0 0 512 128" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="proGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1A237E;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0288D1;stop-opacity:1" />
-    </linearGradient>
+    <clipPath id="s-clip">
+      <rect x="0" y="0" width="120" height="120" rx="12" />
+    </clipPath>
   </defs>
-
-  <!-- Professional S Icon -->
-  <g transform="translate(25, 14)">
-    <!-- Top Arc -->
-    <path d="M75 10 C45 10 30 25 30 45 C30 65 45 70 60 75 C75 80 85 85 85 100 C85 115 70 125 45 125" fill="none" stroke="url(#proGradient)" stroke-width="20" stroke-linecap="round" transform="scale(0.7)"/>
-    <!-- Bottom Arc -->
-    <path d="M25 90 C55 90 70 75 70 55 C70 35 55 30 40 25 C25 20 15 15 15 0 C15 -15 30 -25 55 -25" fill="none" stroke="url(#proGradient)" stroke-width="20" stroke-linecap="round" transform="translate(0, 100) scale(0.7)"/>
+  
+  <!-- Structural S Icon -->
+  <g transform="translate(10, 8)">
+    <!-- Background Plate (Subtle) -->
+    <rect x="0" y="0" width="112" height="112" rx="16" fill="#F5F5F7" />
+    
+    <!-- The S Blocks -->
+    <!-- Top Block -->
+    <path d="M30 35 H85 L75 50 H30 Z" fill="#0071E3" />
+    <!-- Middle Block -->
+    <path d="M30 58 L40 43 H85 V75 L75 90 H20 V58 Z" fill="#1D1D1F" />
+    <!-- Bottom Block -->
+    <path d="M35 83 H90 L80 98 H25 L35 83 Z" fill="#0071E3" />
+    
+    <!-- Accent Point -->
+    <rect x="85" y="35" width="8" height="8" rx="1" fill="#0071E3" />
   </g>
 
   <!-- Text Part -->
-  <text x="140" y="82" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="76" fill="#1A237E" style="letter-spacing: -2px;">
-    <tspan font-weight="200" fill="#78909C">u</tspan><tspan font-weight="800">Skills</tspan>
+  <text x="145" y="80" font-family="SF Pro Display, Inter, system-ui, sans-serif" font-size="74" fill="#1D1D1F" style="letter-spacing: -1.5px;">
+    <tspan font-weight="300" fill="#86868B">u</tspan><tspan font-weight="700">Skills</tspan>
   </text>
-  <text x="142" y="108" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#546E7A" style="letter-spacing: 5px; text-transform: uppercase;">Controllable Skill Foundation</text>
+  <text x="148" y="106" font-family="SF Pro Text, sans-serif" font-size="12" font-weight="600" fill="#0071E3" style="letter-spacing: 6px; text-transform: uppercase;">The Controllable Skill Engine</text>
 </svg>

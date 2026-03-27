@@ -1,16 +1,7 @@
 <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="proFavGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1A237E;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0288D1;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  
-  <!-- Professional S Icon Scaled -->
-  <g transform="translate(6, 6) scale(0.2)">
-    <!-- Top Arc -->
-    <path d="M75 10 C45 10 30 25 30 45 C30 65 45 70 60 75 C75 80 85 85 85 100 C85 115 70 125 45 125" fill="none" stroke="url(#proFavGradient)" stroke-width="25" stroke-linecap="round"/>
-    <!-- Bottom Arc -->
-    <path d="M25 90 C55 90 70 75 70 55 C70 35 55 30 40 25 C25 20 15 15 15 0 C15 -15 30 -25 55 -25" fill="none" stroke="url(#proFavGradient)" stroke-width="25" stroke-linecap="round" transform="translate(0, 100)"/>
-  </g>
+  <rect x="0" y="0" width="32" height="32" rx="6" fill="#1D1D1F" />
+  <!-- The Stylized S Fragments -->
+  <path d="M10 8 H24 L22 12 H10 Z" fill="#0071E3" />
+  <path d="M10 14 L13 10 H24 V18 L21 22 H8 V14 Z" fill="#FFF" />
+  <path d="M12 20 H26 L24 24 H10 L12 20 Z" fill="#0071E3" />
 </svg>
